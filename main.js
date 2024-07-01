@@ -205,6 +205,38 @@ const patches = {
                         }
                     }
                 }
+            },
+            "support": {
+                "Illari": {
+                    "abilities": {
+                        "Outburst": {
+                            "Damage": 10
+                        },
+                        "Healing Pylon": {
+                            "Healing per projectile": 30,
+                            "Self healing efficiency": 100,
+                            "Health": 50,
+                            "Shield health": 50
+                        }
+                    }
+                },
+                "Kiriko": {
+                    "abilities": {
+                        "Swift Step": {
+                            "Cooldown": 7
+                        },
+                        "Protection Suzu": {
+                            "cleanses hard knockdown stuns": true
+                        }
+                    }
+                },
+                "Brigitte": {
+                    "abilities": {
+                        "Rally": {
+                            "resets Shield Bash cooldown upon activation": false
+                        }
+                    }
+                }
             }
         }
     },
@@ -410,6 +442,38 @@ const patches = {
                     "abilities": {
                         "Dragonstrike": {
                             "Speed": 12
+                        }
+                    }
+                }
+            },
+            "support": {
+                "Illari": {
+                    "abilities": {
+                        "Outburst": {
+                            "Damage": 10
+                        },
+                        "Healing Pylon": {
+                            "Healing per projectile": 30,
+                            "Self healing efficiency": 100,
+                            "Health": 50,
+                            "Shield health": 50
+                        }
+                    }
+                },
+                "Kiriko": {
+                    "abilities": {
+                        "Swift Step": {
+                            "Cooldown": 7
+                        },
+                        "Protection Suzu": {
+                            "cleanses hard knockdown stuns": true
+                        }
+                    }
+                },
+                "Brigitte": {
+                    "abilities": {
+                        "Rally": {
+                            "resets Shield Bash cooldown upon activation": false
                         }
                     }
                 }
@@ -621,6 +685,38 @@ const patches = {
                         }
                     }
                 }
+            },
+            "support": {
+                "Illari": {
+                    "abilities": {
+                        "Outburst": {
+                            "Damage": 10
+                        },
+                        "Healing Pylon": {
+                            "Healing per projectile": 30,
+                            "Self healing efficiency": 100,
+                            "Health": 50,
+                            "Shield health": 50
+                        }
+                    }
+                },
+                "Kiriko": {
+                    "abilities": {
+                        "Swift Step": {
+                            "Cooldown": 7
+                        },
+                        "Protection Suzu": {
+                            "cleanses hard knockdown stuns": true
+                        }
+                    }
+                },
+                "Brigitte": {
+                    "abilities": {
+                        "Rally": {
+                            "resets Shield Bash cooldown upon activation": true
+                        }
+                    }
+                }
             }
         }
     },
@@ -826,6 +922,38 @@ const patches = {
                     "abilities": {
                         "Dragonstrike": {
                             "Speed": 15
+                        }
+                    }
+                }
+            },
+            "support": {
+                "Illari": {
+                    "abilities": {
+                        "Outburst": {
+                            "Damage": 10
+                        },
+                        "Healing Pylon": {
+                            "Healing per projectile": 30,
+                            "Self healing efficiency": 100,
+                            "Health": 50,
+                            "Shield health": 50
+                        }
+                    }
+                },
+                "Kiriko": {
+                    "abilities": {
+                        "Swift Step": {
+                            "Cooldown": 7
+                        },
+                        "Protection Suzu": {
+                            "cleanses hard knockdown stuns": true
+                        }
+                    }
+                },
+                "Brigitte": {
+                    "abilities": {
+                        "Rally": {
+                            "resets Shield Bash cooldown upon activation": true
                         }
                     }
                 }
@@ -1037,6 +1165,38 @@ const patches = {
                         }
                     }
                 }
+            },
+            "support": {
+                "Illari": {
+                    "abilities": {
+                        "Outburst": {
+                            "Damage": 10
+                        },
+                        "Healing Pylon": {
+                            "Healing per projectile": 30,
+                            "Self healing efficiency": 100,
+                            "Health": 50,
+                            "Shield health": 50
+                        }
+                    }
+                },
+                "Kiriko": {
+                    "abilities": {
+                        "Swift Step": {
+                            "Cooldown": 7
+                        },
+                        "Protection Suzu": {
+                            "cleanses hard knockdown stuns": true
+                        }
+                    }
+                },
+                "Brigitte": {
+                    "abilities": {
+                        "Rally": {
+                            "resets Shield Bash cooldown upon activation": true
+                        }
+                    }
+                }
             }
         }
     },
@@ -1245,6 +1405,38 @@ const patches = {
                         }
                     }
                 }
+            },
+            "support": {
+                "Illari": {
+                    "abilities": {
+                        "Outburst": {
+                            "Damage": 25
+                        },
+                        "Healing Pylon": {
+                            "Healing per projectile": 40,
+                            "Self healing efficiency": 50,
+                            "Health": 75,
+                            "Shield health": 50
+                        }
+                    }
+                },
+                "Kiriko": {
+                    "abilities": {
+                        "Swift Step": {
+                            "Cooldown": 8
+                        },
+                        "Protection Suzu": {
+                            "cleanses hard knockdown stuns": false
+                        }
+                    }
+                },
+                "Brigitte": {
+                    "abilities": {
+                        "Rally": {
+                            "resets Shield Bash cooldown upon activation": true
+                        }
+                    }
+                }
             }
         }
     }
@@ -1267,6 +1459,9 @@ const hero_images = {
     "Junkrat": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/d3628dc64d78ca6dc2a8b509cf5a6fc417c0f5068d5f75d1f5c094be1f58ee4e.png",
     "Echo": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/0dc3f1679d739ef530ba2b8cbe02bf09f4d40a57c0af84f694a3241d3a7ef948.png",
     "Hanzo": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/3febc2e638ff56d8f0161ea278ac3116b5baf8c0328f1eded6b499552a0eccad.png",
+    "Illari": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/f33f6fe94ad55fcf9027e779f66afac358a2f93651070b95cd565ff90d670c8b.png",
+    "Kiriko": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/24d1d7bf86c331b3d81b934442ed36fd0121f6815255c6f26f456127fb342d15.png",
+    "Brigitte": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/51b93ea59f369a1defa78e5d08c12b1391f5d2d94614a51fd95c125a7a6151fa.png",
 };
 
 const ability_images = {
@@ -1301,6 +1496,11 @@ const ability_images = {
     "Fortify": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/d697fa90726cf683222920822d2ee00a85e0420c6cbc6ec2365573f313d06357.png",
     "SMART Excavator": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/9d5a868a280aba70231d6555b6a5df3bb713b39ea9f994a37eb7cb7425d8f7e6.png",
     "Tectonic Shock": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/210991b74451a635e28e53da0fcfdfe2a0600c0845392db627e8829ecca7149e.png",
+    "Outburst": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/fc671d73e54a10847ee9b1990030a8f937c17c6b46b45fc397c5dc97e28c97d7.png",
+    "Healing Pylon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/03b7303b1480cad458afd46b746f6f0ad55dde473063c93afeef250f6679d214.png",
+    "Swift Step": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/e6ed3a36c4ed15b2127d6ca74756b25e0db7cf33ce7e26d9a79fd821526f055f.png",
+    "Protection Suzu": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/3775c37a363e1aaf02a6df4cdfb611f18e38bb69ce42dd59abddb4140cea9790.png",
+    "Rally": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/08552423da53faa55238bd66a2a72d32d1038e42f2eebc911921bc9d5d575432.png",
 };
 
 let before_patch = Object.keys(patches)[0];
