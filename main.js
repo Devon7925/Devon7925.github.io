@@ -89,6 +89,108 @@ const patches = {
                         }
                     }
                 }
+            },
+            "damage": {
+                "Cassidy": {
+                    "abilities": {
+                        "Peacekeeper": {
+                            "Secondary fire \"Fan the Hammer\" damage": 50
+                        },
+                        "Combat Roll": {
+                            "Damage reduction": 75
+                        },
+                        "Flashbang": {
+                            "Effect": "Applies hinder on stick",
+                            "Duration": 1.25,
+                            "Maximum travel time": 1.5,
+                            "Slow": 25,
+                            "hinder prevents crouching": true,
+                            "Explosive damage": 70,
+                            "Cooldown": 12,
+                            "Projectile speed": 25
+                        },
+                        "Deadeye": {
+                            "Max movement speed penalty": 70,
+                            "Min movement speed penalty": 70,
+                            "Max damage reduction": 40,
+                            "Min damage reduction": 40
+                        }
+                    }
+                },
+                "Mei": {
+                    "abilities": {
+                        "Endothermic Blaster": {
+                            "Secondary fire projectile size": 0.225,
+                            "Secondary fire damage": 75
+                        }
+                    }
+                },
+                "Reaper": {
+                    "abilities": {
+                        "Hellfire Shotguns": {
+                            "Spread": 6.5
+                        },
+                        "Shadow Step": {
+                            "Cast time": 1.5
+                        }
+                    }
+                },
+                "Sojourn": {
+                    "abilities": {
+                        "Railgun": {
+                            "Secondary fire maximum damage": 130,
+                            "Secondary fire minimum damage": 30,
+                            "requires overclock for secondary primary piercing": true,
+                            "Primary fire shots per second": 14
+                        },
+                        "Overclock": {
+                            "Energy charge rate": 100
+                        }
+                    }
+                },
+                "Symmetra": {
+                    "general": {
+                        "Base health": 100
+                    },
+                    "abilities": {
+                        "Photon Projector": {
+                            "Primary fire charge rate": 1
+                        }
+                    }
+                },
+                "Venture": {
+                    "abilities": {
+                        "Drill Dash": {
+                            "Cooldown start": "ability end",
+                            "Cooldown reduction while burrowed": 50,
+                            "Cooldown acceleration while burrowed": 0
+                        },
+                        "Burrow": {
+                            "Grace period": 0.0
+                        }
+                    }
+                },
+                "Junkrat": {
+                    "abilities": {
+                        "Frag Launcher": {
+                            "Impact Damage": "40"
+                        }
+                    }
+                },
+                "Echo": {
+                    "abilities": {
+                        "Duplicate": {
+                            "Ultimate gain modifier": 4
+                        }
+                    }
+                },
+                "Hanzo": {
+                    "abilities": {
+                        "Dragonstrike": {
+                            "Speed": 12
+                        }
+                    }
+                }
             }
         }
     },
@@ -178,6 +280,108 @@ const patches = {
                         "Graviton Surge": {
                             "Radius": 7,
                             "Duration": 4
+                        }
+                    }
+                }
+            },
+            "damage": {
+                "Cassidy": {
+                    "abilities": {
+                        "Peacekeeper": {
+                            "Secondary fire \"Fan the Hammer\" damage": 50
+                        },
+                        "Combat Roll": {
+                            "Damage reduction": 75
+                        },
+                        "Flashbang": {
+                            "Effect": "Applies hinder on stick",
+                            "Duration": 1.25,
+                            "Maximum travel time": 1.5,
+                            "Slow": 25,
+                            "hinder prevents crouching": true,
+                            "Explosive damage": 70,
+                            "Cooldown": 12,
+                            "Projectile speed": 25
+                        },
+                        "Deadeye": {
+                            "Max movement speed penalty": 70,
+                            "Min movement speed penalty": 70,
+                            "Max damage reduction": 40,
+                            "Min damage reduction": 40
+                        }
+                    }
+                },
+                "Mei": {
+                    "abilities": {
+                        "Endothermic Blaster": {
+                            "Secondary fire projectile size": 0.225,
+                            "Secondary fire damage": 75
+                        }
+                    }
+                },
+                "Reaper": {
+                    "abilities": {
+                        "Hellfire Shotguns": {
+                            "Spread": 6.5
+                        },
+                        "Shadow Step": {
+                            "Cast time": 1.5
+                        }
+                    }
+                },
+                "Sojourn": {
+                    "abilities": {
+                        "Railgun": {
+                            "Secondary fire maximum damage": 130,
+                            "Secondary fire minimum damage": 30,
+                            "requires overclock for secondary primary piercing": true,
+                            "Primary fire shots per second": 14
+                        },
+                        "Overclock": {
+                            "Energy charge rate": 100
+                        }
+                    }
+                },
+                "Symmetra": {
+                    "general": {
+                        "Base health": 100
+                    },
+                    "abilities": {
+                        "Photon Projector": {
+                            "Primary fire charge rate": 1
+                        }
+                    }
+                },
+                "Venture": {
+                    "abilities": {
+                        "Drill Dash": {
+                            "Cooldown start": "ability end",
+                            "Cooldown reduction while burrowed": 50,
+                            "Cooldown acceleration while burrowed": 0
+                        },
+                        "Burrow": {
+                            "Grace period": 0.0
+                        }
+                    }
+                },
+                "Junkrat": {
+                    "abilities": {
+                        "Frag Launcher": {
+                            "Impact Damage": "45"
+                        }
+                    }
+                },
+                "Echo": {
+                    "abilities": {
+                        "Duplicate": {
+                            "Ultimate gain modifier": 4.5
+                        }
+                    }
+                },
+                "Hanzo": {
+                    "abilities": {
+                        "Dragonstrike": {
+                            "Speed": 15
                         }
                     }
                 }
@@ -273,6 +477,108 @@ const patches = {
                         }
                     }
                 }
+            },
+            "damage": {
+                "Cassidy": {
+                    "abilities": {
+                        "Peacekeeper": {
+                            "Secondary fire \"Fan the Hammer\" damage": 50
+                        },
+                        "Combat Roll": {
+                            "Damage reduction": 75
+                        },
+                        "Flashbang": {
+                            "Effect": "Applies hinder on stick",
+                            "Duration": 1.25,
+                            "Maximum travel time": 1.5,
+                            "Slow": 25,
+                            "hinder prevents crouching": true,
+                            "Explosive damage": 70,
+                            "Cooldown": 12,
+                            "Projectile speed": 25
+                        },
+                        "Deadeye": {
+                            "Max movement speed penalty": 70,
+                            "Min movement speed penalty": 70,
+                            "Max damage reduction": 40,
+                            "Min damage reduction": 40
+                        }
+                    }
+                },
+                "Mei": {
+                    "abilities": {
+                        "Endothermic Blaster": {
+                            "Secondary fire projectile size": 0.225,
+                            "Secondary fire damage": 75
+                        }
+                    }
+                },
+                "Reaper": {
+                    "abilities": {
+                        "Hellfire Shotguns": {
+                            "Spread": 6.5
+                        },
+                        "Shadow Step": {
+                            "Cast time": 1.5
+                        }
+                    }
+                },
+                "Sojourn": {
+                    "abilities": {
+                        "Railgun": {
+                            "Secondary fire maximum damage": 130,
+                            "Secondary fire minimum damage": 30,
+                            "requires overclock for secondary primary piercing": true,
+                            "Primary fire shots per second": 14
+                        },
+                        "Overclock": {
+                            "Energy charge rate": 100
+                        }
+                    }
+                },
+                "Symmetra": {
+                    "general": {
+                        "Base health": 100
+                    },
+                    "abilities": {
+                        "Photon Projector": {
+                            "Primary fire charge rate": 1
+                        }
+                    }
+                },
+                "Venture": {
+                    "abilities": {
+                        "Drill Dash": {
+                            "Cooldown start": "ability use",
+                            "Cooldown reduction while burrowed": 0,
+                            "Cooldown acceleration while burrowed": 90
+                        },
+                        "Burrow": {
+                            "Grace period": 0.2
+                        }
+                    }
+                },
+                "Junkrat": {
+                    "abilities": {
+                        "Frag Launcher": {
+                            "Impact Damage": "45"
+                        }
+                    }
+                },
+                "Echo": {
+                    "abilities": {
+                        "Duplicate": {
+                            "Ultimate gain modifier": 4.5
+                        }
+                    }
+                },
+                "Hanzo": {
+                    "abilities": {
+                        "Dragonstrike": {
+                            "Speed": 15
+                        }
+                    }
+                }
             }
         }
     },
@@ -362,6 +668,108 @@ const patches = {
                         "Graviton Surge": {
                             "Radius": 7,
                             "Duration": 4
+                        }
+                    }
+                }
+            },
+            "damage": {
+                "Cassidy": {
+                    "abilities": {
+                        "Peacekeeper": {
+                            "Secondary fire \"Fan the Hammer\" damage": 50
+                        },
+                        "Combat Roll": {
+                            "Damage reduction": 75
+                        },
+                        "Flashbang": {
+                            "Effect": "Applies hinder on stick",
+                            "Duration": 1.25,
+                            "Maximum travel time": 1.5,
+                            "Slow": 25,
+                            "hinder prevents crouching": true,
+                            "Explosive damage": 70,
+                            "Cooldown": 12,
+                            "Projectile speed": 25
+                        },
+                        "Deadeye": {
+                            "Max movement speed penalty": 70,
+                            "Min movement speed penalty": 70,
+                            "Max damage reduction": 40,
+                            "Min damage reduction": 40
+                        }
+                    }
+                },
+                "Mei": {
+                    "abilities": {
+                        "Endothermic Blaster": {
+                            "Secondary fire projectile size": 0.225,
+                            "Secondary fire damage": 75
+                        }
+                    }
+                },
+                "Reaper": {
+                    "abilities": {
+                        "Hellfire Shotguns": {
+                            "Spread": 6.5
+                        },
+                        "Shadow Step": {
+                            "Cast time": 1.5
+                        }
+                    }
+                },
+                "Sojourn": {
+                    "abilities": {
+                        "Railgun": {
+                            "Secondary fire maximum damage": 130,
+                            "Secondary fire minimum damage": 30,
+                            "requires overclock for secondary primary piercing": true,
+                            "Primary fire shots per second": 14
+                        },
+                        "Overclock": {
+                            "Energy charge rate": 100
+                        }
+                    }
+                },
+                "Symmetra": {
+                    "general": {
+                        "Base health": 100
+                    },
+                    "abilities": {
+                        "Photon Projector": {
+                            "Primary fire charge rate": 1
+                        }
+                    }
+                },
+                "Venture": {
+                    "abilities": {
+                        "Drill Dash": {
+                            "Cooldown start": "ability use",
+                            "Cooldown reduction while burrowed": 0,
+                            "Cooldown acceleration while burrowed": 90
+                        },
+                        "Burrow": {
+                            "Grace period": 0.2
+                        }
+                    }
+                },
+                "Junkrat": {
+                    "abilities": {
+                        "Frag Launcher": {
+                            "Impact Damage": "45"
+                        }
+                    }
+                },
+                "Echo": {
+                    "abilities": {
+                        "Duplicate": {
+                            "Ultimate gain modifier": 4.5
+                        }
+                    }
+                },
+                "Hanzo": {
+                    "abilities": {
+                        "Dragonstrike": {
+                            "Speed": 15
                         }
                     }
                 }
@@ -457,6 +865,108 @@ const patches = {
                         }
                     }
                 }
+            },
+            "damage": {
+                "Cassidy": {
+                    "abilities": {
+                        "Peacekeeper": {
+                            "Secondary fire \"Fan the Hammer\" damage": 45
+                        },
+                        "Combat Roll": {
+                            "Damage reduction": 50
+                        },
+                        "Flashbang": {
+                            "Effect": "Applies hinder on hit",
+                            "Duration": 1.2,
+                            "Maximum travel time": 0.23,
+                            "Slow": 50,
+                            "hinder prevents crouching": true,
+                            "Explosive damage": 45,
+                            "Cooldown": 12,
+                            "Projectile speed": 30
+                        },
+                        "Deadeye": {
+                            "Max movement speed penalty": 70,
+                            "Min movement speed penalty": 35,
+                            "Max damage reduction": 40,
+                            "Min damage reduction": 0
+                        }
+                    }
+                },
+                "Mei": {
+                    "abilities": {
+                        "Endothermic Blaster": {
+                            "Secondary fire projectile size": 0.2,
+                            "Secondary fire damage": 85
+                        }
+                    }
+                },
+                "Reaper": {
+                    "abilities": {
+                        "Hellfire Shotguns": {
+                            "Spread": 6
+                        },
+                        "Shadow Step": {
+                            "Cast time": 1.2
+                        }
+                    }
+                },
+                "Sojourn": {
+                    "abilities": {
+                        "Railgun": {
+                            "Secondary fire maximum damage": 100,
+                            "Secondary fire minimum damage": 1,
+                            "requires overclock for secondary primary piercing": false,
+                            "Primary fire shots per second": 16
+                        },
+                        "Overclock": {
+                            "Energy charge rate": 120
+                        }
+                    }
+                },
+                "Symmetra": {
+                    "general": {
+                        "Base health": 125
+                    },
+                    "abilities": {
+                        "Photon Projector": {
+                            "Primary fire charge rate": 1.25
+                        }
+                    }
+                },
+                "Venture": {
+                    "abilities": {
+                        "Drill Dash": {
+                            "Cooldown start": "ability use",
+                            "Cooldown reduction while burrowed": 0,
+                            "Cooldown acceleration while burrowed": 90
+                        },
+                        "Burrow": {
+                            "Grace period": 0.2
+                        }
+                    }
+                },
+                "Junkrat": {
+                    "abilities": {
+                        "Frag Launcher": {
+                            "Impact Damage": "45"
+                        }
+                    }
+                },
+                "Echo": {
+                    "abilities": {
+                        "Duplicate": {
+                            "Ultimate gain modifier": 4.5
+                        }
+                    }
+                },
+                "Hanzo": {
+                    "abilities": {
+                        "Dragonstrike": {
+                            "Speed": 15
+                        }
+                    }
+                }
             }
         }
     }
@@ -470,6 +980,15 @@ const hero_images = {
     "Sigma": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/9738e1687bf7064de3667169788ef1b5ea9cf1746a42753c767cf17c7cb67547.png",
     "Wrecking Ball": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/f71d6948e8b6ae340e20ab569ef66d24aead6032c34a7ec09a00ea864b413a24.png",
     "Zarya": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/d43075cba10cd711a129556142849587e78f1f55b0105d39a640da53ffa64e1b.png",
+    "Cassidy": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/8d161c49df5a962ece9ceafc6500bea473d9dd3695b9e24e39d5be616295e6c5.png",
+    "Mei": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/08586dceed41e030d575b2b643118f55390f1c2af91dd15394528f5399fcc934.png",
+    "Reaper": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/b7aac87959afbe062cc31518ded04b9dbcadb0a2282f8963c6bfd5ba0a2d6a27.png",
+    "Sojourn": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/515f25a729a4a3f51d956fc54c600dc60d8e5242f2b188c178496cea1a2e11b5.png",
+    "Symmetra": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/b0a19d5c8b0e299705036f4d0b9394da5ff415dc0dcd4e9207b6e63254022dff.png",
+    "Venture": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/4c5bad8535b648d9dcf4c369e0ab5b9d67685b8ddaee22139eaa63bc5c5a3183.png",
+    "Junkrat": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/d3628dc64d78ca6dc2a8b509cf5a6fc417c0f5068d5f75d1f5c094be1f58ee4e.png",
+    "Echo": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/0dc3f1679d739ef530ba2b8cbe02bf09f4d40a57c0af84f694a3241d3a7ef948.png",
+    "Hanzo": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/3febc2e638ff56d8f0161ea278ac3116b5baf8c0328f1eded6b499552a0eccad.png",
 };
 
 const ability_images = {
@@ -486,6 +1005,21 @@ const ability_images = {
     "Minefield": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/17a54a345b715bc4301b330d8eb394f57e1c66308a8cba67f426de76a71ba868.png",
     "Graviton Surge": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/e58e60f939026f3d0ee95cf3a0b5fc8091da3c35a178d34c358700f3720a70d3.png",
     "Commanding Shout": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/1809c57884dafcfd1aab89eb80d2ad8fe0c64ce0036646a3e19c05f48c322c9d.png",
+    "Peacekeeper": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/afb27d71eeb6f3635ac1ff236c7b3f9e3c6d017360ce022d5d384288ff95bce7.png",
+    "Combat Roll": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/24a3f2f619859812bba6b6374513fa971b6b19ccb34950c02118b41cc4f93142.png",
+    "Flashbang": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/47a593ad7f83394b011161e67a6f414e49f2221c5e014ea909fdcd9df4f94371.png",
+    "Deadeye": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/346cb576a19f978a7b2c52859c5639423f076d66ca740658da0d46955ab2c97d.png",
+    "Endothermic Blaster": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/a935216c60c1c7d72502f373f4af24651c9eb6513781bc482c60ef4d551fb6b9.png",
+    "Hellfire Shotguns": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/76b6866587871744aca310645f66d2d07755c5a55093eb8734ed0898b17efc51.png",
+    "Shadow Step": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/bad9345de1f04a46f219364952464c38d2b2a9afa335df6894cde81565816fa4.png",
+    "Railgun": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/3d7f261e05e3abda155cede4409ec8348490e286805c123d54d7f81fdd50d077.png",
+    "Overclock": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/83bd9d101e779075fadaed194d1964897794c49ce56c59ccc34799753b55efeb.png",
+    "Photon Projector": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/1b3f003d2ba6bba4f3d44f167cd1b03469c4e3c4d3900805b8adddffeedd2c56.png",
+    "Drill Dash": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/2ad4581a6801402aaa413301fdf851d1b4d09d67e1ef2a4538baf52ea0a5a889.png",
+    "Burrow": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/c2d29876f3015bb9625743a7bb03ba22e2758571a34703d3b5546727679679c5.png",
+    "Frag Launcher": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/e43d916b0851551d17a2385f92497cdcfcd781ac155663643a1e1ff3500bbf37.png",
+    "Duplicate": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/457d6ebcb2b92d1e7f7a7174b426903879e131422196825589adbc5e5d9f7efb.png",
+    "Dragonstrike": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/f2d63b8f0e19e91d2c1199ed3ac0f20bb180dabe9ad1ffc7d1f1e880e58f0220.png",
 };
 
 let before_patch = Object.keys(patches)[0];
@@ -509,7 +1043,7 @@ function overlay(template, data) {
     if (typeof template == "object" && typeof data == "object") {
         let result = {};
         for (key in template) {
-            if (data[key]) {
+            if (Object.hasOwn((data, key))) {
                 result[key] = overlay(template[key], data[key]);
             } else {
                 result[key] = template[key];
