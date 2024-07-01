@@ -1,6 +1,6 @@
 let patch_selectors = document.getElementsByClassName("patch-selector");
 const patches = {
-    "APR 30, 2024": {
+    "APR 16, 2024": {
         "general": {
             "Knockdown time": 2,
             "Armor health": "30% damage reduction",
@@ -38,8 +38,12 @@ const patches = {
                 },
                 "Orisa": {
                     "abilities": {
+                        "Fortify": {
+                            "Duration": 4.5,
+                            "Movement speed reduction": 0
+                        },
                         "Javelin Spin": {
-                            "Cooldown": 9
+                            "Cooldown": 7
                         }
                     }
                 },
@@ -91,6 +95,9 @@ const patches = {
                 }
             },
             "damage": {
+                "general": {
+                    "Healing reduction inflicted on hit": 15
+                },
                 "Cassidy": {
                     "abilities": {
                         "Peacekeeper": {
@@ -160,13 +167,228 @@ const patches = {
                 },
                 "Venture": {
                     "abilities": {
+                        "SMART Excavator": {
+                            "Maximum explosion damage": 45
+                        },
                         "Drill Dash": {
                             "Cooldown start": "ability end",
                             "Cooldown reduction while burrowed": 50,
-                            "Cooldown acceleration while burrowed": 0
+                            "Cooldown acceleration while burrowed": 0,
+                            "Initial impact damage": 40
                         },
                         "Burrow": {
-                            "Grace period": 0.0
+                            "Grace period": 0
+                        },
+                        "Tectonic Shock": {
+                            "Ultimate Cost": 1932
+                        }
+                    }
+                },
+                "Junkrat": {
+                    "abilities": {
+                        "Frag Launcher": {
+                            "Impact Damage": "40"
+                        }
+                    }
+                },
+                "Echo": {
+                    "abilities": {
+                        "Duplicate": {
+                            "Ultimate gain modifier": 4
+                        }
+                    }
+                },
+                "Hanzo": {
+                    "abilities": {
+                        "Dragonstrike": {
+                            "Speed": 12
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "APR 30, 2024": {
+        "general": {
+            "Knockdown time": 2,
+            "Armor health": "30% damage reduction",
+            "Out-of-combat health regeneration": "20"
+        },
+        "heroes": {
+            "tank": {
+                "general": {
+                    "Critical headshot damage reduction": 0,
+                    "Knockback resistance": 30
+                },
+                "D.Va": {
+                    "abilities": {
+                        "Fusion Cannons": {
+                            "Spread": 3.75
+                        },
+                        "Boosters": {
+                            "Impact damage": 15
+                        }
+                    }
+                },
+                "Junker Queen": {
+                    "abilities": {
+                        "Jagged Blade": {
+                            "pulls tanks further": true
+                        },
+                        "Rampage": {
+                            "Startup time": 0.75
+                        },
+                        "Commanding Shout": {
+                            "can be activated while using other abilities": false,
+                            "Cooldown": 14
+                        }
+                    }
+                },
+                "Orisa": {
+                    "abilities": {
+                        "Fortify": {
+                            "Duration": 3.5,
+                            "Movement speed reduction": 20
+                        },
+                        "Javelin Spin": {
+                            "Cooldown": 9
+                        }
+                    }
+                },
+                "Roadhog": {
+                    "general": {
+                        "Base health": 650
+                    },
+                    "abilities": {
+                        "Take a Breather": {
+                            "Damage reduction": 50,
+                            "Cooldown": 1.5,
+                            "Maximum healing": 450,
+                            "Resource regeneration rate": 10
+                        },
+                        "Whole Hog": {
+                            "Knockback": 14,
+                            "Damage per pellet": 7
+                        }
+                    }
+                },
+                "Sigma": {
+                    "abilities": {
+                        "Gravitic Flux": {
+                            "requires line-of-sight": true
+                        }
+                    }
+                },
+                "Wrecking Ball": {
+                    "abilities": {
+                        "Grappling Claw": {
+                            "Impact damage": 50
+                        },
+                        "Piledriver": {
+                            "Movement lockout duration for enemies": 0.5
+                        },
+                        "Minefield": {
+                            "Damage": 130,
+                            "Explosion knockback": 5
+                        }
+                    }
+                },
+                "Zarya": {
+                    "abilities": {
+                        "Graviton Surge": {
+                            "Radius": 6,
+                            "Duration": 3.5
+                        }
+                    }
+                }
+            },
+            "damage": {
+                "general": {
+                    "Healing reduction inflicted on hit": 20
+                },
+                "Cassidy": {
+                    "abilities": {
+                        "Peacekeeper": {
+                            "Secondary fire \"Fan the Hammer\" damage": 50
+                        },
+                        "Combat Roll": {
+                            "Damage reduction": 75
+                        },
+                        "Flashbang": {
+                            "Effect": "Applies hinder on stick",
+                            "Duration": 1.25,
+                            "Maximum travel time": 1.5,
+                            "Slow": 25,
+                            "hinder prevents crouching": true,
+                            "Explosive damage": 70,
+                            "Cooldown": 12,
+                            "Projectile speed": 25
+                        },
+                        "Deadeye": {
+                            "Max movement speed penalty": 70,
+                            "Min movement speed penalty": 70,
+                            "Max damage reduction": 40,
+                            "Min damage reduction": 40
+                        }
+                    }
+                },
+                "Mei": {
+                    "abilities": {
+                        "Endothermic Blaster": {
+                            "Secondary fire projectile size": 0.225,
+                            "Secondary fire damage": 75
+                        }
+                    }
+                },
+                "Reaper": {
+                    "abilities": {
+                        "Hellfire Shotguns": {
+                            "Spread": 6.5
+                        },
+                        "Shadow Step": {
+                            "Cast time": 1.5
+                        }
+                    }
+                },
+                "Sojourn": {
+                    "abilities": {
+                        "Railgun": {
+                            "Secondary fire maximum damage": 130,
+                            "Secondary fire minimum damage": 30,
+                            "requires overclock for secondary primary piercing": true,
+                            "Primary fire shots per second": 14
+                        },
+                        "Overclock": {
+                            "Energy charge rate": 100
+                        }
+                    }
+                },
+                "Symmetra": {
+                    "general": {
+                        "Base health": 100
+                    },
+                    "abilities": {
+                        "Photon Projector": {
+                            "Primary fire charge rate": 1
+                        }
+                    }
+                },
+                "Venture": {
+                    "abilities": {
+                        "SMART Excavator": {
+                            "Maximum explosion damage": 40
+                        },
+                        "Drill Dash": {
+                            "Cooldown start": "ability end",
+                            "Cooldown reduction while burrowed": 50,
+                            "Cooldown acceleration while burrowed": 0,
+                            "Initial impact damage": 30
+                        },
+                        "Burrow": {
+                            "Grace period": 0
+                        },
+                        "Tectonic Shock": {
+                            "Ultimate Cost": 2125
                         }
                     }
                 },
@@ -232,6 +454,10 @@ const patches = {
                 },
                 "Orisa": {
                     "abilities": {
+                        "Fortify": {
+                            "Duration": 3.5,
+                            "Movement speed reduction": 20
+                        },
                         "Javelin Spin": {
                             "Cooldown": 9
                         }
@@ -285,6 +511,9 @@ const patches = {
                 }
             },
             "damage": {
+                "general": {
+                    "Healing reduction inflicted on hit": 20
+                },
                 "Cassidy": {
                     "abilities": {
                         "Peacekeeper": {
@@ -354,13 +583,20 @@ const patches = {
                 },
                 "Venture": {
                     "abilities": {
+                        "SMART Excavator": {
+                            "Maximum explosion damage": 40
+                        },
                         "Drill Dash": {
                             "Cooldown start": "ability end",
                             "Cooldown reduction while burrowed": 50,
-                            "Cooldown acceleration while burrowed": 0
+                            "Cooldown acceleration while burrowed": 0,
+                            "Initial impact damage": 30
                         },
                         "Burrow": {
-                            "Grace period": 0.0
+                            "Grace period": 0
+                        },
+                        "Tectonic Shock": {
+                            "Ultimate Cost": 2125
                         }
                     }
                 },
@@ -426,6 +662,10 @@ const patches = {
                 },
                 "Orisa": {
                     "abilities": {
+                        "Fortify": {
+                            "Duration": 3.5,
+                            "Movement speed reduction": 20
+                        },
                         "Javelin Spin": {
                             "Cooldown": 9
                         }
@@ -479,6 +719,9 @@ const patches = {
                 }
             },
             "damage": {
+                "general": {
+                    "Healing reduction inflicted on hit": 20
+                },
                 "Cassidy": {
                     "abilities": {
                         "Peacekeeper": {
@@ -548,13 +791,20 @@ const patches = {
                 },
                 "Venture": {
                     "abilities": {
+                        "SMART Excavator": {
+                            "Maximum explosion damage": 40
+                        },
                         "Drill Dash": {
                             "Cooldown start": "ability use",
                             "Cooldown reduction while burrowed": 0,
-                            "Cooldown acceleration while burrowed": 90
+                            "Cooldown acceleration while burrowed": 90,
+                            "Initial impact damage": 30
                         },
                         "Burrow": {
                             "Grace period": 0.2
+                        },
+                        "Tectonic Shock": {
+                            "Ultimate Cost": 2125
                         }
                     }
                 },
@@ -620,6 +870,10 @@ const patches = {
                 },
                 "Orisa": {
                     "abilities": {
+                        "Fortify": {
+                            "Duration": 3.5,
+                            "Movement speed reduction": 20
+                        },
                         "Javelin Spin": {
                             "Cooldown": 9
                         }
@@ -673,6 +927,9 @@ const patches = {
                 }
             },
             "damage": {
+                "general": {
+                    "Healing reduction inflicted on hit": 20
+                },
                 "Cassidy": {
                     "abilities": {
                         "Peacekeeper": {
@@ -742,13 +999,20 @@ const patches = {
                 },
                 "Venture": {
                     "abilities": {
+                        "SMART Excavator": {
+                            "Maximum explosion damage": 40
+                        },
                         "Drill Dash": {
                             "Cooldown start": "ability use",
                             "Cooldown reduction while burrowed": 0,
-                            "Cooldown acceleration while burrowed": 90
+                            "Cooldown acceleration while burrowed": 90,
+                            "Initial impact damage": 30
                         },
                         "Burrow": {
                             "Grace period": 0.2
+                        },
+                        "Tectonic Shock": {
+                            "Ultimate Cost": 2125
                         }
                     }
                 },
@@ -814,6 +1078,10 @@ const patches = {
                 },
                 "Orisa": {
                     "abilities": {
+                        "Fortify": {
+                            "Duration": 3.5,
+                            "Movement speed reduction": 20
+                        },
                         "Javelin Spin": {
                             "Cooldown": 8
                         }
@@ -867,6 +1135,9 @@ const patches = {
                 }
             },
             "damage": {
+                "general": {
+                    "Healing reduction inflicted on hit": 20
+                },
                 "Cassidy": {
                     "abilities": {
                         "Peacekeeper": {
@@ -936,13 +1207,20 @@ const patches = {
                 },
                 "Venture": {
                     "abilities": {
+                        "SMART Excavator": {
+                            "Maximum explosion damage": 40
+                        },
                         "Drill Dash": {
                             "Cooldown start": "ability use",
                             "Cooldown reduction while burrowed": 0,
-                            "Cooldown acceleration while burrowed": 90
+                            "Cooldown acceleration while burrowed": 90,
+                            "Initial impact damage": 30
                         },
                         "Burrow": {
                             "Grace period": 0.2
+                        },
+                        "Tectonic Shock": {
+                            "Ultimate Cost": 2125
                         }
                     }
                 },
@@ -1020,6 +1298,9 @@ const ability_images = {
     "Frag Launcher": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/e43d916b0851551d17a2385f92497cdcfcd781ac155663643a1e1ff3500bbf37.png",
     "Duplicate": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/457d6ebcb2b92d1e7f7a7174b426903879e131422196825589adbc5e5d9f7efb.png",
     "Dragonstrike": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/f2d63b8f0e19e91d2c1199ed3ac0f20bb180dabe9ad1ffc7d1f1e880e58f0220.png",
+    "Fortify": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/d697fa90726cf683222920822d2ee00a85e0420c6cbc6ec2365573f313d06357.png",
+    "SMART Excavator": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/9d5a868a280aba70231d6555b6a5df3bb713b39ea9f994a37eb7cb7425d8f7e6.png",
+    "Tectonic Shock": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/210991b74451a635e28e53da0fcfdfe2a0600c0845392db627e8829ecca7149e.png",
 };
 
 let before_patch = Object.keys(patches)[0];
@@ -1042,8 +1323,8 @@ function overlay(template, data) {
     }
     if (typeof template == "object" && typeof data == "object") {
         let result = {};
-        for (key in template) {
-            if (Object.hasOwn((data, key))) {
+        for (let key in template) {
+            if (Object.hasOwn(data, key)) {
                 result[key] = overlay(template[key], data[key]);
             } else {
                 result[key] = template[key];
