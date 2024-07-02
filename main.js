@@ -116,7 +116,7 @@ const patches = {
                             "Knockback": 14,
                             "Damage per pellet": 7,
                             "Ultimate cost": 3050,
-                            "is channeled ability": false
+                            "disables other abilities and automatically fires": false
                         }
                     }
                 },
@@ -154,8 +154,8 @@ const patches = {
                         "Grappling Claw": {
                             "Impact damage": 50,
                             "can be retracted": false,
-                            "No ramming cooldown": 5,
-                            "requires ramming speed for max duration": false,
+                            "Cooldown if fireball speed is not achieved": 5,
+                            "requires fireball speed for max duration to begin": false,
                             "Knockback": 22
                         },
                         "Piledriver": {
@@ -187,11 +187,12 @@ const patches = {
                             "Minimum damage": 95
                         },
                         "Particle Barrier": {
-                            "shares cooldown with projected barrier": true,
+                            "shares cooldown with Projected Barrier": true,
                             "Cooldown": 10
                         },
                         "Projected Barrier": {
                             "Cooldown start": "ability use",
+                            "shares cooldown with Particle Barrier": true,
                             "Cooldown": 8
                         },
                         "Graviton Surge": {
@@ -1012,7 +1013,7 @@ const patches = {
                             "Knockback": 14,
                             "Damage per pellet": 7,
                             "Ultimate cost": 3050,
-                            "is channeled ability": false
+                            "disables other abilities and automatically fires": false
                         }
                     }
                 },
@@ -1050,8 +1051,8 @@ const patches = {
                         "Grappling Claw": {
                             "Impact damage": 50,
                             "can be retracted": true,
-                            "No ramming cooldown": 1,
-                            "requires ramming speed for max duration": true,
+                            "Cooldown if fireball speed is not achieved": 1,
+                            "requires fireball speed for max duration to begin": true,
                             "Knockback": 22
                         },
                         "Piledriver": {
@@ -1083,11 +1084,12 @@ const patches = {
                             "Minimum damage": 95
                         },
                         "Particle Barrier": {
-                            "shares cooldown with projected barrier": true,
+                            "shares cooldown with Projected Barrier": true,
                             "Cooldown": 10
                         },
                         "Projected Barrier": {
                             "Cooldown start": "ability use",
+                            "shares cooldown with Particle Barrier": true,
                             "Cooldown": 8
                         },
                         "Graviton Surge": {
@@ -1908,7 +1910,7 @@ const patches = {
                             "Knockback": 14,
                             "Damage per pellet": 7,
                             "Ultimate cost": 3050,
-                            "is channeled ability": false
+                            "disables other abilities and automatically fires": false
                         }
                     }
                 },
@@ -1946,8 +1948,8 @@ const patches = {
                         "Grappling Claw": {
                             "Impact damage": 50,
                             "can be retracted": true,
-                            "No ramming cooldown": 1,
-                            "requires ramming speed for max duration": true,
+                            "Cooldown if fireball speed is not achieved": 1,
+                            "requires fireball speed for max duration to begin": true,
                             "Knockback": 22
                         },
                         "Piledriver": {
@@ -1979,11 +1981,12 @@ const patches = {
                             "Minimum damage": 95
                         },
                         "Particle Barrier": {
-                            "shares cooldown with projected barrier": true,
+                            "shares cooldown with Projected Barrier": true,
                             "Cooldown": 10
                         },
                         "Projected Barrier": {
                             "Cooldown start": "ability use",
+                            "shares cooldown with Particle Barrier": true,
                             "Cooldown": 8
                         },
                         "Graviton Surge": {
@@ -2804,7 +2807,7 @@ const patches = {
                             "Knockback": 14,
                             "Damage per pellet": 7,
                             "Ultimate cost": 3050,
-                            "is channeled ability": false
+                            "disables other abilities and automatically fires": false
                         }
                     }
                 },
@@ -2842,8 +2845,8 @@ const patches = {
                         "Grappling Claw": {
                             "Impact damage": 60,
                             "can be retracted": true,
-                            "No ramming cooldown": 1,
-                            "requires ramming speed for max duration": true,
+                            "Cooldown if fireball speed is not achieved": 1,
+                            "requires fireball speed for max duration to begin": true,
                             "Knockback": 22
                         },
                         "Piledriver": {
@@ -2875,11 +2878,12 @@ const patches = {
                             "Minimum damage": 95
                         },
                         "Particle Barrier": {
-                            "shares cooldown with projected barrier": true,
+                            "shares cooldown with Projected Barrier": true,
                             "Cooldown": 10
                         },
                         "Projected Barrier": {
                             "Cooldown start": "ability use",
+                            "shares cooldown with Particle Barrier": true,
                             "Cooldown": 8
                         },
                         "Graviton Surge": {
@@ -3700,7 +3704,7 @@ const patches = {
                             "Knockback": 14,
                             "Damage per pellet": 7,
                             "Ultimate cost": 3050,
-                            "is channeled ability": false
+                            "disables other abilities and automatically fires": false
                         }
                     }
                 },
@@ -3738,8 +3742,8 @@ const patches = {
                         "Grappling Claw": {
                             "Impact damage": 60,
                             "can be retracted": true,
-                            "No ramming cooldown": 1,
-                            "requires ramming speed for max duration": true,
+                            "Cooldown if fireball speed is not achieved": 1,
+                            "requires fireball speed for max duration to begin": true,
                             "Knockback": 22
                         },
                         "Piledriver": {
@@ -3771,11 +3775,12 @@ const patches = {
                             "Minimum damage": 95
                         },
                         "Particle Barrier": {
-                            "shares cooldown with projected barrier": true,
+                            "shares cooldown with Projected Barrier": true,
                             "Cooldown": 10
                         },
                         "Projected Barrier": {
                             "Cooldown start": "ability use",
+                            "shares cooldown with Particle Barrier": true,
                             "Cooldown": 8
                         },
                         "Graviton Surge": {
@@ -4596,7 +4601,7 @@ const patches = {
                             "Knockback": 16,
                             "Damage per pellet": 6,
                             "Ultimate cost": 3050,
-                            "is channeled ability": false
+                            "disables other abilities and automatically fires": false
                         }
                     }
                 },
@@ -4634,8 +4639,8 @@ const patches = {
                         "Grappling Claw": {
                             "Impact damage": 60,
                             "can be retracted": true,
-                            "No ramming cooldown": 1,
-                            "requires ramming speed for max duration": true,
+                            "Cooldown if fireball speed is not achieved": 1,
+                            "requires fireball speed for max duration to begin": true,
                             "Knockback": 22
                         },
                         "Piledriver": {
@@ -4667,11 +4672,12 @@ const patches = {
                             "Minimum damage": 95
                         },
                         "Particle Barrier": {
-                            "shares cooldown with projected barrier": true,
+                            "shares cooldown with Projected Barrier": true,
                             "Cooldown": 10
                         },
                         "Projected Barrier": {
                             "Cooldown start": "ability use",
+                            "shares cooldown with Particle Barrier": true,
                             "Cooldown": 8
                         },
                         "Graviton Surge": {
@@ -5492,7 +5498,7 @@ const patches = {
                             "Knockback": 16,
                             "Damage per pellet": 6,
                             "Ultimate cost": 3050,
-                            "is channeled ability": false
+                            "disables other abilities and automatically fires": false
                         }
                     }
                 },
@@ -5530,8 +5536,8 @@ const patches = {
                         "Grappling Claw": {
                             "Impact damage": 60,
                             "can be retracted": true,
-                            "No ramming cooldown": 1,
-                            "requires ramming speed for max duration": true,
+                            "Cooldown if fireball speed is not achieved": 1,
+                            "requires fireball speed for max duration to begin": true,
                             "Knockback": 22
                         },
                         "Piledriver": {
@@ -5563,11 +5569,12 @@ const patches = {
                             "Minimum damage": 95
                         },
                         "Particle Barrier": {
-                            "shares cooldown with projected barrier": true,
+                            "shares cooldown with Projected Barrier": true,
                             "Cooldown": 10
                         },
                         "Projected Barrier": {
                             "Cooldown start": "ability use",
+                            "shares cooldown with Particle Barrier": true,
                             "Cooldown": 8
                         },
                         "Graviton Surge": {
@@ -6388,7 +6395,7 @@ const patches = {
                             "Knockback": 16,
                             "Damage per pellet": 6,
                             "Ultimate cost": 2240,
-                            "is channeled ability": true
+                            "disables other abilities and automatically fires": true
                         }
                     }
                 },
@@ -6426,8 +6433,8 @@ const patches = {
                         "Grappling Claw": {
                             "Impact damage": 50,
                             "can be retracted": true,
-                            "No ramming cooldown": 5,
-                            "requires ramming speed for max duration": true,
+                            "Cooldown if fireball speed is not achieved": 5,
+                            "requires fireball speed for max duration to begin": true,
                             "Knockback": 18.7
                         },
                         "Piledriver": {
@@ -6459,11 +6466,12 @@ const patches = {
                             "Minimum damage": 70
                         },
                         "Particle Barrier": {
-                            "shares cooldown with projected barrier": false,
+                            "shares cooldown with Projected Barrier": false,
                             "Cooldown": 10
                         },
                         "Projected Barrier": {
                             "Cooldown start": "ability use",
+                            "shares cooldown with Particle Barrier": false,
                             "Cooldown": 8
                         },
                         "Graviton Surge": {
@@ -6864,7 +6872,7 @@ const patches = {
                 },
                 "Torbjörn": {
                     "general": {
-                        "Base health": 250
+                        "Base health": 200
                     },
                     "abilities": {
                         "Rivet Gun": {
@@ -6962,7 +6970,7 @@ const patches = {
                             "Cooldown": 12
                         },
                         "Biotic Grenade": {
-                            "Healing": 160,
+                            "Healing": 100,
                             "Damage": 60
                         },
                         "Nano Boost": {
@@ -7022,7 +7030,7 @@ const patches = {
                     "abilities": {
                         "Solar Rifle": {
                             "Damage": 70,
-                            "Critical Multiplier": 1.57,
+                            "Critical Multiplier": 1.47,
                             "Ammo": 12,
                             "Primary fire recovery": 0.25,
                             "Secondary fire heal-per-second": 115
@@ -7357,6 +7365,7 @@ const ability_images = {
     "Transcendence": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/6ac5d4f08023cafc9f5412e45141cddecfdb2cb43ecf8415c12d1d161cce4678.png",
     "Regeneration": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/c14b2c5652526a006233965b176fb2b5af9e7c5d44045fad3844267303f07091.png",
     "Sympathetic Recovery": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/c14b2c5652526a006233965b176fb2b5af9e7c5d44045fad3844267303f07091.png",
+    "Projected Barrier": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/6e42984ee8329a50e9c2460ae2df7670d7be9846a093c336e4576d1eea1fb2f1.png",
 };
 
 const queryString = window.location.search;
