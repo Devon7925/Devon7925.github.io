@@ -6089,8 +6089,11 @@ const ability_images = {
     "Dragonblade": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/e9c3c82c08ce1a6006dbdf6905591040ed83ddceba81efb2e526c217cd57c931.png",
 };
 
-let before_patch = Object.keys(patches)[0];
-let after_patch = Object.keys(patches)[0];
+const queryString = window.location.search;
+const urlParams = new URLSearchParams(queryString);
+
+let before_patch = urlParams.get("before") || Object.keys(patches)[0];
+let after_patch = urlParams.get("after") || Object.keys(patches)[0];
 
 function isEmpty(obj) {
     for (var i in obj) { return false; }
@@ -6278,7 +6281,10 @@ document.getElementById("patch_before").onchange = function () {
     before_patch = this.value;
     updatePatchNotes()
 };
+document.getElementById("patch_before").value = before_patch;
 document.getElementById("patch_after").onchange = function () {
     after_patch = this.value;
     updatePatchNotes()
 };
+document.getElementById("patch_after").value = after_patch;
+updatePatchNotes();
