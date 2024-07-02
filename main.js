@@ -6334,7 +6334,7 @@ const patches = {
                             "Immediate healing per target hit": 25
                         },
                         "Rampage": {
-                            "Ultimate Cost": 2700,
+                            "Ultimate Cost": 2450,
                             "Wound total damage": 60
                         }
                     }
