@@ -6500,8 +6500,8 @@ const patches = {
                             "Maximum knockback": 28
                         },
                         "Meteor Strike": {
-                            "Ultimate cost": 2145,
-                            "Healing while in air": 75
+                            "Ultimate cost": 1932,
+                            "Healing while in air": 0
                         }
                     }
                 },
