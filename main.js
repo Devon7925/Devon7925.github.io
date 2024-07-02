@@ -7429,7 +7429,7 @@ function convert_to_changes(before, after) {
 
 function getChangeText(name, change) {
     if (typeof change[0] == "number") {
-        let change_type = "increaced";
+        let change_type = "increased";
         if (change[0] > change[1]) {
             change_type = "reduced";
         }
