@@ -28,7 +28,7 @@ const patches = {
                             "Impact damage": 15
                         },
                         "Defense Matrix": {
-                            "Coodldown": 1,
+                            "cooldown": 1,
                             "Maximum Duration": 3
                         },
                         "Self Destruct": {
@@ -924,7 +924,7 @@ const patches = {
                             "Impact damage": 15
                         },
                         "Defense Matrix": {
-                            "Coodldown": 1,
+                            "cooldown": 1,
                             "Maximum Duration": 3
                         },
                         "Self Destruct": {
@@ -1820,7 +1820,7 @@ const patches = {
                             "Impact damage": 15
                         },
                         "Defense Matrix": {
-                            "Coodldown": 1,
+                            "cooldown": 1,
                             "Maximum Duration": 3
                         },
                         "Self Destruct": {
@@ -2716,7 +2716,7 @@ const patches = {
                             "Impact damage": 15
                         },
                         "Defense Matrix": {
-                            "Coodldown": 1,
+                            "cooldown": 1,
                             "Maximum Duration": 3
                         },
                         "Self Destruct": {
@@ -3612,7 +3612,7 @@ const patches = {
                             "Impact damage": 15
                         },
                         "Defense Matrix": {
-                            "Coodldown": 1,
+                            "cooldown": 1,
                             "Maximum Duration": 3
                         },
                         "Self Destruct": {
@@ -4508,7 +4508,7 @@ const patches = {
                             "Impact damage": 15
                         },
                         "Defense Matrix": {
-                            "Coodldown": 1,
+                            "cooldown": 1,
                             "Maximum Duration": 3
                         },
                         "Self Destruct": {
@@ -5404,7 +5404,7 @@ const patches = {
                             "Impact damage": 25
                         },
                         "Defense Matrix": {
-                            "Coodldown": 1,
+                            "cooldown": 1,
                             "Maximum Duration": 3
                         },
                         "Self Destruct": {
@@ -6300,7 +6300,7 @@ const patches = {
                             "Impact damage": 10
                         },
                         "Defense Matrix": {
-                            "Coodldown": 1.5,
+                            "cooldown": 1.5,
                             "Maximum Duration": 2
                         },
                         "Self Destruct": {
