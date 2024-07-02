@@ -4,7 +4,9 @@ const patches = {
         "general": {
             "Knockdown time": 2,
             "Armor health": "30% damage reduction",
-            "Out-of-combat health regeneration": "20"
+            "Out-of-combat health regeneration": "20",
+            "Role lock": "1-2-2",
+            "Ultimate percent retained on swap": 15
         },
         "heroes": {
             "tank": {
@@ -13,40 +15,81 @@ const patches = {
                     "Knockback resistance": 30
                 },
                 "D.Va": {
+                    "general": {
+                        "Base health": 350,
+                        "Armor health": 375
+                    },
                     "abilities": {
                         "Fusion Cannons": {
-                            "Spread": 3.75
+                            "Spread": 3.75,
+                            "Total damage per shot": 22
                         },
                         "Boosters": {
                             "Impact damage": 15
+                        },
+                        "Defense Matrix": {
+                            "Coodldown": 1,
+                            "Maximum Duration": 3
+                        },
+                        "Self Destruct": {
+                            "Ultimate cost": 1700
                         }
                     }
                 },
                 "Junker Queen": {
+                    "general": {
+                        "Base health": 525,
+                        "Model size": 1
+                    },
                     "abilities": {
+                        "Adrenaline Rush": {
+                            "Health regeneration multiplier from wound damage": 2
+                        },
+                        "Scattergun": {
+                            "Total damage": 80
+                        },
                         "Jagged Blade": {
-                            "pulls tanks further": true
+                            "pulls tanks further": true,
+                            "Pull knockback": 20.74
                         },
                         "Rampage": {
-                            "Startup time": 0.75
+                            "Ultimate Cost": 2700,
+                            "Wound total damage": 90
                         },
                         "Commanding Shout": {
                             "can be activated while using other abilities": false,
-                            "Cooldown": 14
+                            "Cooldown": 14,
+                            "Self overhalth": 150
                         },
                         "Carnage": {
-                            "Impact damage": 90
+                            "Impact damage": 90,
+                            "Immediate healing per target hit": 0
                         }
                     }
                 },
                 "Orisa": {
+                    "general": {
+                        "Base health": 275,
+                        "Armor health": 350
+                    },
                     "abilities": {
                         "Fortify": {
                             "Duration": 4.5,
-                            "Movement speed reduction": 0
+                            "Movement speed reduction": 0,
+                            "Cooldown start": "ability use",
+                            "Cooldown": 16.5,
+                            "Overhealth generation": 100
+                        },
+                        "Energy Javelin": {
+                            "Direct damage": 60
                         },
                         "Javelin Spin": {
                             "Cooldown": 7
+                        },
+                        "Terra Surge": {
+                            "Ultimate Cost": 2150,
+                            "Minimum damage": 72,
+                            "Maximum damage": 500
                         }
                     }
                 },
@@ -55,70 +98,237 @@ const patches = {
                         "Base health": 650
                     },
                     "abilities": {
+                        "Scrap Gun": {
+                            "Ammo": 6,
+                            "Total damage": 160
+                        },
                         "Take a Breather": {
                             "Damage reduction": 50,
                             "Cooldown": 1.5,
                             "Maximum healing": 450,
-                            "Resource regeneration rate": 10
+                            "Maximum Time": 2.5,
+                            "Resource regeneration percent per second": 10
+                        },
+                        "Chain Hook": {
+                            "Cooldown": 6
                         },
                         "Whole Hog": {
                             "Knockback": 14,
-                            "Damage per pellet": 7
+                            "Damage per pellet": 7,
+                            "Ultimate cost": 3050,
+                            "is channeled ability": false
                         }
                     }
                 },
                 "Sigma": {
+                    "general": {
+                        "Base health": 350,
+                        "Shield health": 275
+                    },
                     "abilities": {
-                        "Gravitic Flux": {
-                            "requires line-of-sight": true
-                        },
                         "Experimental Barrier": {
-                            "Movement speed": 16.5
+                            "Movement speed": 16.5,
+                            "Regeneration rate": 100
+                        },
+                        "Kinetic Grasp": {
+                            "Cooldown": 12,
+                            "Overhealth generation percent": 60
+                        },
+                        "Accretion": {
+                            "Direct damage": 40,
+                            "Stun duration": 1.2
+                        },
+                        "Gravitic Flux": {
+                            "requires line-of-sight": true,
+                            "Ultimate Cost": 2300
                         }
                     }
                 },
                 "Wrecking Ball": {
+                    "general": {
+                        "Base health": 400,
+                        "Armor health": 175,
+                        "Shield health": 150
+                    },
                     "abilities": {
                         "Grappling Claw": {
                             "Impact damage": 50,
                             "can be retracted": false,
                             "No ramming cooldown": 5,
                             "requires ramming speed for max duration": false,
+                            "Knockback": 22
                         },
                         "Piledriver": {
-                            "Movement lockout duration for enemies": 0.5
+                            "Movement lockout duration for enemies": 0.5,
+                            "Cooldown": 8,
+                            "Maximum damage": 100
+                        },
+                        "Adaptive Shield": {
+                            "Ally overhealth cap": 0,
+                            "Overhealth generation per enemy": 100,
+                            "Detection radius": 10
                         },
                         "Minefield": {
                             "Health": 50,
                             "Damage": 130,
-                            "Explosion knockback": 5
-                        },
-                        "Adaptive Shield": {
-                            "Ally overhealth cap": 0,
-                            "Detection radius": 10
+                            "Explosion knockback": 5,
+                            "Ultimate cost": 1850
                         }
                     }
                 },
                 "Zarya": {
+                    "general": {
+                        "Base health": 325,
+                        "Shield health": 225
+                    },
                     "abilities": {
+                        "Particle Cannon": {
+                            "Maximum damage": 190,
+                            "Minimum damage": 95
+                        },
+                        "Particle Barrier": {
+                            "shares cooldown with projected barrier": true,
+                            "Cooldown": 10
+                        },
+                        "Projected Barrier": {
+                            "Cooldown start": "ability use",
+                            "Cooldown": 8
+                        },
                         "Graviton Surge": {
+                            "Ultimate cost": 2500,
                             "Radius": 6,
                             "Duration": 3.5
                         }
                     }
                 },
                 "Doomfist": {
+                    "general": {
+                        "Base health": 525
+                    },
                     "abilities": {
+                        "The Best Defense": {
+                            "Overhealth generation": 35
+                        },
+                        "Hand Cannon": {
+                            "Minimum Damage": 16.5,
+                            "Maximum Damage": 55
+                        },
+                        "Seismic Slam": {
+                            "Damage": 50
+                        },
+                        "Power Block": {
+                            "Cooldown": 7,
+                            "Duration": 2.5
+                        },
                         "Rocket Punch": {
-                            "empowered punch consumed when the windup is cancelled by using Seismic Slam or Power Block": true
+                            "empowered punch consumed when the windup is cancelled by using Seismic Slam or Power Block": true,
+                            "Wall stun duration": 0.15,
+                            "Maximum empowered wall stun duration": 0.65,
+                            "Minimum knockback": 15,
+                            "Maximum knockback": 35
+                        },
+                        "Meteor Strike": {
+                            "Ultimate cost": 2145,
+                            "Healing while in air": 75
                         }
                     }
                 },
                 "Reinhardt": {
+                    "general": {
+                        "Base health": 400,
+                        "Armor health": 300
+                    },
                     "abilities": {
+                        "Steadfast": {
+                            "Knockback reduction": 0
+                        },
+                        "Rocket Hammer": {
+                            "Damage": 100
+                        },
+                        "Barrier Field": {
+                            "Barrier health": 1400,
+                            "Regeneration rate": 144
+                        },
+                        "Charge": {
+                            "Cooldown": 7
+                        },
+                        "Firestrike": {
+                            "Ability charges": 2,
+                            "Damage": 120
+                        },
                         "Earthshatter": {
                             "Knockdown duration": 2.75,
-                            "Shockwave range": 20
+                            "Shockwave range": 20,
+                            "Ultimate cost": 1800,
+                            "Critical damage": 150
+                        }
+                    }
+                },
+                "Mauga": {
+                    "general": {
+                        "Base health": 525,
+                        "Armor health": 200,
+                        "Model Size": 1
+                    },
+                    "abilities": {
+                        "Incendiary and Volatile Changuns": {
+                            "Damage per bullet": 4,
+                            "Number of shots required to ignite enemies with Incendiary Chaingun": 10
+                        },
+                        "Overrun": {
+                            "Cooldown": 6
+                        },
+                        "Cardiac Overdrive": {
+                            "Cooldown": 12,
+                            "Allied damage reduction": 30,
+                            "Lifesteal multiplier": 60
+                        },
+                        "Cage Fight": {
+                            "Ultimate cost": 2650,
+                            "Duration": 8
+                        }
+                    }
+                },
+                "Ramattra": {
+                    "general": {
+                        "Base health": 425,
+                        "Armor health": 100,
+                        "Model Size": 1
+                    },
+                    "abilities": {
+                        "Nemesis Form": {
+                            "Cooldown": 7,
+                            "Extra armor": 225,
+                            "Pummel damage": 60,
+                            "Increased movement speed": 20
+                        },
+                        "Void Barrier": {
+                            "Barrier health": 1000
+                        },
+                        "Ravenous Vortex": {
+                            "Cooldown": 11
+                        },
+                        "Annihilation": {
+                            "Ultimate cost": 2300,
+                            "Increased movement speed": 20
+                        }
+                    }
+                },
+                "Winston": {
+                    "general": {
+                        "Base health": 375,
+                        "Armor health": 250
+                    },
+                    "abilities": {
+                        "Tesla Cannon": {
+                            "Damage per second": 75
+                        },
+                        "Jump Pack": {
+                            "Cooldown": 5
+                        },
+                        "Primal Rage": {
+                            "Ultimate Cost": 2050,
+                            "Punch damage": 50
                         }
                     }
                 }
@@ -330,7 +540,9 @@ const patches = {
         "general": {
             "Knockdown time": 2,
             "Armor health": "30% damage reduction",
-            "Out-of-combat health regeneration": "20"
+            "Out-of-combat health regeneration": "20",
+            "Role lock": "1-2-2",
+            "Ultimate percent retained on swap": 15
         },
         "heroes": {
             "tank": {
@@ -339,40 +551,81 @@ const patches = {
                     "Knockback resistance": 30
                 },
                 "D.Va": {
+                    "general": {
+                        "Base health": 350,
+                        "Armor health": 375
+                    },
                     "abilities": {
                         "Fusion Cannons": {
-                            "Spread": 3.75
+                            "Spread": 3.75,
+                            "Total damage per shot": 22
                         },
                         "Boosters": {
                             "Impact damage": 15
+                        },
+                        "Defense Matrix": {
+                            "Coodldown": 1,
+                            "Maximum Duration": 3
+                        },
+                        "Self Destruct": {
+                            "Ultimate cost": 1700
                         }
                     }
                 },
                 "Junker Queen": {
+                    "general": {
+                        "Base health": 525,
+                        "Model size": 1
+                    },
                     "abilities": {
+                        "Adrenaline Rush": {
+                            "Health regeneration multiplier from wound damage": 2
+                        },
+                        "Scattergun": {
+                            "Total damage": 80
+                        },
                         "Jagged Blade": {
-                            "pulls tanks further": true
+                            "pulls tanks further": true,
+                            "Pull knockback": 20.74
                         },
                         "Rampage": {
-                            "Startup time": 0.75
+                            "Ultimate Cost": 2700,
+                            "Wound total damage": 90
                         },
                         "Commanding Shout": {
                             "can be activated while using other abilities": false,
-                            "Cooldown": 14
+                            "Cooldown": 14,
+                            "Self overhalth": 150
                         },
                         "Carnage": {
-                            "Impact damage": 105
+                            "Impact damage": 105,
+                            "Immediate healing per target hit": 0
                         }
                     }
                 },
                 "Orisa": {
+                    "general": {
+                        "Base health": 275,
+                        "Armor health": 350
+                    },
                     "abilities": {
                         "Fortify": {
                             "Duration": 4.5,
-                            "Movement speed reduction": 0
+                            "Movement speed reduction": 0,
+                            "Cooldown start": "ability use",
+                            "Cooldown": 16.5,
+                            "Overhealth generation": 100
+                        },
+                        "Energy Javelin": {
+                            "Direct damage": 60
                         },
                         "Javelin Spin": {
                             "Cooldown": 7
+                        },
+                        "Terra Surge": {
+                            "Ultimate Cost": 2150,
+                            "Minimum damage": 72,
+                            "Maximum damage": 500
                         }
                     }
                 },
@@ -381,70 +634,237 @@ const patches = {
                         "Base health": 650
                     },
                     "abilities": {
+                        "Scrap Gun": {
+                            "Ammo": 6,
+                            "Total damage": 160
+                        },
                         "Take a Breather": {
                             "Damage reduction": 50,
                             "Cooldown": 1.5,
                             "Maximum healing": 450,
-                            "Resource regeneration rate": 10
+                            "Maximum Time": 2.5,
+                            "Resource regeneration percent per second": 10
+                        },
+                        "Chain Hook": {
+                            "Cooldown": 6
                         },
                         "Whole Hog": {
                             "Knockback": 14,
-                            "Damage per pellet": 7
+                            "Damage per pellet": 7,
+                            "Ultimate cost": 3050,
+                            "is channeled ability": false
                         }
                     }
                 },
                 "Sigma": {
+                    "general": {
+                        "Base health": 350,
+                        "Shield health": 275
+                    },
                     "abilities": {
-                        "Gravitic Flux": {
-                            "requires line-of-sight": true
-                        },
                         "Experimental Barrier": {
-                            "Movement speed": 20
+                            "Movement speed": 20,
+                            "Regeneration rate": 100
+                        },
+                        "Kinetic Grasp": {
+                            "Cooldown": 12,
+                            "Overhealth generation percent": 60
+                        },
+                        "Accretion": {
+                            "Direct damage": 40,
+                            "Stun duration": 1.2
+                        },
+                        "Gravitic Flux": {
+                            "requires line-of-sight": true,
+                            "Ultimate Cost": 2300
                         }
                     }
                 },
                 "Wrecking Ball": {
+                    "general": {
+                        "Base health": 400,
+                        "Armor health": 175,
+                        "Shield health": 150
+                    },
                     "abilities": {
                         "Grappling Claw": {
                             "Impact damage": 50,
                             "can be retracted": true,
                             "No ramming cooldown": 1,
-                            "requires ramming speed for max duration": true
+                            "requires ramming speed for max duration": true,
+                            "Knockback": 22
                         },
                         "Piledriver": {
-                            "Movement lockout duration for enemies": 0.5
+                            "Movement lockout duration for enemies": 0.5,
+                            "Cooldown": 8,
+                            "Maximum damage": 100
+                        },
+                        "Adaptive Shield": {
+                            "Ally overhealth cap": 75,
+                            "Overhealth generation per enemy": 100,
+                            "Detection radius": 13
                         },
                         "Minefield": {
                             "Health": 60,
                             "Damage": 130,
-                            "Explosion knockback": 5
-                        },
-                        "Adaptive Shield": {
-                            "Ally overhealth cap": 75,
-                            "Detection radius": 13
+                            "Explosion knockback": 5,
+                            "Ultimate cost": 1850
                         }
                     }
                 },
                 "Zarya": {
+                    "general": {
+                        "Base health": 325,
+                        "Shield health": 225
+                    },
                     "abilities": {
+                        "Particle Cannon": {
+                            "Maximum damage": 190,
+                            "Minimum damage": 95
+                        },
+                        "Particle Barrier": {
+                            "shares cooldown with projected barrier": true,
+                            "Cooldown": 10
+                        },
+                        "Projected Barrier": {
+                            "Cooldown start": "ability use",
+                            "Cooldown": 8
+                        },
                         "Graviton Surge": {
+                            "Ultimate cost": 2500,
                             "Radius": 6,
                             "Duration": 3.5
                         }
                     }
                 },
                 "Doomfist": {
+                    "general": {
+                        "Base health": 525
+                    },
                     "abilities": {
+                        "The Best Defense": {
+                            "Overhealth generation": 35
+                        },
+                        "Hand Cannon": {
+                            "Minimum Damage": 16.5,
+                            "Maximum Damage": 55
+                        },
+                        "Seismic Slam": {
+                            "Damage": 50
+                        },
+                        "Power Block": {
+                            "Cooldown": 7,
+                            "Duration": 2.5
+                        },
                         "Rocket Punch": {
-                            "empowered punch consumed when the windup is cancelled by using Seismic Slam or Power Block": false
+                            "empowered punch consumed when the windup is cancelled by using Seismic Slam or Power Block": false,
+                            "Wall stun duration": 0.15,
+                            "Maximum empowered wall stun duration": 0.65,
+                            "Minimum knockback": 15,
+                            "Maximum knockback": 35
+                        },
+                        "Meteor Strike": {
+                            "Ultimate cost": 2145,
+                            "Healing while in air": 75
                         }
                     }
                 },
                 "Reinhardt": {
+                    "general": {
+                        "Base health": 400,
+                        "Armor health": 300
+                    },
                     "abilities": {
+                        "Steadfast": {
+                            "Knockback reduction": 0
+                        },
+                        "Rocket Hammer": {
+                            "Damage": 100
+                        },
+                        "Barrier Field": {
+                            "Barrier health": 1400,
+                            "Regeneration rate": 144
+                        },
+                        "Charge": {
+                            "Cooldown": 7
+                        },
+                        "Firestrike": {
+                            "Ability charges": 2,
+                            "Damage": 120
+                        },
                         "Earthshatter": {
                             "Knockdown duration": 3,
-                            "Shockwave range": 25
+                            "Shockwave range": 25,
+                            "Ultimate cost": 1800,
+                            "Critical damage": 150
+                        }
+                    }
+                },
+                "Mauga": {
+                    "general": {
+                        "Base health": 525,
+                        "Armor health": 200,
+                        "Model Size": 1
+                    },
+                    "abilities": {
+                        "Incendiary and Volatile Changuns": {
+                            "Damage per bullet": 4,
+                            "Number of shots required to ignite enemies with Incendiary Chaingun": 10
+                        },
+                        "Overrun": {
+                            "Cooldown": 6
+                        },
+                        "Cardiac Overdrive": {
+                            "Cooldown": 12,
+                            "Allied damage reduction": 30,
+                            "Lifesteal multiplier": 60
+                        },
+                        "Cage Fight": {
+                            "Ultimate cost": 2650,
+                            "Duration": 8
+                        }
+                    }
+                },
+                "Ramattra": {
+                    "general": {
+                        "Base health": 425,
+                        "Armor health": 100,
+                        "Model Size": 1
+                    },
+                    "abilities": {
+                        "Nemesis Form": {
+                            "Cooldown": 7,
+                            "Extra armor": 225,
+                            "Pummel damage": 60,
+                            "Increased movement speed": 20
+                        },
+                        "Void Barrier": {
+                            "Barrier health": 1000
+                        },
+                        "Ravenous Vortex": {
+                            "Cooldown": 11
+                        },
+                        "Annihilation": {
+                            "Ultimate cost": 2300,
+                            "Increased movement speed": 20
+                        }
+                    }
+                },
+                "Winston": {
+                    "general": {
+                        "Base health": 375,
+                        "Armor health": 250
+                    },
+                    "abilities": {
+                        "Tesla Cannon": {
+                            "Damage per second": 75
+                        },
+                        "Jump Pack": {
+                            "Cooldown": 5
+                        },
+                        "Primal Rage": {
+                            "Ultimate Cost": 2050,
+                            "Punch damage": 50
                         }
                     }
                 }
@@ -656,7 +1076,9 @@ const patches = {
         "general": {
             "Knockdown time": 2,
             "Armor health": "30% damage reduction",
-            "Out-of-combat health regeneration": "20"
+            "Out-of-combat health regeneration": "20",
+            "Role lock": "1-2-2",
+            "Ultimate percent retained on swap": 15
         },
         "heroes": {
             "tank": {
@@ -665,40 +1087,81 @@ const patches = {
                     "Knockback resistance": 30
                 },
                 "D.Va": {
+                    "general": {
+                        "Base health": 350,
+                        "Armor health": 375
+                    },
                     "abilities": {
                         "Fusion Cannons": {
-                            "Spread": 3.75
+                            "Spread": 3.75,
+                            "Total damage per shot": 22
                         },
                         "Boosters": {
                             "Impact damage": 15
+                        },
+                        "Defense Matrix": {
+                            "Coodldown": 1,
+                            "Maximum Duration": 3
+                        },
+                        "Self Destruct": {
+                            "Ultimate cost": 1700
                         }
                     }
                 },
                 "Junker Queen": {
+                    "general": {
+                        "Base health": 525,
+                        "Model size": 1
+                    },
                     "abilities": {
+                        "Adrenaline Rush": {
+                            "Health regeneration multiplier from wound damage": 2
+                        },
+                        "Scattergun": {
+                            "Total damage": 80
+                        },
                         "Jagged Blade": {
-                            "pulls tanks further": true
+                            "pulls tanks further": true,
+                            "Pull knockback": 20.74
                         },
                         "Rampage": {
-                            "Startup time": 0.75
+                            "Ultimate Cost": 2700,
+                            "Wound total damage": 90
                         },
                         "Commanding Shout": {
                             "can be activated while using other abilities": false,
-                            "Cooldown": 14
+                            "Cooldown": 14,
+                            "Self overhalth": 150
                         },
                         "Carnage": {
-                            "Impact damage": 105
+                            "Impact damage": 105,
+                            "Immediate healing per target hit": 0
                         }
                     }
                 },
                 "Orisa": {
+                    "general": {
+                        "Base health": 275,
+                        "Armor health": 350
+                    },
                     "abilities": {
                         "Fortify": {
                             "Duration": 3.5,
-                            "Movement speed reduction": 20
+                            "Movement speed reduction": 20,
+                            "Cooldown start": "ability use",
+                            "Cooldown": 16.5,
+                            "Overhealth generation": 100
+                        },
+                        "Energy Javelin": {
+                            "Direct damage": 60
                         },
                         "Javelin Spin": {
                             "Cooldown": 9
+                        },
+                        "Terra Surge": {
+                            "Ultimate Cost": 2150,
+                            "Minimum damage": 72,
+                            "Maximum damage": 500
                         }
                     }
                 },
@@ -707,70 +1170,237 @@ const patches = {
                         "Base health": 650
                     },
                     "abilities": {
+                        "Scrap Gun": {
+                            "Ammo": 6,
+                            "Total damage": 160
+                        },
                         "Take a Breather": {
                             "Damage reduction": 50,
                             "Cooldown": 1.5,
                             "Maximum healing": 450,
-                            "Resource regeneration rate": 10
+                            "Maximum Time": 2.5,
+                            "Resource regeneration percent per second": 10
+                        },
+                        "Chain Hook": {
+                            "Cooldown": 6
                         },
                         "Whole Hog": {
                             "Knockback": 14,
-                            "Damage per pellet": 7
+                            "Damage per pellet": 7,
+                            "Ultimate cost": 3050,
+                            "is channeled ability": false
                         }
                     }
                 },
                 "Sigma": {
+                    "general": {
+                        "Base health": 350,
+                        "Shield health": 275
+                    },
                     "abilities": {
-                        "Gravitic Flux": {
-                            "requires line-of-sight": true
-                        },
                         "Experimental Barrier": {
-                            "Movement speed": 20
+                            "Movement speed": 20,
+                            "Regeneration rate": 100
+                        },
+                        "Kinetic Grasp": {
+                            "Cooldown": 12,
+                            "Overhealth generation percent": 60
+                        },
+                        "Accretion": {
+                            "Direct damage": 40,
+                            "Stun duration": 1.2
+                        },
+                        "Gravitic Flux": {
+                            "requires line-of-sight": true,
+                            "Ultimate Cost": 2300
                         }
                     }
                 },
                 "Wrecking Ball": {
+                    "general": {
+                        "Base health": 400,
+                        "Armor health": 175,
+                        "Shield health": 150
+                    },
                     "abilities": {
                         "Grappling Claw": {
                             "Impact damage": 50,
                             "can be retracted": true,
                             "No ramming cooldown": 1,
-                            "requires ramming speed for max duration": true
+                            "requires ramming speed for max duration": true,
+                            "Knockback": 22
                         },
                         "Piledriver": {
-                            "Movement lockout duration for enemies": 0.5
+                            "Movement lockout duration for enemies": 0.5,
+                            "Cooldown": 8,
+                            "Maximum damage": 100
+                        },
+                        "Adaptive Shield": {
+                            "Ally overhealth cap": 75,
+                            "Overhealth generation per enemy": 100,
+                            "Detection radius": 13
                         },
                         "Minefield": {
                             "Health": 60,
                             "Damage": 130,
-                            "Explosion knockback": 5
-                        },
-                        "Adaptive Shield": {
-                            "Ally overhealth cap": 75,
-                            "Detection radius": 13
+                            "Explosion knockback": 5,
+                            "Ultimate cost": 1850
                         }
                     }
                 },
                 "Zarya": {
+                    "general": {
+                        "Base health": 325,
+                        "Shield health": 225
+                    },
                     "abilities": {
+                        "Particle Cannon": {
+                            "Maximum damage": 190,
+                            "Minimum damage": 95
+                        },
+                        "Particle Barrier": {
+                            "shares cooldown with projected barrier": true,
+                            "Cooldown": 10
+                        },
+                        "Projected Barrier": {
+                            "Cooldown start": "ability use",
+                            "Cooldown": 8
+                        },
                         "Graviton Surge": {
+                            "Ultimate cost": 2500,
                             "Radius": 6,
                             "Duration": 3.5
                         }
                     }
                 },
                 "Doomfist": {
+                    "general": {
+                        "Base health": 525
+                    },
                     "abilities": {
+                        "The Best Defense": {
+                            "Overhealth generation": 35
+                        },
+                        "Hand Cannon": {
+                            "Minimum Damage": 16.5,
+                            "Maximum Damage": 55
+                        },
+                        "Seismic Slam": {
+                            "Damage": 50
+                        },
+                        "Power Block": {
+                            "Cooldown": 7,
+                            "Duration": 2.5
+                        },
                         "Rocket Punch": {
-                            "empowered punch consumed when the windup is cancelled by using Seismic Slam or Power Block": false
+                            "empowered punch consumed when the windup is cancelled by using Seismic Slam or Power Block": false,
+                            "Wall stun duration": 0.15,
+                            "Maximum empowered wall stun duration": 0.65,
+                            "Minimum knockback": 15,
+                            "Maximum knockback": 35
+                        },
+                        "Meteor Strike": {
+                            "Ultimate cost": 2145,
+                            "Healing while in air": 75
                         }
                     }
                 },
                 "Reinhardt": {
+                    "general": {
+                        "Base health": 400,
+                        "Armor health": 300
+                    },
                     "abilities": {
+                        "Steadfast": {
+                            "Knockback reduction": 0
+                        },
+                        "Rocket Hammer": {
+                            "Damage": 100
+                        },
+                        "Barrier Field": {
+                            "Barrier health": 1400,
+                            "Regeneration rate": 144
+                        },
+                        "Charge": {
+                            "Cooldown": 7
+                        },
+                        "Firestrike": {
+                            "Ability charges": 2,
+                            "Damage": 120
+                        },
                         "Earthshatter": {
                             "Knockdown duration": 3,
-                            "Shockwave range": 25
+                            "Shockwave range": 25,
+                            "Ultimate cost": 1800,
+                            "Critical damage": 150
+                        }
+                    }
+                },
+                "Mauga": {
+                    "general": {
+                        "Base health": 525,
+                        "Armor health": 200,
+                        "Model Size": 1
+                    },
+                    "abilities": {
+                        "Incendiary and Volatile Changuns": {
+                            "Damage per bullet": 4,
+                            "Number of shots required to ignite enemies with Incendiary Chaingun": 10
+                        },
+                        "Overrun": {
+                            "Cooldown": 6
+                        },
+                        "Cardiac Overdrive": {
+                            "Cooldown": 12,
+                            "Allied damage reduction": 30,
+                            "Lifesteal multiplier": 60
+                        },
+                        "Cage Fight": {
+                            "Ultimate cost": 2650,
+                            "Duration": 8
+                        }
+                    }
+                },
+                "Ramattra": {
+                    "general": {
+                        "Base health": 425,
+                        "Armor health": 100,
+                        "Model Size": 1
+                    },
+                    "abilities": {
+                        "Nemesis Form": {
+                            "Cooldown": 7,
+                            "Extra armor": 225,
+                            "Pummel damage": 60,
+                            "Increased movement speed": 20
+                        },
+                        "Void Barrier": {
+                            "Barrier health": 1000
+                        },
+                        "Ravenous Vortex": {
+                            "Cooldown": 11
+                        },
+                        "Annihilation": {
+                            "Ultimate cost": 2300,
+                            "Increased movement speed": 20
+                        }
+                    }
+                },
+                "Winston": {
+                    "general": {
+                        "Base health": 375,
+                        "Armor health": 250
+                    },
+                    "abilities": {
+                        "Tesla Cannon": {
+                            "Damage per second": 75
+                        },
+                        "Jump Pack": {
+                            "Cooldown": 5
+                        },
+                        "Primal Rage": {
+                            "Ultimate Cost": 2050,
+                            "Punch damage": 50
                         }
                     }
                 }
@@ -982,7 +1612,9 @@ const patches = {
         "general": {
             "Knockdown time": 2,
             "Armor health": "a flat damage reduction of 5 per projectile, up to a maximum of 50% damage reduction",
-            "Out-of-combat health regeneration": "10 + 5% of max hp"
+            "Out-of-combat health regeneration": "10 + 5% of max hp",
+            "Role lock": "1-2-2",
+            "Ultimate percent retained on swap": 15
         },
         "heroes": {
             "tank": {
@@ -991,40 +1623,81 @@ const patches = {
                     "Knockback resistance": 50
                 },
                 "D.Va": {
+                    "general": {
+                        "Base health": 350,
+                        "Armor health": 375
+                    },
                     "abilities": {
                         "Fusion Cannons": {
-                            "Spread": 3.75
+                            "Spread": 3.75,
+                            "Total damage per shot": 22
                         },
                         "Boosters": {
                             "Impact damage": 15
+                        },
+                        "Defense Matrix": {
+                            "Coodldown": 1,
+                            "Maximum Duration": 3
+                        },
+                        "Self Destruct": {
+                            "Ultimate cost": 1700
                         }
                     }
                 },
                 "Junker Queen": {
+                    "general": {
+                        "Base health": 525,
+                        "Model size": 1
+                    },
                     "abilities": {
+                        "Adrenaline Rush": {
+                            "Health regeneration multiplier from wound damage": 2
+                        },
+                        "Scattergun": {
+                            "Total damage": 80
+                        },
                         "Jagged Blade": {
-                            "pulls tanks further": true
+                            "pulls tanks further": true,
+                            "Pull knockback": 20.74
                         },
                         "Rampage": {
-                            "Startup time": 0.75
+                            "Ultimate Cost": 2700,
+                            "Wound total damage": 90
                         },
                         "Commanding Shout": {
                             "can be activated while using other abilities": true,
-                            "Cooldown": 12
+                            "Cooldown": 12,
+                            "Self overhalth": 150
                         },
                         "Carnage": {
-                            "Impact damage": 105
+                            "Impact damage": 105,
+                            "Immediate healing per target hit": 0
                         }
                     }
                 },
                 "Orisa": {
+                    "general": {
+                        "Base health": 275,
+                        "Armor health": 350
+                    },
                     "abilities": {
                         "Fortify": {
                             "Duration": 3.5,
-                            "Movement speed reduction": 20
+                            "Movement speed reduction": 20,
+                            "Cooldown start": "ability use",
+                            "Cooldown": 16.5,
+                            "Overhealth generation": 100
+                        },
+                        "Energy Javelin": {
+                            "Direct damage": 60
                         },
                         "Javelin Spin": {
                             "Cooldown": 9
+                        },
+                        "Terra Surge": {
+                            "Ultimate Cost": 2150,
+                            "Minimum damage": 72,
+                            "Maximum damage": 500
                         }
                     }
                 },
@@ -1033,70 +1706,237 @@ const patches = {
                         "Base health": 650
                     },
                     "abilities": {
+                        "Scrap Gun": {
+                            "Ammo": 6,
+                            "Total damage": 160
+                        },
                         "Take a Breather": {
                             "Damage reduction": 50,
                             "Cooldown": 1.5,
                             "Maximum healing": 450,
-                            "Resource regeneration rate": 10
+                            "Maximum Time": 2.5,
+                            "Resource regeneration percent per second": 10
+                        },
+                        "Chain Hook": {
+                            "Cooldown": 6
                         },
                         "Whole Hog": {
                             "Knockback": 14,
-                            "Damage per pellet": 7
+                            "Damage per pellet": 7,
+                            "Ultimate cost": 3050,
+                            "is channeled ability": false
                         }
                     }
                 },
                 "Sigma": {
+                    "general": {
+                        "Base health": 350,
+                        "Shield health": 275
+                    },
                     "abilities": {
-                        "Gravitic Flux": {
-                            "requires line-of-sight": false
-                        },
                         "Experimental Barrier": {
-                            "Movement speed": 20
+                            "Movement speed": 20,
+                            "Regeneration rate": 100
+                        },
+                        "Kinetic Grasp": {
+                            "Cooldown": 12,
+                            "Overhealth generation percent": 60
+                        },
+                        "Accretion": {
+                            "Direct damage": 40,
+                            "Stun duration": 1.2
+                        },
+                        "Gravitic Flux": {
+                            "requires line-of-sight": false,
+                            "Ultimate Cost": 2300
                         }
                     }
                 },
                 "Wrecking Ball": {
+                    "general": {
+                        "Base health": 400,
+                        "Armor health": 175,
+                        "Shield health": 150
+                    },
                     "abilities": {
                         "Grappling Claw": {
                             "Impact damage": 60,
                             "can be retracted": true,
                             "No ramming cooldown": 1,
-                            "requires ramming speed for max duration": true
+                            "requires ramming speed for max duration": true,
+                            "Knockback": 22
                         },
                         "Piledriver": {
-                            "Movement lockout duration for enemies": 0.75
+                            "Movement lockout duration for enemies": 0.75,
+                            "Cooldown": 8,
+                            "Maximum damage": 100
+                        },
+                        "Adaptive Shield": {
+                            "Ally overhealth cap": 75,
+                            "Overhealth generation per enemy": 100,
+                            "Detection radius": 13
                         },
                         "Minefield": {
                             "Health": 60,
                             "Damage": 165,
-                            "Explosion knockback": 10
-                        },
-                        "Adaptive Shield": {
-                            "Ally overhealth cap": 75,
-                            "Detection radius": 13
+                            "Explosion knockback": 10,
+                            "Ultimate cost": 1850
                         }
                     }
                 },
                 "Zarya": {
+                    "general": {
+                        "Base health": 325,
+                        "Shield health": 225
+                    },
                     "abilities": {
+                        "Particle Cannon": {
+                            "Maximum damage": 190,
+                            "Minimum damage": 95
+                        },
+                        "Particle Barrier": {
+                            "shares cooldown with projected barrier": true,
+                            "Cooldown": 10
+                        },
+                        "Projected Barrier": {
+                            "Cooldown start": "ability use",
+                            "Cooldown": 8
+                        },
                         "Graviton Surge": {
+                            "Ultimate cost": 2500,
                             "Radius": 7,
                             "Duration": 4
                         }
                     }
                 },
                 "Doomfist": {
+                    "general": {
+                        "Base health": 525
+                    },
                     "abilities": {
+                        "The Best Defense": {
+                            "Overhealth generation": 35
+                        },
+                        "Hand Cannon": {
+                            "Minimum Damage": 16.5,
+                            "Maximum Damage": 55
+                        },
+                        "Seismic Slam": {
+                            "Damage": 50
+                        },
+                        "Power Block": {
+                            "Cooldown": 7,
+                            "Duration": 2.5
+                        },
                         "Rocket Punch": {
-                            "empowered punch consumed when the windup is cancelled by using Seismic Slam or Power Block": false
+                            "empowered punch consumed when the windup is cancelled by using Seismic Slam or Power Block": false,
+                            "Wall stun duration": 0.15,
+                            "Maximum empowered wall stun duration": 0.65,
+                            "Minimum knockback": 15,
+                            "Maximum knockback": 35
+                        },
+                        "Meteor Strike": {
+                            "Ultimate cost": 2145,
+                            "Healing while in air": 75
                         }
                     }
                 },
                 "Reinhardt": {
+                    "general": {
+                        "Base health": 400,
+                        "Armor health": 300
+                    },
                     "abilities": {
+                        "Steadfast": {
+                            "Knockback reduction": 0
+                        },
+                        "Rocket Hammer": {
+                            "Damage": 100
+                        },
+                        "Barrier Field": {
+                            "Barrier health": 1400,
+                            "Regeneration rate": 144
+                        },
+                        "Charge": {
+                            "Cooldown": 7
+                        },
+                        "Firestrike": {
+                            "Ability charges": 2,
+                            "Damage": 120
+                        },
                         "Earthshatter": {
                             "Knockdown duration": 3,
-                            "Shockwave range": 25
+                            "Shockwave range": 25,
+                            "Ultimate cost": 1800,
+                            "Critical damage": 150
+                        }
+                    }
+                },
+                "Mauga": {
+                    "general": {
+                        "Base health": 525,
+                        "Armor health": 200,
+                        "Model Size": 1
+                    },
+                    "abilities": {
+                        "Incendiary and Volatile Changuns": {
+                            "Damage per bullet": 4,
+                            "Number of shots required to ignite enemies with Incendiary Chaingun": 10
+                        },
+                        "Overrun": {
+                            "Cooldown": 6
+                        },
+                        "Cardiac Overdrive": {
+                            "Cooldown": 12,
+                            "Allied damage reduction": 30,
+                            "Lifesteal multiplier": 60
+                        },
+                        "Cage Fight": {
+                            "Ultimate cost": 2650,
+                            "Duration": 8
+                        }
+                    }
+                },
+                "Ramattra": {
+                    "general": {
+                        "Base health": 425,
+                        "Armor health": 100,
+                        "Model Size": 1
+                    },
+                    "abilities": {
+                        "Nemesis Form": {
+                            "Cooldown": 7,
+                            "Extra armor": 225,
+                            "Pummel damage": 60,
+                            "Increased movement speed": 20
+                        },
+                        "Void Barrier": {
+                            "Barrier health": 1000
+                        },
+                        "Ravenous Vortex": {
+                            "Cooldown": 11
+                        },
+                        "Annihilation": {
+                            "Ultimate cost": 2300,
+                            "Increased movement speed": 20
+                        }
+                    }
+                },
+                "Winston": {
+                    "general": {
+                        "Base health": 375,
+                        "Armor health": 250
+                    },
+                    "abilities": {
+                        "Tesla Cannon": {
+                            "Damage per second": 75
+                        },
+                        "Jump Pack": {
+                            "Cooldown": 5
+                        },
+                        "Primal Rage": {
+                            "Ultimate Cost": 2050,
+                            "Punch damage": 50
                         }
                     }
                 }
@@ -1308,7 +2148,9 @@ const patches = {
         "general": {
             "Knockdown time": 2,
             "Armor health": "a flat damage reduction of 5 per projectile, up to a maximum of 50% damage reduction",
-            "Out-of-combat health regeneration": "10 + 5% of max hp"
+            "Out-of-combat health regeneration": "10 + 5% of max hp",
+            "Role lock": "1-2-2",
+            "Ultimate percent retained on swap": 15
         },
         "heroes": {
             "tank": {
@@ -1317,40 +2159,81 @@ const patches = {
                     "Knockback resistance": 50
                 },
                 "D.Va": {
+                    "general": {
+                        "Base health": 350,
+                        "Armor health": 375
+                    },
                     "abilities": {
                         "Fusion Cannons": {
-                            "Spread": 3.75
+                            "Spread": 3.75,
+                            "Total damage per shot": 22
                         },
                         "Boosters": {
                             "Impact damage": 15
+                        },
+                        "Defense Matrix": {
+                            "Coodldown": 1,
+                            "Maximum Duration": 3
+                        },
+                        "Self Destruct": {
+                            "Ultimate cost": 1700
                         }
                     }
                 },
                 "Junker Queen": {
+                    "general": {
+                        "Base health": 525,
+                        "Model size": 1
+                    },
                     "abilities": {
+                        "Adrenaline Rush": {
+                            "Health regeneration multiplier from wound damage": 2
+                        },
+                        "Scattergun": {
+                            "Total damage": 80
+                        },
                         "Jagged Blade": {
-                            "pulls tanks further": true
+                            "pulls tanks further": true,
+                            "Pull knockback": 20.74
                         },
                         "Rampage": {
-                            "Startup time": 0.75
+                            "Ultimate Cost": 2700,
+                            "Wound total damage": 90
                         },
                         "Commanding Shout": {
                             "can be activated while using other abilities": true,
-                            "Cooldown": 12
+                            "Cooldown": 12,
+                            "Self overhalth": 150
                         },
                         "Carnage": {
-                            "Impact damage": 105
+                            "Impact damage": 105,
+                            "Immediate healing per target hit": 0
                         }
                     }
                 },
                 "Orisa": {
+                    "general": {
+                        "Base health": 275,
+                        "Armor health": 350
+                    },
                     "abilities": {
                         "Fortify": {
                             "Duration": 3.5,
-                            "Movement speed reduction": 20
+                            "Movement speed reduction": 20,
+                            "Cooldown start": "ability use",
+                            "Cooldown": 16.5,
+                            "Overhealth generation": 100
+                        },
+                        "Energy Javelin": {
+                            "Direct damage": 60
                         },
                         "Javelin Spin": {
                             "Cooldown": 9
+                        },
+                        "Terra Surge": {
+                            "Ultimate Cost": 2150,
+                            "Minimum damage": 72,
+                            "Maximum damage": 500
                         }
                     }
                 },
@@ -1359,70 +2242,237 @@ const patches = {
                         "Base health": 650
                     },
                     "abilities": {
+                        "Scrap Gun": {
+                            "Ammo": 6,
+                            "Total damage": 160
+                        },
                         "Take a Breather": {
                             "Damage reduction": 50,
                             "Cooldown": 1.5,
                             "Maximum healing": 450,
-                            "Resource regeneration rate": 10
+                            "Maximum Time": 2.5,
+                            "Resource regeneration percent per second": 10
+                        },
+                        "Chain Hook": {
+                            "Cooldown": 6
                         },
                         "Whole Hog": {
                             "Knockback": 14,
-                            "Damage per pellet": 7
+                            "Damage per pellet": 7,
+                            "Ultimate cost": 3050,
+                            "is channeled ability": false
                         }
                     }
                 },
                 "Sigma": {
+                    "general": {
+                        "Base health": 350,
+                        "Shield health": 275
+                    },
                     "abilities": {
-                        "Gravitic Flux": {
-                            "requires line-of-sight": false
-                        },
                         "Experimental Barrier": {
-                            "Movement speed": 20
+                            "Movement speed": 20,
+                            "Regeneration rate": 100
+                        },
+                        "Kinetic Grasp": {
+                            "Cooldown": 12,
+                            "Overhealth generation percent": 60
+                        },
+                        "Accretion": {
+                            "Direct damage": 40,
+                            "Stun duration": 1.2
+                        },
+                        "Gravitic Flux": {
+                            "requires line-of-sight": false,
+                            "Ultimate Cost": 2300
                         }
                     }
                 },
                 "Wrecking Ball": {
+                    "general": {
+                        "Base health": 400,
+                        "Armor health": 175,
+                        "Shield health": 150
+                    },
                     "abilities": {
                         "Grappling Claw": {
                             "Impact damage": 60,
                             "can be retracted": true,
                             "No ramming cooldown": 1,
-                            "requires ramming speed for max duration": true
+                            "requires ramming speed for max duration": true,
+                            "Knockback": 22
                         },
                         "Piledriver": {
-                            "Movement lockout duration for enemies": 0.75
+                            "Movement lockout duration for enemies": 0.75,
+                            "Cooldown": 8,
+                            "Maximum damage": 100
+                        },
+                        "Adaptive Shield": {
+                            "Ally overhealth cap": 75,
+                            "Overhealth generation per enemy": 100,
+                            "Detection radius": 13
                         },
                         "Minefield": {
                             "Health": 60,
                             "Damage": 165,
-                            "Explosion knockback": 10
-                        },
-                        "Adaptive Shield": {
-                            "Ally overhealth cap": 75,
-                            "Detection radius": 13
+                            "Explosion knockback": 10,
+                            "Ultimate cost": 1850
                         }
                     }
                 },
                 "Zarya": {
+                    "general": {
+                        "Base health": 325,
+                        "Shield health": 225
+                    },
                     "abilities": {
+                        "Particle Cannon": {
+                            "Maximum damage": 190,
+                            "Minimum damage": 95
+                        },
+                        "Particle Barrier": {
+                            "shares cooldown with projected barrier": true,
+                            "Cooldown": 10
+                        },
+                        "Projected Barrier": {
+                            "Cooldown start": "ability use",
+                            "Cooldown": 8
+                        },
                         "Graviton Surge": {
+                            "Ultimate cost": 2500,
                             "Radius": 7,
                             "Duration": 4
                         }
                     }
                 },
                 "Doomfist": {
+                    "general": {
+                        "Base health": 525
+                    },
                     "abilities": {
+                        "The Best Defense": {
+                            "Overhealth generation": 35
+                        },
+                        "Hand Cannon": {
+                            "Minimum Damage": 16.5,
+                            "Maximum Damage": 55
+                        },
+                        "Seismic Slam": {
+                            "Damage": 50
+                        },
+                        "Power Block": {
+                            "Cooldown": 7,
+                            "Duration": 2.5
+                        },
                         "Rocket Punch": {
-                            "empowered punch consumed when the windup is cancelled by using Seismic Slam or Power Block": false
+                            "empowered punch consumed when the windup is cancelled by using Seismic Slam or Power Block": false,
+                            "Wall stun duration": 0.15,
+                            "Maximum empowered wall stun duration": 0.65,
+                            "Minimum knockback": 15,
+                            "Maximum knockback": 35
+                        },
+                        "Meteor Strike": {
+                            "Ultimate cost": 2145,
+                            "Healing while in air": 75
                         }
                     }
                 },
                 "Reinhardt": {
+                    "general": {
+                        "Base health": 400,
+                        "Armor health": 300
+                    },
                     "abilities": {
+                        "Steadfast": {
+                            "Knockback reduction": 0
+                        },
+                        "Rocket Hammer": {
+                            "Damage": 100
+                        },
+                        "Barrier Field": {
+                            "Barrier health": 1400,
+                            "Regeneration rate": 144
+                        },
+                        "Charge": {
+                            "Cooldown": 7
+                        },
+                        "Firestrike": {
+                            "Ability charges": 2,
+                            "Damage": 120
+                        },
                         "Earthshatter": {
                             "Knockdown duration": 3,
-                            "Shockwave range": 25
+                            "Shockwave range": 25,
+                            "Ultimate cost": 1800,
+                            "Critical damage": 150
+                        }
+                    }
+                },
+                "Mauga": {
+                    "general": {
+                        "Base health": 525,
+                        "Armor health": 200,
+                        "Model Size": 1
+                    },
+                    "abilities": {
+                        "Incendiary and Volatile Changuns": {
+                            "Damage per bullet": 4,
+                            "Number of shots required to ignite enemies with Incendiary Chaingun": 10
+                        },
+                        "Overrun": {
+                            "Cooldown": 6
+                        },
+                        "Cardiac Overdrive": {
+                            "Cooldown": 12,
+                            "Allied damage reduction": 30,
+                            "Lifesteal multiplier": 60
+                        },
+                        "Cage Fight": {
+                            "Ultimate cost": 2650,
+                            "Duration": 8
+                        }
+                    }
+                },
+                "Ramattra": {
+                    "general": {
+                        "Base health": 425,
+                        "Armor health": 100,
+                        "Model Size": 1
+                    },
+                    "abilities": {
+                        "Nemesis Form": {
+                            "Cooldown": 7,
+                            "Extra armor": 225,
+                            "Pummel damage": 60,
+                            "Increased movement speed": 20
+                        },
+                        "Void Barrier": {
+                            "Barrier health": 1000
+                        },
+                        "Ravenous Vortex": {
+                            "Cooldown": 11
+                        },
+                        "Annihilation": {
+                            "Ultimate cost": 2300,
+                            "Increased movement speed": 20
+                        }
+                    }
+                },
+                "Winston": {
+                    "general": {
+                        "Base health": 375,
+                        "Armor health": 250
+                    },
+                    "abilities": {
+                        "Tesla Cannon": {
+                            "Damage per second": 75
+                        },
+                        "Jump Pack": {
+                            "Cooldown": 5
+                        },
+                        "Primal Rage": {
+                            "Ultimate Cost": 2050,
+                            "Punch damage": 50
                         }
                     }
                 }
@@ -1634,7 +2684,9 @@ const patches = {
         "general": {
             "Knockdown time": 2,
             "Armor health": "a flat damage reduction of 5 per projectile, up to a maximum of 50% damage reduction",
-            "Out-of-combat health regeneration": "10 + 5% of max hp"
+            "Out-of-combat health regeneration": "10 + 5% of max hp",
+            "Role lock": "1-2-2",
+            "Ultimate percent retained on swap": 15
         },
         "heroes": {
             "tank": {
@@ -1643,40 +2695,81 @@ const patches = {
                     "Knockback resistance": 50
                 },
                 "D.Va": {
+                    "general": {
+                        "Base health": 350,
+                        "Armor health": 375
+                    },
                     "abilities": {
                         "Fusion Cannons": {
-                            "Spread": 3.75
+                            "Spread": 3.75,
+                            "Total damage per shot": 22
                         },
                         "Boosters": {
                             "Impact damage": 15
+                        },
+                        "Defense Matrix": {
+                            "Coodldown": 1,
+                            "Maximum Duration": 3
+                        },
+                        "Self Destruct": {
+                            "Ultimate cost": 1700
                         }
                     }
                 },
                 "Junker Queen": {
+                    "general": {
+                        "Base health": 525,
+                        "Model size": 1
+                    },
                     "abilities": {
+                        "Adrenaline Rush": {
+                            "Health regeneration multiplier from wound damage": 2
+                        },
+                        "Scattergun": {
+                            "Total damage": 80
+                        },
                         "Jagged Blade": {
-                            "pulls tanks further": true
+                            "pulls tanks further": true,
+                            "Pull knockback": 20.74
                         },
                         "Rampage": {
-                            "Startup time": 0.75
+                            "Ultimate Cost": 2700,
+                            "Wound total damage": 90
                         },
                         "Commanding Shout": {
                             "can be activated while using other abilities": true,
-                            "Cooldown": 12
+                            "Cooldown": 12,
+                            "Self overhalth": 150
                         },
                         "Carnage": {
-                            "Impact damage": 105
+                            "Impact damage": 105,
+                            "Immediate healing per target hit": 0
                         }
                     }
                 },
                 "Orisa": {
+                    "general": {
+                        "Base health": 275,
+                        "Armor health": 350
+                    },
                     "abilities": {
                         "Fortify": {
                             "Duration": 3.5,
-                            "Movement speed reduction": 20
+                            "Movement speed reduction": 20,
+                            "Cooldown start": "ability use",
+                            "Cooldown": 16.5,
+                            "Overhealth generation": 100
+                        },
+                        "Energy Javelin": {
+                            "Direct damage": 60
                         },
                         "Javelin Spin": {
                             "Cooldown": 9
+                        },
+                        "Terra Surge": {
+                            "Ultimate Cost": 2150,
+                            "Minimum damage": 72,
+                            "Maximum damage": 500
                         }
                     }
                 },
@@ -1685,70 +2778,237 @@ const patches = {
                         "Base health": 650
                     },
                     "abilities": {
+                        "Scrap Gun": {
+                            "Ammo": 6,
+                            "Total damage": 160
+                        },
                         "Take a Breather": {
                             "Damage reduction": 50,
                             "Cooldown": 1.25,
                             "Maximum healing": 400,
-                            "Resource regeneration rate": 8
+                            "Maximum Time": 2.5,
+                            "Resource regeneration percent per second": 8
+                        },
+                        "Chain Hook": {
+                            "Cooldown": 6
                         },
                         "Whole Hog": {
                             "Knockback": 16,
-                            "Damage per pellet": 6
+                            "Damage per pellet": 6,
+                            "Ultimate cost": 3050,
+                            "is channeled ability": false
                         }
                     }
                 },
                 "Sigma": {
+                    "general": {
+                        "Base health": 350,
+                        "Shield health": 275
+                    },
                     "abilities": {
-                        "Gravitic Flux": {
-                            "requires line-of-sight": true
-                        },
                         "Experimental Barrier": {
-                            "Movement speed": 20
+                            "Movement speed": 20,
+                            "Regeneration rate": 100
+                        },
+                        "Kinetic Grasp": {
+                            "Cooldown": 12,
+                            "Overhealth generation percent": 60
+                        },
+                        "Accretion": {
+                            "Direct damage": 40,
+                            "Stun duration": 1.2
+                        },
+                        "Gravitic Flux": {
+                            "requires line-of-sight": true,
+                            "Ultimate Cost": 2300
                         }
                     }
                 },
                 "Wrecking Ball": {
+                    "general": {
+                        "Base health": 400,
+                        "Armor health": 175,
+                        "Shield health": 150
+                    },
                     "abilities": {
                         "Grappling Claw": {
                             "Impact damage": 60,
                             "can be retracted": true,
                             "No ramming cooldown": 1,
-                            "requires ramming speed for max duration": true
+                            "requires ramming speed for max duration": true,
+                            "Knockback": 22
                         },
                         "Piledriver": {
-                            "Movement lockout duration for enemies": 0.75
+                            "Movement lockout duration for enemies": 0.75,
+                            "Cooldown": 8,
+                            "Maximum damage": 100
+                        },
+                        "Adaptive Shield": {
+                            "Ally overhealth cap": 75,
+                            "Overhealth generation per enemy": 100,
+                            "Detection radius": 13
                         },
                         "Minefield": {
                             "Health": 60,
                             "Damage": 165,
-                            "Explosion knockback": 10
-                        },
-                        "Adaptive Shield": {
-                            "Ally overhealth cap": 75,
-                            "Detection radius": 13
+                            "Explosion knockback": 10,
+                            "Ultimate cost": 1850
                         }
                     }
                 },
                 "Zarya": {
+                    "general": {
+                        "Base health": 325,
+                        "Shield health": 225
+                    },
                     "abilities": {
+                        "Particle Cannon": {
+                            "Maximum damage": 190,
+                            "Minimum damage": 95
+                        },
+                        "Particle Barrier": {
+                            "shares cooldown with projected barrier": true,
+                            "Cooldown": 10
+                        },
+                        "Projected Barrier": {
+                            "Cooldown start": "ability use",
+                            "Cooldown": 8
+                        },
                         "Graviton Surge": {
+                            "Ultimate cost": 2500,
                             "Radius": 7,
                             "Duration": 4
                         }
                     }
                 },
                 "Doomfist": {
+                    "general": {
+                        "Base health": 525
+                    },
                     "abilities": {
+                        "The Best Defense": {
+                            "Overhealth generation": 35
+                        },
+                        "Hand Cannon": {
+                            "Minimum Damage": 16.5,
+                            "Maximum Damage": 55
+                        },
+                        "Seismic Slam": {
+                            "Damage": 50
+                        },
+                        "Power Block": {
+                            "Cooldown": 7,
+                            "Duration": 2.5
+                        },
                         "Rocket Punch": {
-                            "empowered punch consumed when the windup is cancelled by using Seismic Slam or Power Block": false
+                            "empowered punch consumed when the windup is cancelled by using Seismic Slam or Power Block": false,
+                            "Wall stun duration": 0.15,
+                            "Maximum empowered wall stun duration": 0.65,
+                            "Minimum knockback": 15,
+                            "Maximum knockback": 35
+                        },
+                        "Meteor Strike": {
+                            "Ultimate cost": 2145,
+                            "Healing while in air": 75
                         }
                     }
                 },
                 "Reinhardt": {
+                    "general": {
+                        "Base health": 400,
+                        "Armor health": 300
+                    },
                     "abilities": {
+                        "Steadfast": {
+                            "Knockback reduction": 0
+                        },
+                        "Rocket Hammer": {
+                            "Damage": 100
+                        },
+                        "Barrier Field": {
+                            "Barrier health": 1400,
+                            "Regeneration rate": 144
+                        },
+                        "Charge": {
+                            "Cooldown": 7
+                        },
+                        "Firestrike": {
+                            "Ability charges": 2,
+                            "Damage": 120
+                        },
                         "Earthshatter": {
                             "Knockdown duration": 3,
-                            "Shockwave range": 25
+                            "Shockwave range": 25,
+                            "Ultimate cost": 1800,
+                            "Critical damage": 150
+                        }
+                    }
+                },
+                "Mauga": {
+                    "general": {
+                        "Base health": 525,
+                        "Armor health": 200,
+                        "Model Size": 1
+                    },
+                    "abilities": {
+                        "Incendiary and Volatile Changuns": {
+                            "Damage per bullet": 4,
+                            "Number of shots required to ignite enemies with Incendiary Chaingun": 10
+                        },
+                        "Overrun": {
+                            "Cooldown": 6
+                        },
+                        "Cardiac Overdrive": {
+                            "Cooldown": 12,
+                            "Allied damage reduction": 30,
+                            "Lifesteal multiplier": 60
+                        },
+                        "Cage Fight": {
+                            "Ultimate cost": 2650,
+                            "Duration": 8
+                        }
+                    }
+                },
+                "Ramattra": {
+                    "general": {
+                        "Base health": 425,
+                        "Armor health": 100,
+                        "Model Size": 1
+                    },
+                    "abilities": {
+                        "Nemesis Form": {
+                            "Cooldown": 7,
+                            "Extra armor": 225,
+                            "Pummel damage": 60,
+                            "Increased movement speed": 20
+                        },
+                        "Void Barrier": {
+                            "Barrier health": 1000
+                        },
+                        "Ravenous Vortex": {
+                            "Cooldown": 11
+                        },
+                        "Annihilation": {
+                            "Ultimate cost": 2300,
+                            "Increased movement speed": 20
+                        }
+                    }
+                },
+                "Winston": {
+                    "general": {
+                        "Base health": 375,
+                        "Armor health": 250
+                    },
+                    "abilities": {
+                        "Tesla Cannon": {
+                            "Damage per second": 75
+                        },
+                        "Jump Pack": {
+                            "Cooldown": 5
+                        },
+                        "Primal Rage": {
+                            "Ultimate Cost": 2050,
+                            "Punch damage": 50
                         }
                     }
                 }
@@ -1960,7 +3220,9 @@ const patches = {
         "general": {
             "Knockdown time": 1.7,
             "Armor health": "a flat damage reduction of 5 per projectile, up to a maximum of 50% damage reduction",
-            "Out-of-combat health regeneration": "10 + 5% of max hp"
+            "Out-of-combat health regeneration": "10 + 5% of max hp",
+            "Role lock": "1-2-2",
+            "Ultimate percent retained on swap": 15
         },
         "heroes": {
             "tank": {
@@ -1969,40 +3231,81 @@ const patches = {
                     "Knockback resistance": 50
                 },
                 "D.Va": {
+                    "general": {
+                        "Base health": 350,
+                        "Armor health": 375
+                    },
                     "abilities": {
                         "Fusion Cannons": {
-                            "Spread": 3.375
+                            "Spread": 3.375,
+                            "Total damage per shot": 22
                         },
                         "Boosters": {
                             "Impact damage": 25
+                        },
+                        "Defense Matrix": {
+                            "Coodldown": 1,
+                            "Maximum Duration": 3
+                        },
+                        "Self Destruct": {
+                            "Ultimate cost": 1700
                         }
                     }
                 },
                 "Junker Queen": {
+                    "general": {
+                        "Base health": 525,
+                        "Model size": 1
+                    },
                     "abilities": {
+                        "Adrenaline Rush": {
+                            "Health regeneration multiplier from wound damage": 2
+                        },
+                        "Scattergun": {
+                            "Total damage": 80
+                        },
                         "Jagged Blade": {
-                            "pulls tanks further": true
+                            "pulls tanks further": true,
+                            "Pull knockback": 20.74
                         },
                         "Rampage": {
-                            "Startup time": 0.5
+                            "Ultimate Cost": 2700,
+                            "Wound total damage": 90
                         },
                         "Commanding Shout": {
                             "can be activated while using other abilities": true,
-                            "Cooldown": 12
+                            "Cooldown": 12,
+                            "Self overhalth": 150
                         },
                         "Carnage": {
-                            "Impact damage": 105
+                            "Impact damage": 105,
+                            "Immediate healing per target hit": 0
                         }
                     }
                 },
                 "Orisa": {
+                    "general": {
+                        "Base health": 275,
+                        "Armor health": 350
+                    },
                     "abilities": {
                         "Fortify": {
                             "Duration": 3.5,
-                            "Movement speed reduction": 20
+                            "Movement speed reduction": 20,
+                            "Cooldown start": "ability use",
+                            "Cooldown": 16.5,
+                            "Overhealth generation": 100
+                        },
+                        "Energy Javelin": {
+                            "Direct damage": 60
                         },
                         "Javelin Spin": {
                             "Cooldown": 8
+                        },
+                        "Terra Surge": {
+                            "Ultimate Cost": 2150,
+                            "Minimum damage": 72,
+                            "Maximum damage": 500
                         }
                     }
                 },
@@ -2011,70 +3314,773 @@ const patches = {
                         "Base health": 600
                     },
                     "abilities": {
+                        "Scrap Gun": {
+                            "Ammo": 6,
+                            "Total damage": 160
+                        },
                         "Take a Breather": {
                             "Damage reduction": 40,
                             "Cooldown": 1.25,
                             "Maximum healing": 400,
-                            "Resource regeneration rate": 8
+                            "Maximum Time": 2.5,
+                            "Resource regeneration percent per second": 8
+                        },
+                        "Chain Hook": {
+                            "Cooldown": 6
                         },
                         "Whole Hog": {
                             "Knockback": 16,
-                            "Damage per pellet": 6
+                            "Damage per pellet": 6,
+                            "Ultimate cost": 3050,
+                            "is channeled ability": false
                         }
                     }
                 },
                 "Sigma": {
+                    "general": {
+                        "Base health": 350,
+                        "Shield health": 275
+                    },
                     "abilities": {
-                        "Gravitic Flux": {
-                            "requires line-of-sight": true
-                        },
                         "Experimental Barrier": {
-                            "Movement speed": 20
+                            "Movement speed": 20,
+                            "Regeneration rate": 100
+                        },
+                        "Kinetic Grasp": {
+                            "Cooldown": 12,
+                            "Overhealth generation percent": 60
+                        },
+                        "Accretion": {
+                            "Direct damage": 40,
+                            "Stun duration": 1.2
+                        },
+                        "Gravitic Flux": {
+                            "requires line-of-sight": true,
+                            "Ultimate Cost": 2300
                         }
                     }
                 },
                 "Wrecking Ball": {
+                    "general": {
+                        "Base health": 400,
+                        "Armor health": 175,
+                        "Shield health": 150
+                    },
                     "abilities": {
                         "Grappling Claw": {
                             "Impact damage": 60,
                             "can be retracted": true,
                             "No ramming cooldown": 1,
-                            "requires ramming speed for max duration": true
+                            "requires ramming speed for max duration": true,
+                            "Knockback": 22
                         },
                         "Piledriver": {
-                            "Movement lockout duration for enemies": 0.75
+                            "Movement lockout duration for enemies": 0.75,
+                            "Cooldown": 8,
+                            "Maximum damage": 100
+                        },
+                        "Adaptive Shield": {
+                            "Ally overhealth cap": 75,
+                            "Overhealth generation per enemy": 100,
+                            "Detection radius": 13
                         },
                         "Minefield": {
                             "Health": 60,
                             "Damage": 165,
-                            "Explosion knockback": 10
-                        },
-                        "Adaptive Shield": {
-                            "Ally overhealth cap": 75,
-                            "Detection radius": 13
+                            "Explosion knockback": 10,
+                            "Ultimate cost": 1850
                         }
                     }
                 },
                 "Zarya": {
+                    "general": {
+                        "Base health": 325,
+                        "Shield health": 225
+                    },
                     "abilities": {
+                        "Particle Cannon": {
+                            "Maximum damage": 190,
+                            "Minimum damage": 95
+                        },
+                        "Particle Barrier": {
+                            "shares cooldown with projected barrier": true,
+                            "Cooldown": 10
+                        },
+                        "Projected Barrier": {
+                            "Cooldown start": "ability use",
+                            "Cooldown": 8
+                        },
                         "Graviton Surge": {
+                            "Ultimate cost": 2500,
                             "Radius": 7,
                             "Duration": 4
                         }
                     }
                 },
                 "Doomfist": {
+                    "general": {
+                        "Base health": 525
+                    },
                     "abilities": {
+                        "The Best Defense": {
+                            "Overhealth generation": 35
+                        },
+                        "Hand Cannon": {
+                            "Minimum Damage": 16.5,
+                            "Maximum Damage": 55
+                        },
+                        "Seismic Slam": {
+                            "Damage": 50
+                        },
+                        "Power Block": {
+                            "Cooldown": 7,
+                            "Duration": 2.5
+                        },
                         "Rocket Punch": {
-                            "empowered punch consumed when the windup is cancelled by using Seismic Slam or Power Block": false
+                            "empowered punch consumed when the windup is cancelled by using Seismic Slam or Power Block": false,
+                            "Wall stun duration": 0.15,
+                            "Maximum empowered wall stun duration": 0.65,
+                            "Minimum knockback": 15,
+                            "Maximum knockback": 35
+                        },
+                        "Meteor Strike": {
+                            "Ultimate cost": 2145,
+                            "Healing while in air": 75
                         }
                     }
                 },
                 "Reinhardt": {
+                    "general": {
+                        "Base health": 400,
+                        "Armor health": 300
+                    },
                     "abilities": {
+                        "Steadfast": {
+                            "Knockback reduction": 0
+                        },
+                        "Rocket Hammer": {
+                            "Damage": 100
+                        },
+                        "Barrier Field": {
+                            "Barrier health": 1400,
+                            "Regeneration rate": 144
+                        },
+                        "Charge": {
+                            "Cooldown": 7
+                        },
+                        "Firestrike": {
+                            "Ability charges": 2,
+                            "Damage": 120
+                        },
                         "Earthshatter": {
                             "Knockdown duration": 3,
-                            "Shockwave range": 25
+                            "Shockwave range": 25,
+                            "Ultimate cost": 1800,
+                            "Critical damage": 150
+                        }
+                    }
+                },
+                "Mauga": {
+                    "general": {
+                        "Base health": 525,
+                        "Armor health": 200,
+                        "Model Size": 1
+                    },
+                    "abilities": {
+                        "Incendiary and Volatile Changuns": {
+                            "Damage per bullet": 4,
+                            "Number of shots required to ignite enemies with Incendiary Chaingun": 10
+                        },
+                        "Overrun": {
+                            "Cooldown": 6
+                        },
+                        "Cardiac Overdrive": {
+                            "Cooldown": 12,
+                            "Allied damage reduction": 30,
+                            "Lifesteal multiplier": 60
+                        },
+                        "Cage Fight": {
+                            "Ultimate cost": 2650,
+                            "Duration": 8
+                        }
+                    }
+                },
+                "Ramattra": {
+                    "general": {
+                        "Base health": 425,
+                        "Armor health": 100,
+                        "Model Size": 1
+                    },
+                    "abilities": {
+                        "Nemesis Form": {
+                            "Cooldown": 7,
+                            "Extra armor": 225,
+                            "Pummel damage": 60,
+                            "Increased movement speed": 20
+                        },
+                        "Void Barrier": {
+                            "Barrier health": 1000
+                        },
+                        "Ravenous Vortex": {
+                            "Cooldown": 11
+                        },
+                        "Annihilation": {
+                            "Ultimate cost": 2300,
+                            "Increased movement speed": 20
+                        }
+                    }
+                },
+                "Winston": {
+                    "general": {
+                        "Base health": 375,
+                        "Armor health": 250
+                    },
+                    "abilities": {
+                        "Tesla Cannon": {
+                            "Damage per second": 75
+                        },
+                        "Jump Pack": {
+                            "Cooldown": 5
+                        },
+                        "Primal Rage": {
+                            "Ultimate Cost": 2050,
+                            "Punch damage": 50
+                        }
+                    }
+                }
+            },
+            "damage": {
+                "general": {
+                    "Healing reduction inflicted on hit": 20
+                },
+                "Cassidy": {
+                    "abilities": {
+                        "Peacekeeper": {
+                            "Secondary fire \"Fan the Hammer\" damage": 45
+                        },
+                        "Combat Roll": {
+                            "Damage reduction": 50
+                        },
+                        "Flashbang": {
+                            "Effect": "Applies hinder on hit",
+                            "Duration": 1.2,
+                            "Maximum travel time": 0.23,
+                            "Slow": 50,
+                            "hinder prevents crouching": true,
+                            "Explosive damage": 45,
+                            "Cooldown": 12,
+                            "Projectile speed": 30
+                        },
+                        "Deadeye": {
+                            "Max movement speed penalty": 70,
+                            "Min movement speed penalty": 35,
+                            "Max damage reduction": 40,
+                            "Min damage reduction": 0
+                        }
+                    }
+                },
+                "Mei": {
+                    "abilities": {
+                        "Endothermic Blaster": {
+                            "Secondary fire projectile size": 0.2,
+                            "Secondary fire damage": 85
+                        }
+                    }
+                },
+                "Reaper": {
+                    "abilities": {
+                        "Hellfire Shotguns": {
+                            "Spread": 6
+                        },
+                        "Shadow Step": {
+                            "Cast time": 1.2
+                        }
+                    }
+                },
+                "Sojourn": {
+                    "abilities": {
+                        "Railgun": {
+                            "Secondary fire maximum damage": 100,
+                            "Secondary fire minimum damage": 1,
+                            "requires overclock for secondary primary piercing": false,
+                            "Primary fire shots per second": 16
+                        },
+                        "Overclock": {
+                            "Energy charge rate": 120
+                        }
+                    }
+                },
+                "Symmetra": {
+                    "general": {
+                        "Base health": 125
+                    },
+                    "abilities": {
+                        "Photon Projector": {
+                            "Primary fire charge rate": 1.25
+                        }
+                    }
+                },
+                "Venture": {
+                    "abilities": {
+                        "SMART Excavator": {
+                            "Maximum explosion damage": 40
+                        },
+                        "Drill Dash": {
+                            "Cooldown start": "ability use",
+                            "Cooldown reduction while burrowed": 0,
+                            "Cooldown acceleration while burrowed": 90,
+                            "Initial impact damage": 30,
+                            "Damage over time": 60
+                        },
+                        "Burrow": {
+                            "Grace period": 0.2
+                        },
+                        "Tectonic Shock": {
+                            "Ultimate Cost": 2125,
+                            "Vertical knockback": 5
+                        },
+                        "Clobber": {
+                            "Impact damage": 30,
+                            "Damage over time": 40
+                        }
+                    }
+                },
+                "Junkrat": {
+                    "abilities": {
+                        "Frag Launcher": {
+                            "Impact Damage": "45"
+                        }
+                    }
+                },
+                "Echo": {
+                    "abilities": {
+                        "Duplicate": {
+                            "Ultimate gain modifier": 4.5
+                        }
+                    }
+                },
+                "Hanzo": {
+                    "abilities": {
+                        "Dragonstrike": {
+                            "Speed": 15
+                        }
+                    }
+                },
+                "Sombra": {
+                    "abilities": {
+                        "Virus": {
+                            "Damage over time": 90
+                        }
+                    }
+                },
+                "Tracer": {
+                    "abilities": {
+                        "Recall": {
+                            "Cooldown": 13
+                        },
+                        "Pulse Bomb": {
+                            "Projectile size": 0.25
+                        }
+                    }
+                }
+            },
+            "support": {
+                "Illari": {
+                    "abilities": {
+                        "Outburst": {
+                            "Damage": 25
+                        },
+                        "Healing Pylon": {
+                            "Healing per projectile": 40,
+                            "Self healing efficiency": 50,
+                            "Health": 75,
+                            "Shield health": 50
+                        },
+                        "Solar Rifle": {
+                            "Primary fire recovery": 0.25,
+                            "Secondary fire heal-per-second": 115
+                        }
+                    }
+                },
+                "Kiriko": {
+                    "abilities": {
+                        "Swift Step": {
+                            "Cooldown": 8
+                        },
+                        "Protection Suzu": {
+                            "cleanses hard knockdown stuns": false
+                        }
+                    }
+                },
+                "Brigitte": {
+                    "abilities": {
+                        "Rally": {
+                            "resets Shield Bash cooldown upon activation": true
+                        }
+                    }
+                },
+                "Lúcio": {
+                    "abilities": {
+                        "Sonic Amplifier": {
+                            "Damage per projectile": 18
+                        },
+                        "Soundwave": {
+                            "Damage": 45
+                        }
+                    }
+                },
+                "Lifeweaver": {
+                    "abilities": {
+                        "Rejuvenating Dash": {
+                            "Heal": 60
+                        },
+                        "Tree of Life": {
+                            "Pulse healing": 90
+                        }
+                    }
+                },
+                "Moira": {
+                    "abilities": {
+                        "Biotic Grasp": {
+                            "Damage per second": 60
+                        },
+                        "Coalescence": {
+                            "Self-heal per second": 55
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "6v6 Adjustments v1.7.0 - 6/28/2024": {
+        "general": {
+            "Knockdown time": 1.7,
+            "Armor health": "a flat damage reduction of 5 per projectile, up to a maximum of 50% damage reduction",
+            "Out-of-combat health regeneration": "10 + 5% of max hp",
+            "Role lock": "1-2-2",
+            "Ultimate percent retained on swap": 15
+        },
+        "heroes": {
+            "tank": {
+                "general": {
+                    "Critical headshot damage reduction": 25,
+                    "Knockback resistance": 50
+                },
+                "D.Va": {
+                    "general": {
+                        "Base health": 300,
+                        "Armor health": 250
+                    },
+                    "abilities": {
+                        "Fusion Cannons": {
+                            "Spread": 3.375,
+                            "Total damage per shot": 20.5
+                        },
+                        "Boosters": {
+                            "Impact damage": 10
+                        },
+                        "Defense Matrix": {
+                            "Coodldown": 1.5,
+                            "Maximum Duration": 2
+                        },
+                        "Self Destruct": {
+                            "Ultimate cost": 1540
+                        }
+                    }
+                },
+                "Junker Queen": {
+                    "general": {
+                        "Base health": 425,
+                        "Model size": 0.96
+                    },
+                    "abilities": {
+                        "Adrenaline Rush": {
+                            "Health regeneration multiplier from wound damage": 1.2
+                        },
+                        "Scattergun": {
+                            "Total damage": 75
+                        },
+                        "Jagged Blade": {
+                            "pulls tanks further": false,
+                            "Pull knockback": 17.629
+                        },
+                        "Commanding Shout": {
+                            "can be activated while using other abilities": true,
+                            "Cooldown": 14,
+                            "Self overhalth": 100
+                        },
+                        "Carnage": {
+                            "Impact damage": 90,
+                            "Immediate healing per target hit": 25
+                        },
+                        "Rampage": {
+                            "Ultimate Cost": 2700,
+                            "Wound total damage": 60
+                        },
+                    }
+                },
+                "Orisa": {
+                    "general": {
+                        "Base health": 200,
+                        "Armor health": 250
+                    },
+                    "abilities": {
+                        "Fortify": {
+                            "Duration": 3.5,
+                            "Movement speed reduction": 0,
+                            "Cooldown start": "ability end",
+                            "Cooldown": 13,
+                            "Overhealth generation": 0
+                        },
+                        "Energy Javelin": {
+                            "Direct damage": 70
+                        },
+                        "Javelin Spin": {
+                            "Cooldown": 7
+                        },
+                        "Terra Surge": {
+                            "Ultimate Cost": 1814,
+                            "Minimum damage": 58,
+                            "Maximum damage": 400
+                        }
+                    }
+                },
+                "Roadhog": {
+                    "general": {
+                        "Base health": 600
+                    },
+                    "abilities": {
+                        "Scrap Gun": {
+                            "Ammo": 5,
+                            "Total damage": 140
+                        },
+                        "Take a Breather": {
+                            "Damage reduction": 40,
+                            "Cooldown": 3.5,
+                            "Maximum healing": 300,
+                            "Maximum Time": 1.425,
+                            "Resource regeneration percent per second": 12.5
+                        },
+                        "Chain Hook": {
+                            "Cooldown": 7
+                        },
+                        "Whole Hog": {
+                            "Knockback": 16,
+                            "Damage per pellet": 6,
+                            "Ultimate cost": 2240,
+                            "is channeled ability": true
+                        }
+                    }
+                },
+                "Sigma": {
+                    "general": {
+                        "Base health": 250,
+                        "Shield health": 150
+                    },
+                    "abilities": {
+                        "Experimental Barrier": {
+                            "Movement speed": 20,
+                            "Regeneration rate": 94
+                        },
+                        "Kinetic Grasp": {
+                            "Cooldown": 13,
+                            "Overhealth generation percent": 40
+                        },
+                        "Accretion": {
+                            "Direct damage": 50,
+                            "Stun duration": 0.7
+                        },
+                        "Gravitic Flux": {
+                            "requires line-of-sight": true,
+                            "Ultimate Cost": 1960
+                        }
+                    }
+                },
+                "Wrecking Ball": {
+                    "general": {
+                        "Base health": 400,
+                        "Armor health": 100,
+                        "Shield health": 0
+                    },
+                    "abilities": {
+                        "Grappling Claw": {
+                            "Impact damage": 50,
+                            "can be retracted": true,
+                            "No ramming cooldown": 5,
+                            "requires ramming speed for max duration": true,
+                            "Knockback": 18.7
+                        },
+                        "Piledriver": {
+                            "Movement lockout duration for enemies": 0.75,
+                            "Cooldown": 10,
+                            "Maximum damage": 90
+                        },
+                        "Adaptive Shield": {
+                            "Ally overhealth cap": 0,
+                            "Overhealth generation per enemy": 75,
+                            "Detection radius": 13
+                        },
+                        "Minefield": {
+                            "Health": 45,
+                            "Damage": 130,
+                            "Explosion knockback": 10,
+                            "Ultimate cost": 1540
+                        }
+                    }
+                },
+                "Zarya": {
+                    "general": {
+                        "Base health": 200,
+                        "Shield health": 200
+                    },
+                    "abilities": {
+                        "Particle Cannon": {
+                            "Maximum damage": 160,
+                            "Minimum damage": 70
+                        },
+                        "Particle Barrier": {
+                            "shares cooldown with projected barrier": false,
+                            "Cooldown": 10
+                        },
+                        "Projected Barrier": {
+                            "Cooldown start": "ability use",
+                            "Cooldown": 8
+                        },
+                        "Graviton Surge": {
+                            "Ultimate cost": 2100,
+                            "Radius": 7,
+                            "Duration": 4
+                        }
+                    }
+                },
+                "Doomfist": {
+                    "general": {
+                        "Base health": 400
+                    },
+                    "abilities": {
+                        "The Best Defense": {
+                            "Overhealth generation": 25
+                        },
+                        "Hand Cannon": {
+                            "Minimum Damage": 13.5,
+                            "Maximum Damage": 45
+                        },
+                        "Seismic Slam": {
+                            "Damage": 40
+                        },
+                        "Power Block": {
+                            "Cooldown": 8,
+                            "Duration": 1.5
+                        },
+                        "Rocket Punch": {
+                            "empowered punch consumed when the windup is cancelled by using Seismic Slam or Power Block": false,
+                            "Wall stun duration": 0.0,
+                            "Maximum empowered wall stun duration": 0.0,
+                            "Minimum knockback": 12,
+                            "Maximum knockback": 28,
+                        },
+                        "Meteor Strike": {
+                            "Ultimate cost": 2145,
+                            "Healing while in air": 75
+                        }
+                    }
+                },
+                "Reinhardt": {
+                    "general": {
+                        "Base health": 300,
+                        "Armor health": 250
+                    },
+                    "abilities": {
+                        "Steadfast": {
+                            "Knockback reduction": 20
+                        },
+                        "Rocket Hammer": {
+                            "Damage": 80
+                        },
+                        "Barrier Field": {
+                            "Barrier health": 1600,
+                            "Regeneration rate": 180
+                        },
+                        "Charge": {
+                            "Cooldown": 10
+                        },
+                        "Firestrike": {
+                            "Ability charges": 1,
+                            "Damage": 100
+                        },
+                        "Earthshatter": {
+                            "Knockdown duration": 3,
+                            "Shockwave range": 25,
+                            "Ultimate cost": 1540,
+                            "Critical damage": 175
+                        }
+                    }
+                },
+                "Mauga": {
+                    "general": {
+                        "Base health": 400,
+                        "Armor health": 100,
+                        "Model Size": 0.94
+                    },
+                    "abilities": {
+                        "Incendiary and Volatile Changuns": {
+                            "Damage per bullet": 3.5,
+                            "Number of shots required to ignite enemies with Incendiary Chaingun": 8
+                        },
+                        "Overrun": {
+                            "Cooldown": 8
+                        },
+                        "Cardiac Overdrive": {
+                            "Cooldown": 16,
+                            "Allied damage reduction": 0,
+                            "Lifesteal multiplier": 50
+                        },
+                        "Cage Fight": {
+                            "Ultimate cost": 2400,
+                            "Duration": 7
+                        }
+                    }
+                },
+                "Ramattra": {
+                    "general": {
+                        "Base health": 400,
+                        "Armor health": 0,
+                        "Model Size": 0.94
+                    },
+                    "abilities": {
+                        "Nemesis Form": {
+                            "Cooldown": 9,
+                            "Extra armor": 175,
+                            "Pummel damage": 70,
+                            "Increased movement speed": 0
+                        },
+                        "Void Barrier": {
+                            "Barrier health": 650
+                        },
+                        "Ravenous Vortex": {
+                            "Cooldown": 12
+                        },
+                        "Annihilation": {
+                            "Ultimate cost": 2016,
+                            "Increased movement speed": 10
+                        }
+                    }
+                },
+                "Winston": {
+                    "general": {
+                        "Base health": 400,
+                        "Armor health": 150
+                    },
+                    "abilities": {
+                        "Tesla Cannon": {
+                            "Damage per second": 60
+                        },
+                        "Jump Pack": {
+                            "Cooldown": 6
+                        },
+                        "Primal Rage": {
+                            "Ultimate Cost": 1540,
+                            "Punch damage": 40
                         }
                     }
                 }
@@ -2311,6 +4317,9 @@ const hero_images = {
     "Lúcio": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/dee7e92975f5e659fa6b28c508d8fbad62bda720698b1d21f2492af7b9f94b48.png",
     "Lifeweaver": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/57d5014ab6034db9138f838e8450693b4a97ab3c54f85d594b199a8853e75ccb.png",
     "Moira": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/90fa2b69a7b80ae6d57c9ea6f3387dd18dfc1728bdb26949d28a17b98dd4e5f7.png",
+    "Mauga": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/6dbd80a0b40bd0464db35948f98d91ecc6dfcede8c94ff9b1ecefda781a7aa1f.png",
+    "Ramattra": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/cf69d4bfa61ac14f61d3d541b0d2687a20fa24f55afe7a392d746f5ccb138dea.png",
+    "Winston": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/6a9a37012551410b46b2c28146404354fe21e4a1e8ea65db4e1e497eeaa05c71.png",
 };
 
 const ability_images = {
@@ -2366,6 +4375,40 @@ const ability_images = {
     "Tree of Life": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/105495a0c2ea708de307204b47c90915782256cffd83fc8dff8abcc508e0ef5a.png",
     "Biotic Grasp": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/4073577768c5a1f5b5e8bcdb9ce9615be249d35cfbff4b66bc617c19e3b96591.png",
     "Coalescence": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/23d3ef53fd21d04e7e7b137b38e87c61b3d65394393dc00759ceb65d406e37b9.png",
+    "Defense Matrix": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/2713a8ef6742f4009da072d66d382eb8ff3dd8e00828deadb5af1a93b0d8ce4b.png",
+    "Self Destruct": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/f76e4b710ceb71f2e260029fc8d0ad15b227e3f006ab1b6c0c4e44da98c2d614.png",
+    "Hand Cannon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/49c404d5887c562cdb5aafb55979c5589a450c0e18fa9d62a3c8cc0ac585886e.png",
+    "Seismic Slam": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/20f721d5fd05f91e203d6e0007a137bdc90a161356f85d5aa88b2ab02b8da22b.png",
+    "Power Block": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/56267df764931eadeae09513e0f1b9594ae238eebba84878c501ba4b69acb71f.png",
+    "Scattergun": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/f2e438e49ffae25e094d79f876a8538149ff2aefd7cdf962da4556bd3551184e.png",
+    "Adrenaline Rush": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/e1706243e4996af6844e7f8233bbd3f98f04583a223cd3ad926d40ef6c4c8557.png",
+    "Overrun": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/c23cc1056dcc40fb5976f3987181b7a46406a0a133f1e95b9b1db11d36253363.png",
+    "Cardiac Overdrive": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/1d19c61b479c82bbdd8ed645ccdec54e16431409d3c8a56b27376c7f8630ec9c.png",
+    "Cage Fight": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/795ba75b2aaf304f69ea6fbc6e7fbfe5d3d4d7365d776243f8241f8e9e7f208e.png",
+    "Energy Javelin": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/0cf93f55a30fe7ec769c5f2eebd284c92851d6b1dbaca0e2c39eae908a9b35c6.png",
+    "Terra Surge": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/8d8892b56df62b068343e5029a2ae1e2fa54f7568febac7141ffa945d02e214c.png",
+    "Void Barrier": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/0a40466f823f39910c8453a42d9338e434d8d36d120c540a381c6a9a1557da78.png",
+    "Annihilation": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/dbffca5b7b1e0dcc7a0cceaffe1fedb1a6bf7af73e71218a15df2779fc97805f.png",
+    "Ravenous Vortex": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/7a7334480013e1d2eccd7df8b4b1e2f484ca81dfe5719fd3506d1055ba79908c.png",
+    "Rocket Hammer": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/f116232be8cdbfd5e5ebd7ac13731f928e3b56e72fa0337e5ede414cc5944b08.png",
+    "Barrier Field": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/121f13903665417446ee4673d9740080a3bc117e285cf3dcf6547861a0bc7d43.png",
+    "Firestrike": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/568a5f49875557f735af36dce68474a923f7e8582a7be20fb68b6ee66ac077e6.png",
+    "Charge": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/40c9f1c060033e58120c9ec174008b8f5d833412923f7f351a32e5df47fe8166.png",
+    "Earthshatter": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/a63041a68d81c202a47a95035878edcfa75d5aa3f72414a7e84e1b1a68594bed.png",
+    "Scrap Gun": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/50b6e388a6693ce31b5a1889e53037970a1b884b8265834f33dd6f7a3dedce44.png",
+    "Chain Hook": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/139deabeb3d62c451b558367bf5e64641583355d99ed90fe42107a5716fdca3b.png",
+    "Kinetic Grasp": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/a7401d18a391bc0eafddd8fc47a31ccc7f277190ab61ed14ae98408f576d6a23.png",
+    "Accretion": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/594b0ecbb34b41b288c08bc7b040b273f25289ef0afc2d00828d6a30a0687236.png",
+    "Tesla Cannon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/050de92c7ce31e42368c796d9c246210a40bb1bd4a5273b2d64d8a980e1f9f9a.png",
+    "Jump Pack": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/dbad1fe535da5b932ad706a0ca06373d530f1210cbbb095ef1bc8b3a7cc64172.png",
+    "Primal Rage": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/685608721cb914e0412a090eb1e89c0f5d10edfb3dbc34218ba3acd35611c990.png",
+    "Particle Cannon": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/02aebadea29904eca48f514437522f9f3a52ea266e6c2b2688dad39641071bda.png",
+    "Particle Barrier": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/2d462e28ae2fc60b3ef9c32702bbc88936885dd7d20746a31dd2e3c51c20f199.png",
+    "Projected Barrier": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/6e42984ee8329a50e9c2460ae2df7670d7be9846a093c336e4576d1eea1fb2f1.png",
+    "The Best Defense": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/e60ad8d06a44f829f6110b528751d2e5a1840e0a72bed4a9c848970ba6ebae80.png",
+    "Incendiary and Volatile Changuns": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/df6bae435e7e319b51fe4977e92971fcfbb9b30fab2f39d1e614660274fab226.png",
+    "Nemesis Form": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/5a9818afe979474cd23a8a3863522be14ae549df841a6a7efc9ed5398f3d692f.png",
+
 };
 
 let before_patch = Object.keys(patches)[0];
@@ -2490,7 +4533,7 @@ function updatePatchNotes() {
             `;
         }
         let heroChanges = "";
-        for (let hero in changes.heroes[role]) {
+        for (let hero of Object.keys(changes.heroes[role]).sort()) {
             if(hero == "general") continue;
             let generalChangesRender = "";
             if (changes.heroes[role][hero].general) {
