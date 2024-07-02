@@ -674,8 +674,87 @@ const patches = {
                 }
             },
             "support": {
-                "Illari": {
+                "general": {
+                    "Self heal delay": 2.5,
+                    "Self heal amount": "same as general heal passive"
+                },
+                "Ana": {
+                    "general": {
+                        "Base health": 250
+                    },
                     "abilities": {
+                        "Biotic Rifle": {
+                            "Ammo": 15
+                        },
+                        "Sleep Dart": {
+                            "Cooldown": 14
+                        },
+                        "Biotic Grenade": {
+                            "Healing": 90,
+                            "Damage": 90
+                        },
+                        "Nano Boost": {
+                            "Ultimate cost": 2300
+                        }
+                    }
+                },
+                "Baptiste": {
+                    "general": {
+                        "Base health": 250
+                    },
+                    "abilities": {
+                        "Biotic Launcher": {
+                            "Damage per bullet": 25,
+                            "Explosion healing": 50,
+                            "Direct healing": 20
+                        },
+                        "Regenerative Burst": {
+                            "Cooldown": 15,
+                            "Instant healing": 40,
+                            "Instant healing on allies <50% HP": 40,
+                            "Heal over time": 40,
+                            "Additional self heal over time": 0
+                        },
+                        "Immortality Field": {
+                            "Health": 125
+                        },
+                        "Amplification Matrix": {
+                            "Ultimate cost": 2550
+                        }
+                    }
+                },
+                "Brigitte": {
+                    "general": {
+                        "Base health": 200
+                    },
+                    "abilities": {
+                        "Inspire": {
+                            "Healing per second": 15
+                        },
+                        "Rocket Flail": {
+                            "Damage": 45
+                        },
+                        "Repair Pack": {
+                            "Instant healing": 25
+                        },
+                        "Rally": {
+                            "Ultimate cost": 2700,
+                            "resets Shield Bash cooldown upon activation": false
+                        }
+                    }
+                },
+                "Illari": {
+                    "general": {
+                        "Base health": 250
+                    },
+                    "abilities": {
+                        "Solar Rifle": {
+                            "Damage": 75,
+                            "Critical Multiplier": 1.5,
+                            "Ammo": 16,
+                            "Primary fire recovery": 0.2,
+                            "Secondary fire heal-per-second": 105
+                        },
                         "Outburst": {
                             "Damage": 10
                         },
@@ -683,58 +762,134 @@ const patches = {
                             "Healing per projectile": 30,
                             "Self healing efficiency": 100,
                             "Health": 50,
-                            "Shield health": 50
+                            "Shield health": 50,
+                            "Cooldown": 12
                         },
-                        "Solar Rifle": {
-                            "Primary fire recovery": 0.2,
-                            "Secondary fire heal-per-second": 105
+                        "Captive Sun": {
+                            "Ultimate cost": 2650,
+                            "Sunstruck explosion damage": 160
                         }
                     }
                 },
                 "Kiriko": {
+                    "general": {
+                        "Base health": 250
+                    },
                     "abilities": {
+                        "Kunai": {
+                            "Ammo": 15
+                        },
                         "Swift Step": {
-                            "Cooldown": 7
+                            "Cooldown": 7,
+                            "Respawn cooldown": 0,
+                            "Self healing": 0
                         },
                         "Protection Suzu": {
                             "cleanses hard knockdown stuns": true
+                        },
+                        "Kitsune Rush": {
+                            "Ultimate cost": 2525
                         }
                     }
                 },
-                "Brigitte": {
+                "Lifeweaver": {
+                    "general": {
+                        "Base health": 225,
+                        "Shield health": 50
+                    },
                     "abilities": {
-                        "Rally": {
-                            "resets Shield Bash cooldown upon activation": false
+                        "Healing Blossom": {
+                            "Ammo": 16
+                        },
+                        "Thorn Volley": {
+                            "Ammo": 80,
+                            "Damage": 6
+                        },
+                        "Petal Platform": {
+                            "Health": 400,
+                            "Cooldown": 12
+                        },
+                        "Rejuvenating Dash": {
+                            "Heal": 50
+                        },
+                        "Tree of Life": {
+                            "Pulse healing": 75,
+                            "Health": 1000,
+                            "Duration": 15,
+                            "Ultimate cost": 2200
                         }
                     }
                 },
                 "Lúcio": {
+                    "general": {
+                        "Base health": 250
+                    },
                     "abilities": {
                         "Sonic Amplifier": {
                             "Damage per projectile": 20
                         },
                         "Soundwave": {
-                            "Damage": 35
+                            "Damage": 35,
+                            "Knockback": 8
+                        },
+                        "Sound Barrier": {
+                            "Ultimate cost": 2650
                         }
                     }
                 },
-                "Lifeweaver": {
+                "Mercy": {
+                    "general": {
+                        "Base health": 250
+                    },
                     "abilities": {
-                        "Rejuvenating Dash": {
-                            "Heal": 50
+                        "Regeneration": {
+                            "Healing": 0,
+                            "Delay": 2.5
                         },
-                        "Tree of Life": {
-                            "Pulse healing": 75
+                        "Sympathetic Recovery": {
+                            "Self healing as percent of healing done": 40
+                        },
+                        "Caduceus Staff": {
+                            "Healing": 55
+                        },
+                        "Caduceus Blaster": {
+                            "Ammo": 25
+                        },
+                        "Valkyrie": {
+                            "Healing": 60,
+                            "Ultimate cost": 2000
                         }
                     }
                 },
                 "Moira": {
+                    "general": {
+                        "Base health": 250
+                    },
                     "abilities": {
                         "Biotic Grasp": {
                             "Damage per second": 65
                         },
                         "Coalescence": {
-                            "Self-heal per second": 50
+                            "Self-heal per second": 50,
+                            "can use fade during duration": true,
+                            "Ultimate cost": 2900
+                        }
+                    }
+                },
+                "Zenyatta": {
+                    "general": {
+                        "Base health": 75,
+                        "Shield health": 175
+                    },
+                    "abilities": {
+                        "Snap Kick": {
+                            "Knockback": 8
+                        },
+                        "Orb of Destruction": {
+                            "Ammo": 25
+                        },
+                        "Transcendence": {
+                            "Ultimate cost": 2550
                         }
                     }
                 }
@@ -1253,7 +1408,7 @@ const patches = {
                         },
                         "Death Blossom": {
                             "Ultimate cost": 1870,
-                            "Damage per second": 185 
+                            "Damage per second": 185
                         }
                     }
                 },
@@ -1415,8 +1570,87 @@ const patches = {
                 }
             },
             "support": {
-                "Illari": {
+                "general": {
+                    "Self heal delay": 2.5,
+                    "Self heal amount": "same as general heal passive"
+                },
+                "Ana": {
+                    "general": {
+                        "Base health": 250
+                    },
                     "abilities": {
+                        "Biotic Rifle": {
+                            "Ammo": 15
+                        },
+                        "Sleep Dart": {
+                            "Cooldown": 14
+                        },
+                        "Biotic Grenade": {
+                            "Healing": 90,
+                            "Damage": 90
+                        },
+                        "Nano Boost": {
+                            "Ultimate cost": 2300
+                        }
+                    }
+                },
+                "Baptiste": {
+                    "general": {
+                        "Base health": 250
+                    },
+                    "abilities": {
+                        "Biotic Launcher": {
+                            "Damage per bullet": 25,
+                            "Explosion healing": 50,
+                            "Direct healing": 20
+                        },
+                        "Regenerative Burst": {
+                            "Cooldown": 15,
+                            "Instant healing": 40,
+                            "Instant healing on allies <50% HP": 40,
+                            "Heal over time": 40,
+                            "Additional self heal over time": 0
+                        },
+                        "Immortality Field": {
+                            "Health": 125
+                        },
+                        "Amplification Matrix": {
+                            "Ultimate cost": 2550
+                        }
+                    }
+                },
+                "Brigitte": {
+                    "general": {
+                        "Base health": 200
+                    },
+                    "abilities": {
+                        "Inspire": {
+                            "Healing per second": 15
+                        },
+                        "Rocket Flail": {
+                            "Damage": 45
+                        },
+                        "Repair Pack": {
+                            "Instant healing": 25
+                        },
+                        "Rally": {
+                            "Ultimate cost": 2700,
+                            "resets Shield Bash cooldown upon activation": false
+                        }
+                    }
+                },
+                "Illari": {
+                    "general": {
+                        "Base health": 250
+                    },
+                    "abilities": {
+                        "Solar Rifle": {
+                            "Damage": 75,
+                            "Critical Multiplier": 1.5,
+                            "Ammo": 16,
+                            "Primary fire recovery": 0.25,
+                            "Secondary fire heal-per-second": 115
+                        },
                         "Outburst": {
                             "Damage": 10
                         },
@@ -1424,58 +1658,134 @@ const patches = {
                             "Healing per projectile": 30,
                             "Self healing efficiency": 100,
                             "Health": 50,
-                            "Shield health": 50
+                            "Shield health": 50,
+                            "Cooldown": 12
                         },
-                        "Solar Rifle": {
-                            "Primary fire recovery": 0.25,
-                            "Secondary fire heal-per-second": 115
+                        "Captive Sun": {
+                            "Ultimate cost": 2650,
+                            "Sunstruck explosion damage": 160
                         }
                     }
                 },
                 "Kiriko": {
+                    "general": {
+                        "Base health": 250
+                    },
                     "abilities": {
+                        "Kunai": {
+                            "Ammo": 15
+                        },
                         "Swift Step": {
-                            "Cooldown": 7
+                            "Cooldown": 7,
+                            "Respawn cooldown": 0,
+                            "Self healing": 0
                         },
                         "Protection Suzu": {
                             "cleanses hard knockdown stuns": true
+                        },
+                        "Kitsune Rush": {
+                            "Ultimate cost": 2525
                         }
                     }
                 },
-                "Brigitte": {
+                "Lifeweaver": {
+                    "general": {
+                        "Base health": 225,
+                        "Shield health": 50
+                    },
                     "abilities": {
-                        "Rally": {
-                            "resets Shield Bash cooldown upon activation": false
+                        "Healing Blossom": {
+                            "Ammo": 16
+                        },
+                        "Thorn Volley": {
+                            "Ammo": 80,
+                            "Damage": 6
+                        },
+                        "Petal Platform": {
+                            "Health": 400,
+                            "Cooldown": 12
+                        },
+                        "Rejuvenating Dash": {
+                            "Heal": 60
+                        },
+                        "Tree of Life": {
+                            "Pulse healing": 90,
+                            "Health": 1000,
+                            "Duration": 15,
+                            "Ultimate cost": 2200
                         }
                     }
                 },
                 "Lúcio": {
+                    "general": {
+                        "Base health": 250
+                    },
                     "abilities": {
                         "Sonic Amplifier": {
                             "Damage per projectile": 18
                         },
                         "Soundwave": {
-                            "Damage": 45
+                            "Damage": 45,
+                            "Knockback": 8
+                        },
+                        "Sound Barrier": {
+                            "Ultimate cost": 2650
                         }
                     }
                 },
-                "Lifeweaver": {
+                "Mercy": {
+                    "general": {
+                        "Base health": 250
+                    },
                     "abilities": {
-                        "Rejuvenating Dash": {
-                            "Heal": 60
+                        "Regeneration": {
+                            "Healing": 0,
+                            "Delay": 2.5
                         },
-                        "Tree of Life": {
-                            "Pulse healing": 90
+                        "Sympathetic Recovery": {
+                            "Self healing as percent of healing done": 40
+                        },
+                        "Caduceus Staff": {
+                            "Healing": 55
+                        },
+                        "Caduceus Blaster": {
+                            "Ammo": 25
+                        },
+                        "Valkyrie": {
+                            "Healing": 60,
+                            "Ultimate cost": 2000
                         }
                     }
                 },
                 "Moira": {
+                    "general": {
+                        "Base health": 250
+                    },
                     "abilities": {
                         "Biotic Grasp": {
                             "Damage per second": 60
                         },
                         "Coalescence": {
-                            "Self-heal per second": 55
+                            "Self-heal per second": 55,
+                            "can use fade during duration": true,
+                            "Ultimate cost": 2900
+                        }
+                    }
+                },
+                "Zenyatta": {
+                    "general": {
+                        "Base health": 75,
+                        "Shield health": 175
+                    },
+                    "abilities": {
+                        "Snap Kick": {
+                            "Knockback": 8
+                        },
+                        "Orb of Destruction": {
+                            "Ammo": 25
+                        },
+                        "Transcendence": {
+                            "Ultimate cost": 2550
                         }
                     }
                 }
@@ -1994,7 +2304,7 @@ const patches = {
                         },
                         "Death Blossom": {
                             "Ultimate cost": 1870,
-                            "Damage per second": 185 
+                            "Damage per second": 185
                         }
                     }
                 },
@@ -2156,8 +2466,87 @@ const patches = {
                 }
             },
             "support": {
-                "Illari": {
+                "general": {
+                    "Self heal delay": 2.5,
+                    "Self heal amount": "same as general heal passive"
+                },
+                "Ana": {
+                    "general": {
+                        "Base health": 250
+                    },
                     "abilities": {
+                        "Biotic Rifle": {
+                            "Ammo": 15
+                        },
+                        "Sleep Dart": {
+                            "Cooldown": 14
+                        },
+                        "Biotic Grenade": {
+                            "Healing": 90,
+                            "Damage": 90
+                        },
+                        "Nano Boost": {
+                            "Ultimate cost": 2300
+                        }
+                    }
+                },
+                "Baptiste": {
+                    "general": {
+                        "Base health": 250
+                    },
+                    "abilities": {
+                        "Biotic Launcher": {
+                            "Damage per bullet": 25,
+                            "Explosion healing": 50,
+                            "Direct healing": 20
+                        },
+                        "Regenerative Burst": {
+                            "Cooldown": 15,
+                            "Instant healing": 40,
+                            "Instant healing on allies <50% HP": 40,
+                            "Heal over time": 40,
+                            "Additional self heal over time": 0
+                        },
+                        "Immortality Field": {
+                            "Health": 125
+                        },
+                        "Amplification Matrix": {
+                            "Ultimate cost": 2550
+                        }
+                    }
+                },
+                "Brigitte": {
+                    "general": {
+                        "Base health": 200
+                    },
+                    "abilities": {
+                        "Inspire": {
+                            "Healing per second": 15
+                        },
+                        "Rocket Flail": {
+                            "Damage": 45
+                        },
+                        "Repair Pack": {
+                            "Instant healing": 25
+                        },
+                        "Rally": {
+                            "Ultimate cost": 2700,
+                            "resets Shield Bash cooldown upon activation": false
+                        }
+                    }
+                },
+                "Illari": {
+                    "general": {
+                        "Base health": 250
+                    },
+                    "abilities": {
+                        "Solar Rifle": {
+                            "Damage": 75,
+                            "Critical Multiplier": 1.5,
+                            "Ammo": 16,
+                            "Primary fire recovery": 0.25,
+                            "Secondary fire heal-per-second": 115
+                        },
                         "Outburst": {
                             "Damage": 10
                         },
@@ -2165,58 +2554,134 @@ const patches = {
                             "Healing per projectile": 30,
                             "Self healing efficiency": 100,
                             "Health": 50,
-                            "Shield health": 50
+                            "Shield health": 50,
+                            "Cooldown": 12
                         },
-                        "Solar Rifle": {
-                            "Primary fire recovery": 0.25,
-                            "Secondary fire heal-per-second": 115
+                        "Captive Sun": {
+                            "Ultimate cost": 2650,
+                            "Sunstruck explosion damage": 160
                         }
                     }
                 },
                 "Kiriko": {
+                    "general": {
+                        "Base health": 250
+                    },
                     "abilities": {
+                        "Kunai": {
+                            "Ammo": 15
+                        },
                         "Swift Step": {
-                            "Cooldown": 7
+                            "Cooldown": 7,
+                            "Respawn cooldown": 0,
+                            "Self healing": 0
                         },
                         "Protection Suzu": {
                             "cleanses hard knockdown stuns": true
+                        },
+                        "Kitsune Rush": {
+                            "Ultimate cost": 2525
                         }
                     }
                 },
-                "Brigitte": {
+                "Lifeweaver": {
+                    "general": {
+                        "Base health": 225,
+                        "Shield health": 50
+                    },
                     "abilities": {
-                        "Rally": {
-                            "resets Shield Bash cooldown upon activation": false
+                        "Healing Blossom": {
+                            "Ammo": 16
+                        },
+                        "Thorn Volley": {
+                            "Ammo": 80,
+                            "Damage": 6
+                        },
+                        "Petal Platform": {
+                            "Health": 400,
+                            "Cooldown": 12
+                        },
+                        "Rejuvenating Dash": {
+                            "Heal": 60
+                        },
+                        "Tree of Life": {
+                            "Pulse healing": 90,
+                            "Health": 1000,
+                            "Duration": 15,
+                            "Ultimate cost": 2200
                         }
                     }
                 },
                 "Lúcio": {
+                    "general": {
+                        "Base health": 250
+                    },
                     "abilities": {
                         "Sonic Amplifier": {
                             "Damage per projectile": 18
                         },
                         "Soundwave": {
-                            "Damage": 45
+                            "Damage": 45,
+                            "Knockback": 8
+                        },
+                        "Sound Barrier": {
+                            "Ultimate cost": 2650
                         }
                     }
                 },
-                "Lifeweaver": {
+                "Mercy": {
+                    "general": {
+                        "Base health": 250
+                    },
                     "abilities": {
-                        "Rejuvenating Dash": {
-                            "Heal": 60
+                        "Regeneration": {
+                            "Healing": 0,
+                            "Delay": 2.5
                         },
-                        "Tree of Life": {
-                            "Pulse healing": 90
+                        "Sympathetic Recovery": {
+                            "Self healing as percent of healing done": 40
+                        },
+                        "Caduceus Staff": {
+                            "Healing": 55
+                        },
+                        "Caduceus Blaster": {
+                            "Ammo": 25
+                        },
+                        "Valkyrie": {
+                            "Healing": 60,
+                            "Ultimate cost": 2000
                         }
                     }
                 },
                 "Moira": {
+                    "general": {
+                        "Base health": 250
+                    },
                     "abilities": {
                         "Biotic Grasp": {
                             "Damage per second": 60
                         },
                         "Coalescence": {
-                            "Self-heal per second": 55
+                            "Self-heal per second": 55,
+                            "can use fade during duration": true,
+                            "Ultimate cost": 2900
+                        }
+                    }
+                },
+                "Zenyatta": {
+                    "general": {
+                        "Base health": 75,
+                        "Shield health": 175
+                    },
+                    "abilities": {
+                        "Snap Kick": {
+                            "Knockback": 8
+                        },
+                        "Orb of Destruction": {
+                            "Ammo": 25
+                        },
+                        "Transcendence": {
+                            "Ultimate cost": 2550
                         }
                     }
                 }
@@ -2735,7 +3200,7 @@ const patches = {
                         },
                         "Death Blossom": {
                             "Ultimate cost": 1870,
-                            "Damage per second": 185 
+                            "Damage per second": 185
                         }
                     }
                 },
@@ -2897,8 +3362,87 @@ const patches = {
                 }
             },
             "support": {
-                "Illari": {
+                "general": {
+                    "Self heal delay": 2.5,
+                    "Self heal amount": "same as general heal passive"
+                },
+                "Ana": {
+                    "general": {
+                        "Base health": 250
+                    },
                     "abilities": {
+                        "Biotic Rifle": {
+                            "Ammo": 15
+                        },
+                        "Sleep Dart": {
+                            "Cooldown": 14
+                        },
+                        "Biotic Grenade": {
+                            "Healing": 90,
+                            "Damage": 90
+                        },
+                        "Nano Boost": {
+                            "Ultimate cost": 2300
+                        }
+                    }
+                },
+                "Baptiste": {
+                    "general": {
+                        "Base health": 250
+                    },
+                    "abilities": {
+                        "Biotic Launcher": {
+                            "Damage per bullet": 25,
+                            "Explosion healing": 50,
+                            "Direct healing": 20
+                        },
+                        "Regenerative Burst": {
+                            "Cooldown": 15,
+                            "Instant healing": 40,
+                            "Instant healing on allies <50% HP": 40,
+                            "Heal over time": 40,
+                            "Additional self heal over time": 0
+                        },
+                        "Immortality Field": {
+                            "Health": 125
+                        },
+                        "Amplification Matrix": {
+                            "Ultimate cost": 2550
+                        }
+                    }
+                },
+                "Brigitte": {
+                    "general": {
+                        "Base health": 200
+                    },
+                    "abilities": {
+                        "Inspire": {
+                            "Healing per second": 15
+                        },
+                        "Rocket Flail": {
+                            "Damage": 45
+                        },
+                        "Repair Pack": {
+                            "Instant healing": 25
+                        },
+                        "Rally": {
+                            "Ultimate cost": 2700,
+                            "resets Shield Bash cooldown upon activation": true
+                        }
+                    }
+                },
+                "Illari": {
+                    "general": {
+                        "Base health": 250
+                    },
+                    "abilities": {
+                        "Solar Rifle": {
+                            "Damage": 75,
+                            "Critical Multiplier": 1.5,
+                            "Ammo": 16,
+                            "Primary fire recovery": 0.25,
+                            "Secondary fire heal-per-second": 115
+                        },
                         "Outburst": {
                             "Damage": 10
                         },
@@ -2906,58 +3450,134 @@ const patches = {
                             "Healing per projectile": 30,
                             "Self healing efficiency": 100,
                             "Health": 50,
-                            "Shield health": 50
+                            "Shield health": 50,
+                            "Cooldown": 12
                         },
-                        "Solar Rifle": {
-                            "Primary fire recovery": 0.25,
-                            "Secondary fire heal-per-second": 115
+                        "Captive Sun": {
+                            "Ultimate cost": 2650,
+                            "Sunstruck explosion damage": 160
                         }
                     }
                 },
                 "Kiriko": {
+                    "general": {
+                        "Base health": 250
+                    },
                     "abilities": {
+                        "Kunai": {
+                            "Ammo": 15
+                        },
                         "Swift Step": {
-                            "Cooldown": 7
+                            "Cooldown": 7,
+                            "Respawn cooldown": 0,
+                            "Self healing": 0
                         },
                         "Protection Suzu": {
                             "cleanses hard knockdown stuns": true
+                        },
+                        "Kitsune Rush": {
+                            "Ultimate cost": 2525
                         }
                     }
                 },
-                "Brigitte": {
+                "Lifeweaver": {
+                    "general": {
+                        "Base health": 225,
+                        "Shield health": 50
+                    },
                     "abilities": {
-                        "Rally": {
-                            "resets Shield Bash cooldown upon activation": true
+                        "Healing Blossom": {
+                            "Ammo": 16
+                        },
+                        "Thorn Volley": {
+                            "Ammo": 80,
+                            "Damage": 6
+                        },
+                        "Petal Platform": {
+                            "Health": 400,
+                            "Cooldown": 12
+                        },
+                        "Rejuvenating Dash": {
+                            "Heal": 60
+                        },
+                        "Tree of Life": {
+                            "Pulse healing": 90,
+                            "Health": 1000,
+                            "Duration": 15,
+                            "Ultimate cost": 2200
                         }
                     }
                 },
                 "Lúcio": {
+                    "general": {
+                        "Base health": 250
+                    },
                     "abilities": {
                         "Sonic Amplifier": {
                             "Damage per projectile": 18
                         },
                         "Soundwave": {
-                            "Damage": 45
+                            "Damage": 45,
+                            "Knockback": 8
+                        },
+                        "Sound Barrier": {
+                            "Ultimate cost": 2650
                         }
                     }
                 },
-                "Lifeweaver": {
+                "Mercy": {
+                    "general": {
+                        "Base health": 250
+                    },
                     "abilities": {
-                        "Rejuvenating Dash": {
-                            "Heal": 60
+                        "Regeneration": {
+                            "Healing": 0,
+                            "Delay": 2.5
                         },
-                        "Tree of Life": {
-                            "Pulse healing": 90
+                        "Sympathetic Recovery": {
+                            "Self healing as percent of healing done": 40
+                        },
+                        "Caduceus Staff": {
+                            "Healing": 55
+                        },
+                        "Caduceus Blaster": {
+                            "Ammo": 25
+                        },
+                        "Valkyrie": {
+                            "Healing": 60,
+                            "Ultimate cost": 2000
                         }
                     }
                 },
                 "Moira": {
+                    "general": {
+                        "Base health": 250
+                    },
                     "abilities": {
                         "Biotic Grasp": {
                             "Damage per second": 60
                         },
                         "Coalescence": {
-                            "Self-heal per second": 55
+                            "Self-heal per second": 55,
+                            "can use fade during duration": true,
+                            "Ultimate cost": 2900
+                        }
+                    }
+                },
+                "Zenyatta": {
+                    "general": {
+                        "Base health": 75,
+                        "Shield health": 175
+                    },
+                    "abilities": {
+                        "Snap Kick": {
+                            "Knockback": 8
+                        },
+                        "Orb of Destruction": {
+                            "Ammo": 25
+                        },
+                        "Transcendence": {
+                            "Ultimate cost": 2550
                         }
                     }
                 }
@@ -3476,7 +4096,7 @@ const patches = {
                         },
                         "Death Blossom": {
                             "Ultimate cost": 1870,
-                            "Damage per second": 185 
+                            "Damage per second": 185
                         }
                     }
                 },
@@ -3638,8 +4258,87 @@ const patches = {
                 }
             },
             "support": {
-                "Illari": {
+                "general": {
+                    "Self heal delay": 2.5,
+                    "Self heal amount": "same as general heal passive"
+                },
+                "Ana": {
+                    "general": {
+                        "Base health": 250
+                    },
                     "abilities": {
+                        "Biotic Rifle": {
+                            "Ammo": 15
+                        },
+                        "Sleep Dart": {
+                            "Cooldown": 14
+                        },
+                        "Biotic Grenade": {
+                            "Healing": 90,
+                            "Damage": 90
+                        },
+                        "Nano Boost": {
+                            "Ultimate cost": 2300
+                        }
+                    }
+                },
+                "Baptiste": {
+                    "general": {
+                        "Base health": 250
+                    },
+                    "abilities": {
+                        "Biotic Launcher": {
+                            "Damage per bullet": 25,
+                            "Explosion healing": 50,
+                            "Direct healing": 20
+                        },
+                        "Regenerative Burst": {
+                            "Cooldown": 15,
+                            "Instant healing": 40,
+                            "Instant healing on allies <50% HP": 40,
+                            "Heal over time": 40,
+                            "Additional self heal over time": 0
+                        },
+                        "Immortality Field": {
+                            "Health": 125
+                        },
+                        "Amplification Matrix": {
+                            "Ultimate cost": 2550
+                        }
+                    }
+                },
+                "Brigitte": {
+                    "general": {
+                        "Base health": 200
+                    },
+                    "abilities": {
+                        "Inspire": {
+                            "Healing per second": 15
+                        },
+                        "Rocket Flail": {
+                            "Damage": 45
+                        },
+                        "Repair Pack": {
+                            "Instant healing": 25
+                        },
+                        "Rally": {
+                            "Ultimate cost": 2700,
+                            "resets Shield Bash cooldown upon activation": true
+                        }
+                    }
+                },
+                "Illari": {
+                    "general": {
+                        "Base health": 250
+                    },
+                    "abilities": {
+                        "Solar Rifle": {
+                            "Damage": 75,
+                            "Critical Multiplier": 1.5,
+                            "Ammo": 16,
+                            "Primary fire recovery": 0.25,
+                            "Secondary fire heal-per-second": 115
+                        },
                         "Outburst": {
                             "Damage": 10
                         },
@@ -3647,58 +4346,134 @@ const patches = {
                             "Healing per projectile": 30,
                             "Self healing efficiency": 100,
                             "Health": 50,
-                            "Shield health": 50
+                            "Shield health": 50,
+                            "Cooldown": 12
                         },
-                        "Solar Rifle": {
-                            "Primary fire recovery": 0.25,
-                            "Secondary fire heal-per-second": 115
+                        "Captive Sun": {
+                            "Ultimate cost": 2650,
+                            "Sunstruck explosion damage": 160
                         }
                     }
                 },
                 "Kiriko": {
+                    "general": {
+                        "Base health": 250
+                    },
                     "abilities": {
+                        "Kunai": {
+                            "Ammo": 15
+                        },
                         "Swift Step": {
-                            "Cooldown": 7
+                            "Cooldown": 7,
+                            "Respawn cooldown": 0,
+                            "Self healing": 0
                         },
                         "Protection Suzu": {
                             "cleanses hard knockdown stuns": true
+                        },
+                        "Kitsune Rush": {
+                            "Ultimate cost": 2525
                         }
                     }
                 },
-                "Brigitte": {
+                "Lifeweaver": {
+                    "general": {
+                        "Base health": 225,
+                        "Shield health": 50
+                    },
                     "abilities": {
-                        "Rally": {
-                            "resets Shield Bash cooldown upon activation": true
+                        "Healing Blossom": {
+                            "Ammo": 16
+                        },
+                        "Thorn Volley": {
+                            "Ammo": 80,
+                            "Damage": 6
+                        },
+                        "Petal Platform": {
+                            "Health": 400,
+                            "Cooldown": 12
+                        },
+                        "Rejuvenating Dash": {
+                            "Heal": 60
+                        },
+                        "Tree of Life": {
+                            "Pulse healing": 90,
+                            "Health": 1000,
+                            "Duration": 15,
+                            "Ultimate cost": 2200
                         }
                     }
                 },
                 "Lúcio": {
+                    "general": {
+                        "Base health": 250
+                    },
                     "abilities": {
                         "Sonic Amplifier": {
                             "Damage per projectile": 18
                         },
                         "Soundwave": {
-                            "Damage": 45
+                            "Damage": 45,
+                            "Knockback": 8
+                        },
+                        "Sound Barrier": {
+                            "Ultimate cost": 2650
                         }
                     }
                 },
-                "Lifeweaver": {
+                "Mercy": {
+                    "general": {
+                        "Base health": 250
+                    },
                     "abilities": {
-                        "Rejuvenating Dash": {
-                            "Heal": 60
+                        "Regeneration": {
+                            "Healing": 0,
+                            "Delay": 2.5
                         },
-                        "Tree of Life": {
-                            "Pulse healing": 90
+                        "Sympathetic Recovery": {
+                            "Self healing as percent of healing done": 40
+                        },
+                        "Caduceus Staff": {
+                            "Healing": 55
+                        },
+                        "Caduceus Blaster": {
+                            "Ammo": 25
+                        },
+                        "Valkyrie": {
+                            "Healing": 60,
+                            "Ultimate cost": 2000
                         }
                     }
                 },
                 "Moira": {
+                    "general": {
+                        "Base health": 250
+                    },
                     "abilities": {
                         "Biotic Grasp": {
                             "Damage per second": 60
                         },
                         "Coalescence": {
-                            "Self-heal per second": 55
+                            "Self-heal per second": 55,
+                            "can use fade during duration": true,
+                            "Ultimate cost": 2900
+                        }
+                    }
+                },
+                "Zenyatta": {
+                    "general": {
+                        "Base health": 75,
+                        "Shield health": 175
+                    },
+                    "abilities": {
+                        "Snap Kick": {
+                            "Knockback": 8
+                        },
+                        "Orb of Destruction": {
+                            "Ammo": 25
+                        },
+                        "Transcendence": {
+                            "Ultimate cost": 2550
                         }
                     }
                 }
@@ -4217,7 +4992,7 @@ const patches = {
                         },
                         "Death Blossom": {
                             "Ultimate cost": 1870,
-                            "Damage per second": 185 
+                            "Damage per second": 185
                         }
                     }
                 },
@@ -4379,8 +5154,87 @@ const patches = {
                 }
             },
             "support": {
-                "Illari": {
+                "general": {
+                    "Self heal delay": 2.5,
+                    "Self heal amount": "same as general heal passive"
+                },
+                "Ana": {
+                    "general": {
+                        "Base health": 250
+                    },
                     "abilities": {
+                        "Biotic Rifle": {
+                            "Ammo": 15
+                        },
+                        "Sleep Dart": {
+                            "Cooldown": 14
+                        },
+                        "Biotic Grenade": {
+                            "Healing": 90,
+                            "Damage": 90
+                        },
+                        "Nano Boost": {
+                            "Ultimate cost": 2300
+                        }
+                    }
+                },
+                "Baptiste": {
+                    "general": {
+                        "Base health": 250
+                    },
+                    "abilities": {
+                        "Biotic Launcher": {
+                            "Damage per bullet": 25,
+                            "Explosion healing": 50,
+                            "Direct healing": 20
+                        },
+                        "Regenerative Burst": {
+                            "Cooldown": 15,
+                            "Instant healing": 40,
+                            "Instant healing on allies <50% HP": 40,
+                            "Heal over time": 40,
+                            "Additional self heal over time": 0
+                        },
+                        "Immortality Field": {
+                            "Health": 125
+                        },
+                        "Amplification Matrix": {
+                            "Ultimate cost": 2550
+                        }
+                    }
+                },
+                "Brigitte": {
+                    "general": {
+                        "Base health": 200
+                    },
+                    "abilities": {
+                        "Inspire": {
+                            "Healing per second": 15
+                        },
+                        "Rocket Flail": {
+                            "Damage": 45
+                        },
+                        "Repair Pack": {
+                            "Instant healing": 25
+                        },
+                        "Rally": {
+                            "Ultimate cost": 2700,
+                            "resets Shield Bash cooldown upon activation": true
+                        }
+                    }
+                },
+                "Illari": {
+                    "general": {
+                        "Base health": 250
+                    },
+                    "abilities": {
+                        "Solar Rifle": {
+                            "Damage": 75,
+                            "Critical Multiplier": 1.5,
+                            "Ammo": 16,
+                            "Primary fire recovery": 0.25,
+                            "Secondary fire heal-per-second": 115
+                        },
                         "Outburst": {
                             "Damage": 10
                         },
@@ -4388,58 +5242,134 @@ const patches = {
                             "Healing per projectile": 30,
                             "Self healing efficiency": 100,
                             "Health": 50,
-                            "Shield health": 50
+                            "Shield health": 50,
+                            "Cooldown": 12
                         },
-                        "Solar Rifle": {
-                            "Primary fire recovery": 0.25,
-                            "Secondary fire heal-per-second": 115
+                        "Captive Sun": {
+                            "Ultimate cost": 2650,
+                            "Sunstruck explosion damage": 160
                         }
                     }
                 },
                 "Kiriko": {
+                    "general": {
+                        "Base health": 250
+                    },
                     "abilities": {
+                        "Kunai": {
+                            "Ammo": 15
+                        },
                         "Swift Step": {
-                            "Cooldown": 7
+                            "Cooldown": 7,
+                            "Respawn cooldown": 0,
+                            "Self healing": 0
                         },
                         "Protection Suzu": {
                             "cleanses hard knockdown stuns": true
+                        },
+                        "Kitsune Rush": {
+                            "Ultimate cost": 2525
                         }
                     }
                 },
-                "Brigitte": {
+                "Lifeweaver": {
+                    "general": {
+                        "Base health": 225,
+                        "Shield health": 50
+                    },
                     "abilities": {
-                        "Rally": {
-                            "resets Shield Bash cooldown upon activation": true
+                        "Healing Blossom": {
+                            "Ammo": 16
+                        },
+                        "Thorn Volley": {
+                            "Ammo": 80,
+                            "Damage": 6
+                        },
+                        "Petal Platform": {
+                            "Health": 400,
+                            "Cooldown": 12
+                        },
+                        "Rejuvenating Dash": {
+                            "Heal": 60
+                        },
+                        "Tree of Life": {
+                            "Pulse healing": 90,
+                            "Health": 1000,
+                            "Duration": 15,
+                            "Ultimate cost": 2200
                         }
                     }
                 },
                 "Lúcio": {
+                    "general": {
+                        "Base health": 250
+                    },
                     "abilities": {
                         "Sonic Amplifier": {
                             "Damage per projectile": 18
                         },
                         "Soundwave": {
-                            "Damage": 45
+                            "Damage": 45,
+                            "Knockback": 8
+                        },
+                        "Sound Barrier": {
+                            "Ultimate cost": 2650
                         }
                     }
                 },
-                "Lifeweaver": {
+                "Mercy": {
+                    "general": {
+                        "Base health": 250
+                    },
                     "abilities": {
-                        "Rejuvenating Dash": {
-                            "Heal": 60
+                        "Regeneration": {
+                            "Healing": 0,
+                            "Delay": 2.5
                         },
-                        "Tree of Life": {
-                            "Pulse healing": 90
+                        "Sympathetic Recovery": {
+                            "Self healing as percent of healing done": 40
+                        },
+                        "Caduceus Staff": {
+                            "Healing": 55
+                        },
+                        "Caduceus Blaster": {
+                            "Ammo": 25
+                        },
+                        "Valkyrie": {
+                            "Healing": 60,
+                            "Ultimate cost": 2000
                         }
                     }
                 },
                 "Moira": {
+                    "general": {
+                        "Base health": 250
+                    },
                     "abilities": {
                         "Biotic Grasp": {
                             "Damage per second": 60
                         },
                         "Coalescence": {
-                            "Self-heal per second": 55
+                            "Self-heal per second": 55,
+                            "can use fade during duration": true,
+                            "Ultimate cost": 2900
+                        }
+                    }
+                },
+                "Zenyatta": {
+                    "general": {
+                        "Base health": 75,
+                        "Shield health": 175
+                    },
+                    "abilities": {
+                        "Snap Kick": {
+                            "Knockback": 8
+                        },
+                        "Orb of Destruction": {
+                            "Ammo": 25
+                        },
+                        "Transcendence": {
+                            "Ultimate cost": 2550
                         }
                     }
                 }
@@ -4958,7 +5888,7 @@ const patches = {
                         },
                         "Death Blossom": {
                             "Ultimate cost": 1870,
-                            "Damage per second": 185 
+                            "Damage per second": 185
                         }
                     }
                 },
@@ -5120,8 +6050,87 @@ const patches = {
                 }
             },
             "support": {
-                "Illari": {
+                "general": {
+                    "Self heal delay": 2.5,
+                    "Self heal amount": "same as general heal passive"
+                },
+                "Ana": {
+                    "general": {
+                        "Base health": 250
+                    },
                     "abilities": {
+                        "Biotic Rifle": {
+                            "Ammo": 15
+                        },
+                        "Sleep Dart": {
+                            "Cooldown": 14
+                        },
+                        "Biotic Grenade": {
+                            "Healing": 90,
+                            "Damage": 90
+                        },
+                        "Nano Boost": {
+                            "Ultimate cost": 2300
+                        }
+                    }
+                },
+                "Baptiste": {
+                    "general": {
+                        "Base health": 250
+                    },
+                    "abilities": {
+                        "Biotic Launcher": {
+                            "Damage per bullet": 25,
+                            "Explosion healing": 50,
+                            "Direct healing": 20
+                        },
+                        "Regenerative Burst": {
+                            "Cooldown": 15,
+                            "Instant healing": 40,
+                            "Instant healing on allies <50% HP": 40,
+                            "Heal over time": 40,
+                            "Additional self heal over time": 0
+                        },
+                        "Immortality Field": {
+                            "Health": 125
+                        },
+                        "Amplification Matrix": {
+                            "Ultimate cost": 2550
+                        }
+                    }
+                },
+                "Brigitte": {
+                    "general": {
+                        "Base health": 200
+                    },
+                    "abilities": {
+                        "Inspire": {
+                            "Healing per second": 15
+                        },
+                        "Rocket Flail": {
+                            "Damage": 45
+                        },
+                        "Repair Pack": {
+                            "Instant healing": 25
+                        },
+                        "Rally": {
+                            "Ultimate cost": 2700,
+                            "resets Shield Bash cooldown upon activation": true
+                        }
+                    }
+                },
+                "Illari": {
+                    "general": {
+                        "Base health": 250
+                    },
+                    "abilities": {
+                        "Solar Rifle": {
+                            "Damage": 75,
+                            "Critical Multiplier": 1.5,
+                            "Ammo": 16,
+                            "Primary fire recovery": 0.25,
+                            "Secondary fire heal-per-second": 115
+                        },
                         "Outburst": {
                             "Damage": 25
                         },
@@ -5129,58 +6138,134 @@ const patches = {
                             "Healing per projectile": 40,
                             "Self healing efficiency": 50,
                             "Health": 75,
-                            "Shield health": 50
+                            "Shield health": 50,
+                            "Cooldown": 12
                         },
-                        "Solar Rifle": {
-                            "Primary fire recovery": 0.25,
-                            "Secondary fire heal-per-second": 115
+                        "Captive Sun": {
+                            "Ultimate cost": 2650,
+                            "Sunstruck explosion damage": 160
                         }
                     }
                 },
                 "Kiriko": {
+                    "general": {
+                        "Base health": 250
+                    },
                     "abilities": {
+                        "Kunai": {
+                            "Ammo": 15
+                        },
                         "Swift Step": {
-                            "Cooldown": 8
+                            "Cooldown": 8,
+                            "Respawn cooldown": 0,
+                            "Self healing": 0
                         },
                         "Protection Suzu": {
                             "cleanses hard knockdown stuns": false
+                        },
+                        "Kitsune Rush": {
+                            "Ultimate cost": 2525
                         }
                     }
                 },
-                "Brigitte": {
+                "Lifeweaver": {
+                    "general": {
+                        "Base health": 225,
+                        "Shield health": 50
+                    },
                     "abilities": {
-                        "Rally": {
-                            "resets Shield Bash cooldown upon activation": true
+                        "Healing Blossom": {
+                            "Ammo": 16
+                        },
+                        "Thorn Volley": {
+                            "Ammo": 80,
+                            "Damage": 6
+                        },
+                        "Petal Platform": {
+                            "Health": 400,
+                            "Cooldown": 12
+                        },
+                        "Rejuvenating Dash": {
+                            "Heal": 60
+                        },
+                        "Tree of Life": {
+                            "Pulse healing": 90,
+                            "Health": 1000,
+                            "Duration": 15,
+                            "Ultimate cost": 2200
                         }
                     }
                 },
                 "Lúcio": {
+                    "general": {
+                        "Base health": 250
+                    },
                     "abilities": {
                         "Sonic Amplifier": {
                             "Damage per projectile": 18
                         },
                         "Soundwave": {
-                            "Damage": 45
+                            "Damage": 45,
+                            "Knockback": 8
+                        },
+                        "Sound Barrier": {
+                            "Ultimate cost": 2650
                         }
                     }
                 },
-                "Lifeweaver": {
+                "Mercy": {
+                    "general": {
+                        "Base health": 250
+                    },
                     "abilities": {
-                        "Rejuvenating Dash": {
-                            "Heal": 60
+                        "Regeneration": {
+                            "Healing": 0,
+                            "Delay": 2.5
                         },
-                        "Tree of Life": {
-                            "Pulse healing": 90
+                        "Sympathetic Recovery": {
+                            "Self healing as percent of healing done": 40
+                        },
+                        "Caduceus Staff": {
+                            "Healing": 55
+                        },
+                        "Caduceus Blaster": {
+                            "Ammo": 25
+                        },
+                        "Valkyrie": {
+                            "Healing": 60,
+                            "Ultimate cost": 2000
                         }
                     }
                 },
                 "Moira": {
+                    "general": {
+                        "Base health": 250
+                    },
                     "abilities": {
                         "Biotic Grasp": {
                             "Damage per second": 60
                         },
                         "Coalescence": {
-                            "Self-heal per second": 55
+                            "Self-heal per second": 55,
+                            "can use fade during duration": true,
+                            "Ultimate cost": 2900
+                        }
+                    }
+                },
+                "Zenyatta": {
+                    "general": {
+                        "Base health": 75,
+                        "Shield health": 175
+                    },
+                    "abilities": {
+                        "Snap Kick": {
+                            "Knockback": 8
+                        },
+                        "Orb of Destruction": {
+                            "Ammo": 25
+                        },
+                        "Transcendence": {
+                            "Ultimate cost": 2550
                         }
                     }
                 }
@@ -5861,67 +6946,222 @@ const patches = {
                 }
             },
             "support": {
-                "Illari": {
+                "general": {
+                    "Self heal delay": 2.5,
+                    "Self heal amount": "none"
+                },
+                "Ana": {
+                    "general": {
+                        "Base health": 200
+                    },
                     "abilities": {
-                        "Outburst": {
-                            "Damage": 25
+                        "Biotic Rifle": {
+                            "Ammo": 12
                         },
-                        "Healing Pylon": {
-                            "Healing per projectile": 40,
-                            "Self healing efficiency": 50,
-                            "Health": 75,
-                            "Shield health": 50
+                        "Sleep Dart": {
+                            "Cooldown": 12
                         },
-                        "Solar Rifle": {
-                            "Primary fire recovery": 0.25,
-                            "Secondary fire heal-per-second": 115
+                        "Biotic Grenade": {
+                            "Healing": 160,
+                            "Damage": 60
+                        },
+                        "Nano Boost": {
+                            "Ultimate cost": 2100
                         }
                     }
                 },
-                "Kiriko": {
+                "Baptiste": {
+                    "general": {
+                        "Base health": 200
+                    },
                     "abilities": {
-                        "Swift Step": {
-                            "Cooldown": 8
+                        "Biotic Launcher": {
+                            "Damage per bullet": 24,
+                            "Explosion healing": 35,
+                            "Direct healing": 40
                         },
-                        "Protection Suzu": {
-                            "cleanses hard knockdown stuns": false
+                        "Regenerative Burst": {
+                            "Cooldown": 13,
+                            "Instant healing": 0,
+                            "Instant healing on allies <50% HP": 0,
+                            "Heal over time": 75,
+                            "Additional self heal over time": 75
+                        },
+                        "Immortality Field": {
+                            "Health": 100
+                        },
+                        "Amplification Matrix": {
+                            "Ultimate cost": 2310
                         }
                     }
                 },
                 "Brigitte": {
+                    "general": {
+                        "Base health": 150
+                    },
                     "abilities": {
+                        "Inspire": {
+                            "Healing per second": 12
+                        },
+                        "Rocket Flail": {
+                            "Damage": 35
+                        },
+                        "Repair Pack": {
+                            "Instant healing": 35
+                        },
                         "Rally": {
-                            "resets Shield Bash cooldown upon activation": true
+                            "Ultimate cost": 2800,
+                            "resets Shield Bash cooldown upon activation": false
                         }
                     }
                 },
-                "Lúcio": {
+                "Illari": {
+                    "general": {
+                        "Base health": 200
+                    },
                     "abilities": {
-                        "Sonic Amplifier": {
-                            "Damage per projectile": 18
+                        "Solar Rifle": {
+                            "Damage": 70,
+                            "Critical Multiplier": 1.57,
+                            "Ammo": 12,
+                            "Primary fire recovery": 0.25,
+                            "Secondary fire heal-per-second": 115
                         },
-                        "Soundwave": {
-                            "Damage": 45
+                        "Outburst": {
+                            "Damage": 25
+                        },
+                        "Healing Pylon": {
+                            "Healing per projectile": 35,
+                            "Self healing efficiency": 100,
+                            "Health": 60,
+                            "Shield health": 40,
+                            "Cooldown": 16
+                        },
+                        "Captive Sun": {
+                            "Ultimate cost": 2226,
+                            "Sunstruck explosion damage": 120
+                        }
+                    }
+                },
+                "Kiriko": {
+                    "general": {
+                        "Base health": 200
+                    },
+                    "abilities": {
+                        "Kunai": {
+                            "Ammo": 12
+                        },
+                        "Swift Step": {
+                            "Cooldown": 7,
+                            "Respawn cooldown": 5,
+                            "Self healing": 40
+                        },
+                        "Protection Suzu": {
+                            "cleanses hard knockdown stuns": false
+                        },
+                        "Kitsune Rush": {
+                            "Ultimate cost": 2400
                         }
                     }
                 },
                 "Lifeweaver": {
+                    "general": {
+                        "Base health": 100,
+                        "Shield health": 125
+                    },
                     "abilities": {
+                        "Healing Blossom": {
+                            "Ammo": 14
+                        },
+                        "Thorn Volley": {
+                            "Ammo": 60,
+                            "Damage": 7.5
+                        },
+                        "Petal Platform": {
+                            "Health": 300,
+                            "Cooldown": 10
+                        },
                         "Rejuvenating Dash": {
                             "Heal": 60
                         },
                         "Tree of Life": {
-                            "Pulse healing": 90
+                            "Pulse healing": 75,
+                            "Health": 900,
+                            "Duration": 12,
+                            "Ultimate cost": 2000
+                        }
+                    }
+                },
+                "Lúcio": {
+                    "general": {
+                        "Base health": 200
+                    },
+                    "abilities": {
+                        "Sonic Amplifier": {
+                            "Damage per projectile": 20
+                        },
+                        "Soundwave": {
+                            "Damage": 30,
+                            "Knockback": 6.5
+                        },
+                        "Sound Barrier": {
+                            "Ultimate cost": 2940
+                        }
+                    }
+                },
+                "Mercy": {
+                    "general": {
+                        "Base health": 200
+                    },
+                    "abilities": {
+                        "Regeneration": {
+                            "Healing": 20,
+                            "Delay": 2.5
+                        },
+                        "Sympathetic Recovery": {
+                            "Self healing as percent of healing done": 40
+                        },
+                        "Caduceus Staff": {
+                            "Healing": 60
+                        },
+                        "Caduceus Blaster": {
+                            "Ammo": 20
+                        },
+                        "Valkyrie": {
+                            "Healing": 60,
+                            "Ultimate cost": 1820
                         }
                     }
                 },
                 "Moira": {
+                    "general": {
+                        "Base health": 200
+                    },
                     "abilities": {
                         "Biotic Grasp": {
                             "Damage per second": 60
                         },
                         "Coalescence": {
-                            "Self-heal per second": 55
+                            "Self-heal per second": 55,
+                            "can use fade during duration": false,
+                            "Ultimate cost": 2800
+                        }
+                    }
+                },
+                "Zenyatta": {
+                    "general": {
+                        "Base health": 100,
+                        "Shield health": 100
+                    },
+                    "abilities": {
+                        "Snap Kick": {
+                            "Knockback": 0
+                        },
+                        "Orb of Destruction": {
+                            "Ammo": 20
+                        },
+                        "Transcendence": {
+                            "Ultimate cost": 2310
                         }
                     }
                 }
@@ -5967,6 +7207,10 @@ const hero_images = {
     "Soldier: 76": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/1cb6f3ad4b8afdc1a901c26180a4c134018bb805b91eefe9b7cf2946879f10c8.png",
     "Torbjörn": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/2ef3a4bdd117829a83867a7775ece351c4226f29b24cdbf8d7fac89443e8d8a2.png",
     "Widowmaker": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/b4871b9addd770582c8b6a1ab366b9ec08d986c2995248ee5fce7e15cb0d809d.png",
+    "Ana": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/86debddbaaaf8699d68775a9dbffaf5b8db514772b77ff7234b1ff84c0b29fd5.png",
+    "Baptiste": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/5ac801c6fe84f83fe5015af89858cbdfb2ec9d32d141f582889b5381fd0195fc.png",
+    "Mercy": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/c889fade479003fac5a1ff46a05aee7b0dc88fbb8d2d4b75e4be31159eb1f816.png",
+    "Zenyatta": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/9367143a32f3fc07781330a0b26c6f1087361204a2b7e4088d1daf26428273f2.png",
 };
 
 const ability_images = {
@@ -6087,6 +7331,32 @@ const ability_images = {
     "Shuriken": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/8d0916035141abd9ab2bf72dbcfd0460b7a0019529e023d259ad4340890b34b3.png",
     "Deflect": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/9e46bda733749ddd6512b61c021b4487b6201338a9ff39c716e4ee06e5d63a58.png",
     "Dragonblade": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/e9c3c82c08ce1a6006dbdf6905591040ed83ddceba81efb2e526c217cd57c931.png",
+    "Biotic Rifle": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/efe0ebb135e87dc26b60f0d20500dcd7553ad121ab2b10cd4ffb5db17be9c977.png",
+    "Sleep Dart": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/20707fd82265412fdc6d2353daa88ec7558cd71c89aa3ac6cf0e78bbbfcabd80.png",
+    "Biotic Grenade": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/c8190b234bf0a0e28eecffe162d0c942e6b8656e95f4688c6ca3b025fa5a487d.png",
+    "Nano Boost": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/6fda18b343f3fd0e8dc50fa5a91589e1ca9ed7471a354f61dfc9f22b27b19497.png",
+    "Biotic Launcher": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/af62dfb3476b6389472188ce9e6e0e296928a5cb3ae87a4ed5133c8330e46f0d.png",
+    "Regenerative Burst": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/d887d165f7b0eb98a30af8f274ff740c6c7735af719b93e95dd9da17558815d8.png",
+    "Immortality Field": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/d66d82bab88fc813080dd15e31629cc3aa7c8b41cfb41d5b962b628dd345e433.png",
+    "Amplification Matrix": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/0a31371b55e4007e67a86f8495949970d20f64b2f0166e78d3fd16217e090a83.png",
+    "Inspire": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/487545fb37163e4029e1e8483266180fbcc59b7e8482062563168998774615f8.png",
+    "Rocket Flail": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/1304eead9caa02eb2057c7f9a3eb758bd438086223a8d6c475bb6912da5b8132.png",
+    "Repair Pack": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/5f9f1e00af992f4a090cafc8e83821dd2848f22cb9e0205fafcedacb26bd7335.png",
+    "Captive Sun": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/556c78ff01455fb1ab7ed7808e681ae0f1cd1fdf0fe1c92fe89672ea261ad187.png",
+    "Kunai": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/dd7da4b0caa30dafaa3359c902b31866e547f9a1ea7952d7f536e1671d47d9bd.png",
+    "Kitsune Rush": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/f29fd68592d73f20da39d783e0e2f86dcc65c311912d3284062d2bd1a8aa1c52.png",
+    "Healing Blossom": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/a3ccff02b44507df5c9bdaced0ecd56ac80b33285ad8a60e6c454acf90560579.png",
+    "Thorn Volley": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/2ff86a970fedb412a1166fddfbca13bbd08156043012608e538867f792fc1d78.png",
+    "Petal Platform": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/f64582890d92e968d79c54f9bb8cf1b9b1cc8da6dca7b8bdc647512957cac89f.png",
+    "Sound Barrier": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/21c5a17be341a3c0da2dcc9372f4f3c88ef622c80776360bd844d0fba3eb88a7.png",
+    "Caduceus Staff": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/d1a18f702a0e30d58608da51a0b8eeeab72a04faf0de3579ce625066caa8389e.png",
+    "Caduceus Blaster": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/9d3118f2f0a262678fb1b11ffbaa3f5e929e453cb4d7c819e69ff137cde918e1.png",
+    "Valkyrie": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/0f5455a8a464e85370365bc954dc6c1cca11f4f5c09e7e6eee7a3dde29170c9e.png",
+    "Snap Kick": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/43fbd6de39a636c92c9f17ee4638216fd5cd7dd517c94125e24fa64cddd7845e.png",
+    "Orb of Destruction": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/5740abd7e5f0de513ebcb32b073f27ba8f5625804598d5762cefd0c7331c1437.png",
+    "Transcendence": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/6ac5d4f08023cafc9f5412e45141cddecfdb2cb43ecf8415c12d1d161cce4678.png",
+    "Regeneration": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/c14b2c5652526a006233965b176fb2b5af9e7c5d44045fad3844267303f07091.png",
+    "Sympathetic Recovery": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/c14b2c5652526a006233965b176fb2b5af9e7c5d44045fad3844267303f07091.png",
 };
 
 const queryString = window.location.search;
