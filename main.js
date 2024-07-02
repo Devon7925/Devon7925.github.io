@@ -843,7 +843,7 @@ const patches = {
                     },
                     "abilities": {
                         "Regeneration": {
-                            "Healing": 0,
+                            "Healing": 20,
                             "Delay": 2.5
                         },
                         "Sympathetic Recovery": {
@@ -1739,7 +1739,7 @@ const patches = {
                     },
                     "abilities": {
                         "Regeneration": {
-                            "Healing": 0,
+                            "Healing": 20,
                             "Delay": 2.5
                         },
                         "Sympathetic Recovery": {
@@ -2635,7 +2635,7 @@ const patches = {
                     },
                     "abilities": {
                         "Regeneration": {
-                            "Healing": 0,
+                            "Healing": 20,
                             "Delay": 2.5
                         },
                         "Sympathetic Recovery": {
@@ -3531,7 +3531,7 @@ const patches = {
                     },
                     "abilities": {
                         "Regeneration": {
-                            "Healing": 0,
+                            "Healing": 20,
                             "Delay": 2.5
                         },
                         "Sympathetic Recovery": {
@@ -4427,7 +4427,7 @@ const patches = {
                     },
                     "abilities": {
                         "Regeneration": {
-                            "Healing": 0,
+                            "Healing": 20,
                             "Delay": 2.5
                         },
                         "Sympathetic Recovery": {
@@ -5323,7 +5323,7 @@ const patches = {
                     },
                     "abilities": {
                         "Regeneration": {
-                            "Healing": 0,
+                            "Healing": 20,
                             "Delay": 2.5
                         },
                         "Sympathetic Recovery": {
@@ -6219,7 +6219,7 @@ const patches = {
                     },
                     "abilities": {
                         "Regeneration": {
-                            "Healing": 0,
+                            "Healing": 20,
                             "Delay": 2.5
                         },
                         "Sympathetic Recovery": {
@@ -7115,7 +7115,7 @@ const patches = {
                     },
                     "abilities": {
                         "Regeneration": {
-                            "Healing": 20,
+                            "Healing": 0,
                             "Delay": 2.5
                         },
                         "Sympathetic Recovery": {
