@@ -785,7 +785,7 @@ const patches = {
                             "Self healing": 0
                         },
                         "Protection Suzu": {
-                            "cleanses hard knockdown stuns": true
+                            "cleanses hard knockdown stuns": false
                         },
                         "Kitsune Rush": {
                             "Ultimate cost": 2525
@@ -1681,7 +1681,7 @@ const patches = {
                             "Self healing": 0
                         },
                         "Protection Suzu": {
-                            "cleanses hard knockdown stuns": true
+                            "cleanses hard knockdown stuns": false
                         },
                         "Kitsune Rush": {
                             "Ultimate cost": 2525
@@ -2577,7 +2577,7 @@ const patches = {
                             "Self healing": 0
                         },
                         "Protection Suzu": {
-                            "cleanses hard knockdown stuns": true
+                            "cleanses hard knockdown stuns": false
                         },
                         "Kitsune Rush": {
                             "Ultimate cost": 2525
@@ -3473,7 +3473,7 @@ const patches = {
                             "Self healing": 0
                         },
                         "Protection Suzu": {
-                            "cleanses hard knockdown stuns": true
+                            "cleanses hard knockdown stuns": false
                         },
                         "Kitsune Rush": {
                             "Ultimate cost": 2525
@@ -4369,7 +4369,7 @@ const patches = {
                             "Self healing": 0
                         },
                         "Protection Suzu": {
-                            "cleanses hard knockdown stuns": true
+                            "cleanses hard knockdown stuns": false
                         },
                         "Kitsune Rush": {
                             "Ultimate cost": 2525
@@ -5265,7 +5265,7 @@ const patches = {
                             "Self healing": 0
                         },
                         "Protection Suzu": {
-                            "cleanses hard knockdown stuns": true
+                            "cleanses hard knockdown stuns": false
                         },
                         "Kitsune Rush": {
                             "Ultimate cost": 2525
@@ -6161,7 +6161,7 @@ const patches = {
                             "Self healing": 0
                         },
                         "Protection Suzu": {
-                            "cleanses hard knockdown stuns": false
+                            "cleanses hard knockdown stuns": true
                         },
                         "Kitsune Rush": {
                             "Ultimate cost": 2525
@@ -7057,7 +7057,7 @@ const patches = {
                             "Self healing": 40
                         },
                         "Protection Suzu": {
-                            "cleanses hard knockdown stuns": false
+                            "cleanses hard knockdown stuns": true
                         },
                         "Kitsune Rush": {
                             "Ultimate cost": 2400
