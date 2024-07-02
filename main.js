@@ -5199,7 +5199,7 @@ const patches = {
             "tank": {
                 "general": {
                     "Critical headshot damage reduction": 25,
-                    "Knockback resistance": 50
+                    "Knockback resistance": 0
                 },
                 "D.Va": {
                     "general": {
