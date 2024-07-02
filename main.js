@@ -1,6 +1,6 @@
 let patch_selectors = document.getElementsByClassName("patch-selector");
 const patches = {
-    "APR 16, 2024": {
+    "MAR 28, 2024": {
         "general": {
             "Knockdown time": 2,
             "Armor health": "30% damage reduction",
@@ -33,6 +33,9 @@ const patches = {
                         "Commanding Shout": {
                             "can be activated while using other abilities": false,
                             "Cooldown": 14
+                        },
+                        "Carnage": {
+                            "Impact damage": 90
                         }
                     }
                 },
@@ -68,20 +71,31 @@ const patches = {
                     "abilities": {
                         "Gravitic Flux": {
                             "requires line-of-sight": true
+                        },
+                        "Experimental Barrier": {
+                            "Movement speed": 16.5
                         }
                     }
                 },
                 "Wrecking Ball": {
                     "abilities": {
                         "Grappling Claw": {
-                            "Impact damage": 50
+                            "Impact damage": 50,
+                            "can be retracted": false,
+                            "No ramming cooldown": 5,
+                            "requires ramming speed for max duration": false,
                         },
                         "Piledriver": {
                             "Movement lockout duration for enemies": 0.5
                         },
                         "Minefield": {
+                            "Health": 50,
                             "Damage": 130,
                             "Explosion knockback": 5
+                        },
+                        "Adaptive Shield": {
+                            "Ally overhealth cap": 0,
+                            "Detection radius": 10
                         }
                     }
                 },
@@ -90,6 +104,21 @@ const patches = {
                         "Graviton Surge": {
                             "Radius": 6,
                             "Duration": 3.5
+                        }
+                    }
+                },
+                "Doomfist": {
+                    "abilities": {
+                        "Rocket Punch": {
+                            "empowered punch consumed when the windup is cancelled by using Seismic Slam or Power Block": true
+                        }
+                    }
+                },
+                "Reinhardt": {
+                    "abilities": {
+                        "Earthshatter": {
+                            "Knockdown duration": 2.75,
+                            "Shockwave range": 20
                         }
                     }
                 }
@@ -174,13 +203,19 @@ const patches = {
                             "Cooldown start": "ability end",
                             "Cooldown reduction while burrowed": 50,
                             "Cooldown acceleration while burrowed": 0,
-                            "Initial impact damage": 40
+                            "Initial impact damage": 60,
+                            "Damage over time": 40
                         },
                         "Burrow": {
                             "Grace period": 0
                         },
                         "Tectonic Shock": {
-                            "Ultimate Cost": 1932
+                            "Ultimate Cost": 1932,
+                            "Vertical knockback": 7
+                        },
+                        "Clobber": {
+                            "Impact damage": 40,
+                            "Damage over time": 30
                         }
                     }
                 },
@@ -204,6 +239,23 @@ const patches = {
                             "Speed": 12
                         }
                     }
+                },
+                "Sombra": {
+                    "abilities": {
+                        "Virus": {
+                            "Damage over time": 100
+                        }
+                    }
+                },
+                "Tracer": {
+                    "abilities": {
+                        "Recall": {
+                            "Cooldown": 12
+                        },
+                        "Pulse Bomb": {
+                            "Projectile size": 0.35
+                        }
+                    }
                 }
             },
             "support": {
@@ -217,6 +269,10 @@ const patches = {
                             "Self healing efficiency": 100,
                             "Health": 50,
                             "Shield health": 50
+                        },
+                        "Solar Rifle": {
+                            "Primary fire recovery": 0.2,
+                            "Secondary fire heal-per-second": 105
                         }
                     }
                 },
@@ -234,6 +290,362 @@ const patches = {
                     "abilities": {
                         "Rally": {
                             "resets Shield Bash cooldown upon activation": false
+                        }
+                    }
+                },
+                "Lúcio": {
+                    "abilities": {
+                        "Sonic Amplifier": {
+                            "Damage per projectile": 20
+                        },
+                        "Soundwave": {
+                            "Damage": 35
+                        }
+                    }
+                },
+                "Lifeweaver": {
+                    "abilities": {
+                        "Rejuvenating Dash": {
+                            "Heal": 50
+                        },
+                        "Tree of Life": {
+                            "Pulse healing": 75
+                        }
+                    }
+                },
+                "Moira": {
+                    "abilities": {
+                        "Biotic Grasp": {
+                            "Damage per second": 65
+                        },
+                        "Coalescence": {
+                            "Self-heal per second": 50
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "APR 16, 2024": {
+        "general": {
+            "Knockdown time": 2,
+            "Armor health": "30% damage reduction",
+            "Out-of-combat health regeneration": "20"
+        },
+        "heroes": {
+            "tank": {
+                "general": {
+                    "Critical headshot damage reduction": 0,
+                    "Knockback resistance": 30
+                },
+                "D.Va": {
+                    "abilities": {
+                        "Fusion Cannons": {
+                            "Spread": 3.75
+                        },
+                        "Boosters": {
+                            "Impact damage": 15
+                        }
+                    }
+                },
+                "Junker Queen": {
+                    "abilities": {
+                        "Jagged Blade": {
+                            "pulls tanks further": true
+                        },
+                        "Rampage": {
+                            "Startup time": 0.75
+                        },
+                        "Commanding Shout": {
+                            "can be activated while using other abilities": false,
+                            "Cooldown": 14
+                        },
+                        "Carnage": {
+                            "Impact damage": 105
+                        }
+                    }
+                },
+                "Orisa": {
+                    "abilities": {
+                        "Fortify": {
+                            "Duration": 4.5,
+                            "Movement speed reduction": 0
+                        },
+                        "Javelin Spin": {
+                            "Cooldown": 7
+                        }
+                    }
+                },
+                "Roadhog": {
+                    "general": {
+                        "Base health": 650
+                    },
+                    "abilities": {
+                        "Take a Breather": {
+                            "Damage reduction": 50,
+                            "Cooldown": 1.5,
+                            "Maximum healing": 450,
+                            "Resource regeneration rate": 10
+                        },
+                        "Whole Hog": {
+                            "Knockback": 14,
+                            "Damage per pellet": 7
+                        }
+                    }
+                },
+                "Sigma": {
+                    "abilities": {
+                        "Gravitic Flux": {
+                            "requires line-of-sight": true
+                        },
+                        "Experimental Barrier": {
+                            "Movement speed": 20
+                        }
+                    }
+                },
+                "Wrecking Ball": {
+                    "abilities": {
+                        "Grappling Claw": {
+                            "Impact damage": 50,
+                            "can be retracted": true,
+                            "No ramming cooldown": 1,
+                            "requires ramming speed for max duration": true
+                        },
+                        "Piledriver": {
+                            "Movement lockout duration for enemies": 0.5
+                        },
+                        "Minefield": {
+                            "Health": 60,
+                            "Damage": 130,
+                            "Explosion knockback": 5
+                        },
+                        "Adaptive Shield": {
+                            "Ally overhealth cap": 75,
+                            "Detection radius": 13
+                        }
+                    }
+                },
+                "Zarya": {
+                    "abilities": {
+                        "Graviton Surge": {
+                            "Radius": 6,
+                            "Duration": 3.5
+                        }
+                    }
+                },
+                "Doomfist": {
+                    "abilities": {
+                        "Rocket Punch": {
+                            "empowered punch consumed when the windup is cancelled by using Seismic Slam or Power Block": false
+                        }
+                    }
+                },
+                "Reinhardt": {
+                    "abilities": {
+                        "Earthshatter": {
+                            "Knockdown duration": 3,
+                            "Shockwave range": 25
+                        }
+                    }
+                }
+            },
+            "damage": {
+                "general": {
+                    "Healing reduction inflicted on hit": 15
+                },
+                "Cassidy": {
+                    "abilities": {
+                        "Peacekeeper": {
+                            "Secondary fire \"Fan the Hammer\" damage": 50
+                        },
+                        "Combat Roll": {
+                            "Damage reduction": 75
+                        },
+                        "Flashbang": {
+                            "Effect": "Applies hinder on stick",
+                            "Duration": 1.25,
+                            "Maximum travel time": 1.5,
+                            "Slow": 25,
+                            "hinder prevents crouching": true,
+                            "Explosive damage": 70,
+                            "Cooldown": 12,
+                            "Projectile speed": 25
+                        },
+                        "Deadeye": {
+                            "Max movement speed penalty": 70,
+                            "Min movement speed penalty": 70,
+                            "Max damage reduction": 40,
+                            "Min damage reduction": 40
+                        }
+                    }
+                },
+                "Mei": {
+                    "abilities": {
+                        "Endothermic Blaster": {
+                            "Secondary fire projectile size": 0.225,
+                            "Secondary fire damage": 75
+                        }
+                    }
+                },
+                "Reaper": {
+                    "abilities": {
+                        "Hellfire Shotguns": {
+                            "Spread": 6.5
+                        },
+                        "Shadow Step": {
+                            "Cast time": 1.5
+                        }
+                    }
+                },
+                "Sojourn": {
+                    "abilities": {
+                        "Railgun": {
+                            "Secondary fire maximum damage": 130,
+                            "Secondary fire minimum damage": 30,
+                            "requires overclock for secondary primary piercing": true,
+                            "Primary fire shots per second": 14
+                        },
+                        "Overclock": {
+                            "Energy charge rate": 100
+                        }
+                    }
+                },
+                "Symmetra": {
+                    "general": {
+                        "Base health": 100
+                    },
+                    "abilities": {
+                        "Photon Projector": {
+                            "Primary fire charge rate": 1
+                        }
+                    }
+                },
+                "Venture": {
+                    "abilities": {
+                        "SMART Excavator": {
+                            "Maximum explosion damage": 45
+                        },
+                        "Drill Dash": {
+                            "Cooldown start": "ability end",
+                            "Cooldown reduction while burrowed": 50,
+                            "Cooldown acceleration while burrowed": 0,
+                            "Initial impact damage": 40,
+                            "Damage over time": 60
+                        },
+                        "Burrow": {
+                            "Grace period": 0
+                        },
+                        "Tectonic Shock": {
+                            "Ultimate Cost": 1932,
+                            "Vertical knockback": 5
+                        },
+                        "Clobber": {
+                            "Impact damage": 30,
+                            "Damage over time": 40
+                        }
+                    }
+                },
+                "Junkrat": {
+                    "abilities": {
+                        "Frag Launcher": {
+                            "Impact Damage": "40"
+                        }
+                    }
+                },
+                "Echo": {
+                    "abilities": {
+                        "Duplicate": {
+                            "Ultimate gain modifier": 4
+                        }
+                    }
+                },
+                "Hanzo": {
+                    "abilities": {
+                        "Dragonstrike": {
+                            "Speed": 12
+                        }
+                    }
+                },
+                "Sombra": {
+                    "abilities": {
+                        "Virus": {
+                            "Damage over time": 90
+                        }
+                    }
+                },
+                "Tracer": {
+                    "abilities": {
+                        "Recall": {
+                            "Cooldown": 13
+                        },
+                        "Pulse Bomb": {
+                            "Projectile size": 0.25
+                        }
+                    }
+                }
+            },
+            "support": {
+                "Illari": {
+                    "abilities": {
+                        "Outburst": {
+                            "Damage": 10
+                        },
+                        "Healing Pylon": {
+                            "Healing per projectile": 30,
+                            "Self healing efficiency": 100,
+                            "Health": 50,
+                            "Shield health": 50
+                        },
+                        "Solar Rifle": {
+                            "Primary fire recovery": 0.25,
+                            "Secondary fire heal-per-second": 115
+                        }
+                    }
+                },
+                "Kiriko": {
+                    "abilities": {
+                        "Swift Step": {
+                            "Cooldown": 7
+                        },
+                        "Protection Suzu": {
+                            "cleanses hard knockdown stuns": true
+                        }
+                    }
+                },
+                "Brigitte": {
+                    "abilities": {
+                        "Rally": {
+                            "resets Shield Bash cooldown upon activation": false
+                        }
+                    }
+                },
+                "Lúcio": {
+                    "abilities": {
+                        "Sonic Amplifier": {
+                            "Damage per projectile": 18
+                        },
+                        "Soundwave": {
+                            "Damage": 45
+                        }
+                    }
+                },
+                "Lifeweaver": {
+                    "abilities": {
+                        "Rejuvenating Dash": {
+                            "Heal": 60
+                        },
+                        "Tree of Life": {
+                            "Pulse healing": 90
+                        }
+                    }
+                },
+                "Moira": {
+                    "abilities": {
+                        "Biotic Grasp": {
+                            "Damage per second": 60
+                        },
+                        "Coalescence": {
+                            "Self-heal per second": 55
                         }
                     }
                 }
@@ -273,6 +685,9 @@ const patches = {
                         "Commanding Shout": {
                             "can be activated while using other abilities": false,
                             "Cooldown": 14
+                        },
+                        "Carnage": {
+                            "Impact damage": 105
                         }
                     }
                 },
@@ -308,20 +723,31 @@ const patches = {
                     "abilities": {
                         "Gravitic Flux": {
                             "requires line-of-sight": true
+                        },
+                        "Experimental Barrier": {
+                            "Movement speed": 20
                         }
                     }
                 },
                 "Wrecking Ball": {
                     "abilities": {
                         "Grappling Claw": {
-                            "Impact damage": 50
+                            "Impact damage": 50,
+                            "can be retracted": true,
+                            "No ramming cooldown": 1,
+                            "requires ramming speed for max duration": true
                         },
                         "Piledriver": {
                             "Movement lockout duration for enemies": 0.5
                         },
                         "Minefield": {
+                            "Health": 60,
                             "Damage": 130,
                             "Explosion knockback": 5
+                        },
+                        "Adaptive Shield": {
+                            "Ally overhealth cap": 75,
+                            "Detection radius": 13
                         }
                     }
                 },
@@ -330,6 +756,21 @@ const patches = {
                         "Graviton Surge": {
                             "Radius": 6,
                             "Duration": 3.5
+                        }
+                    }
+                },
+                "Doomfist": {
+                    "abilities": {
+                        "Rocket Punch": {
+                            "empowered punch consumed when the windup is cancelled by using Seismic Slam or Power Block": false
+                        }
+                    }
+                },
+                "Reinhardt": {
+                    "abilities": {
+                        "Earthshatter": {
+                            "Knockdown duration": 3,
+                            "Shockwave range": 25
                         }
                     }
                 }
@@ -414,13 +855,19 @@ const patches = {
                             "Cooldown start": "ability end",
                             "Cooldown reduction while burrowed": 50,
                             "Cooldown acceleration while burrowed": 0,
-                            "Initial impact damage": 30
+                            "Initial impact damage": 30,
+                            "Damage over time": 60
                         },
                         "Burrow": {
                             "Grace period": 0
                         },
                         "Tectonic Shock": {
-                            "Ultimate Cost": 2125
+                            "Ultimate Cost": 2125,
+                            "Vertical knockback": 5
+                        },
+                        "Clobber": {
+                            "Impact damage": 30,
+                            "Damage over time": 40
                         }
                     }
                 },
@@ -444,6 +891,23 @@ const patches = {
                             "Speed": 12
                         }
                     }
+                },
+                "Sombra": {
+                    "abilities": {
+                        "Virus": {
+                            "Damage over time": 90
+                        }
+                    }
+                },
+                "Tracer": {
+                    "abilities": {
+                        "Recall": {
+                            "Cooldown": 13
+                        },
+                        "Pulse Bomb": {
+                            "Projectile size": 0.25
+                        }
+                    }
                 }
             },
             "support": {
@@ -457,6 +921,10 @@ const patches = {
                             "Self healing efficiency": 100,
                             "Health": 50,
                             "Shield health": 50
+                        },
+                        "Solar Rifle": {
+                            "Primary fire recovery": 0.25,
+                            "Secondary fire heal-per-second": 115
                         }
                     }
                 },
@@ -474,6 +942,36 @@ const patches = {
                     "abilities": {
                         "Rally": {
                             "resets Shield Bash cooldown upon activation": false
+                        }
+                    }
+                },
+                "Lúcio": {
+                    "abilities": {
+                        "Sonic Amplifier": {
+                            "Damage per projectile": 18
+                        },
+                        "Soundwave": {
+                            "Damage": 45
+                        }
+                    }
+                },
+                "Lifeweaver": {
+                    "abilities": {
+                        "Rejuvenating Dash": {
+                            "Heal": 60
+                        },
+                        "Tree of Life": {
+                            "Pulse healing": 90
+                        }
+                    }
+                },
+                "Moira": {
+                    "abilities": {
+                        "Biotic Grasp": {
+                            "Damage per second": 60
+                        },
+                        "Coalescence": {
+                            "Self-heal per second": 55
                         }
                     }
                 }
@@ -513,6 +1011,9 @@ const patches = {
                         "Commanding Shout": {
                             "can be activated while using other abilities": true,
                             "Cooldown": 12
+                        },
+                        "Carnage": {
+                            "Impact damage": 105
                         }
                     }
                 },
@@ -548,20 +1049,31 @@ const patches = {
                     "abilities": {
                         "Gravitic Flux": {
                             "requires line-of-sight": false
+                        },
+                        "Experimental Barrier": {
+                            "Movement speed": 20
                         }
                     }
                 },
                 "Wrecking Ball": {
                     "abilities": {
                         "Grappling Claw": {
-                            "Impact damage": 60
+                            "Impact damage": 60,
+                            "can be retracted": true,
+                            "No ramming cooldown": 1,
+                            "requires ramming speed for max duration": true
                         },
                         "Piledriver": {
                             "Movement lockout duration for enemies": 0.75
                         },
                         "Minefield": {
+                            "Health": 60,
                             "Damage": 165,
                             "Explosion knockback": 10
+                        },
+                        "Adaptive Shield": {
+                            "Ally overhealth cap": 75,
+                            "Detection radius": 13
                         }
                     }
                 },
@@ -570,6 +1082,21 @@ const patches = {
                         "Graviton Surge": {
                             "Radius": 7,
                             "Duration": 4
+                        }
+                    }
+                },
+                "Doomfist": {
+                    "abilities": {
+                        "Rocket Punch": {
+                            "empowered punch consumed when the windup is cancelled by using Seismic Slam or Power Block": false
+                        }
+                    }
+                },
+                "Reinhardt": {
+                    "abilities": {
+                        "Earthshatter": {
+                            "Knockdown duration": 3,
+                            "Shockwave range": 25
                         }
                     }
                 }
@@ -654,13 +1181,19 @@ const patches = {
                             "Cooldown start": "ability end",
                             "Cooldown reduction while burrowed": 50,
                             "Cooldown acceleration while burrowed": 0,
-                            "Initial impact damage": 30
+                            "Initial impact damage": 30,
+                            "Damage over time": 60
                         },
                         "Burrow": {
                             "Grace period": 0
                         },
                         "Tectonic Shock": {
-                            "Ultimate Cost": 2125
+                            "Ultimate Cost": 2125,
+                            "Vertical knockback": 5
+                        },
+                        "Clobber": {
+                            "Impact damage": 30,
+                            "Damage over time": 40
                         }
                     }
                 },
@@ -684,6 +1217,23 @@ const patches = {
                             "Speed": 15
                         }
                     }
+                },
+                "Sombra": {
+                    "abilities": {
+                        "Virus": {
+                            "Damage over time": 90
+                        }
+                    }
+                },
+                "Tracer": {
+                    "abilities": {
+                        "Recall": {
+                            "Cooldown": 13
+                        },
+                        "Pulse Bomb": {
+                            "Projectile size": 0.25
+                        }
+                    }
                 }
             },
             "support": {
@@ -697,6 +1247,10 @@ const patches = {
                             "Self healing efficiency": 100,
                             "Health": 50,
                             "Shield health": 50
+                        },
+                        "Solar Rifle": {
+                            "Primary fire recovery": 0.25,
+                            "Secondary fire heal-per-second": 115
                         }
                     }
                 },
@@ -714,6 +1268,36 @@ const patches = {
                     "abilities": {
                         "Rally": {
                             "resets Shield Bash cooldown upon activation": true
+                        }
+                    }
+                },
+                "Lúcio": {
+                    "abilities": {
+                        "Sonic Amplifier": {
+                            "Damage per projectile": 18
+                        },
+                        "Soundwave": {
+                            "Damage": 45
+                        }
+                    }
+                },
+                "Lifeweaver": {
+                    "abilities": {
+                        "Rejuvenating Dash": {
+                            "Heal": 60
+                        },
+                        "Tree of Life": {
+                            "Pulse healing": 90
+                        }
+                    }
+                },
+                "Moira": {
+                    "abilities": {
+                        "Biotic Grasp": {
+                            "Damage per second": 60
+                        },
+                        "Coalescence": {
+                            "Self-heal per second": 55
                         }
                     }
                 }
@@ -753,6 +1337,9 @@ const patches = {
                         "Commanding Shout": {
                             "can be activated while using other abilities": true,
                             "Cooldown": 12
+                        },
+                        "Carnage": {
+                            "Impact damage": 105
                         }
                     }
                 },
@@ -788,20 +1375,31 @@ const patches = {
                     "abilities": {
                         "Gravitic Flux": {
                             "requires line-of-sight": false
+                        },
+                        "Experimental Barrier": {
+                            "Movement speed": 20
                         }
                     }
                 },
                 "Wrecking Ball": {
                     "abilities": {
                         "Grappling Claw": {
-                            "Impact damage": 60
+                            "Impact damage": 60,
+                            "can be retracted": true,
+                            "No ramming cooldown": 1,
+                            "requires ramming speed for max duration": true
                         },
                         "Piledriver": {
                             "Movement lockout duration for enemies": 0.75
                         },
                         "Minefield": {
+                            "Health": 60,
                             "Damage": 165,
                             "Explosion knockback": 10
+                        },
+                        "Adaptive Shield": {
+                            "Ally overhealth cap": 75,
+                            "Detection radius": 13
                         }
                     }
                 },
@@ -810,6 +1408,21 @@ const patches = {
                         "Graviton Surge": {
                             "Radius": 7,
                             "Duration": 4
+                        }
+                    }
+                },
+                "Doomfist": {
+                    "abilities": {
+                        "Rocket Punch": {
+                            "empowered punch consumed when the windup is cancelled by using Seismic Slam or Power Block": false
+                        }
+                    }
+                },
+                "Reinhardt": {
+                    "abilities": {
+                        "Earthshatter": {
+                            "Knockdown duration": 3,
+                            "Shockwave range": 25
                         }
                     }
                 }
@@ -894,13 +1507,19 @@ const patches = {
                             "Cooldown start": "ability use",
                             "Cooldown reduction while burrowed": 0,
                             "Cooldown acceleration while burrowed": 90,
-                            "Initial impact damage": 30
+                            "Initial impact damage": 30,
+                            "Damage over time": 60
                         },
                         "Burrow": {
                             "Grace period": 0.2
                         },
                         "Tectonic Shock": {
-                            "Ultimate Cost": 2125
+                            "Ultimate Cost": 2125,
+                            "Vertical knockback": 5
+                        },
+                        "Clobber": {
+                            "Impact damage": 30,
+                            "Damage over time": 40
                         }
                     }
                 },
@@ -924,6 +1543,23 @@ const patches = {
                             "Speed": 15
                         }
                     }
+                },
+                "Sombra": {
+                    "abilities": {
+                        "Virus": {
+                            "Damage over time": 90
+                        }
+                    }
+                },
+                "Tracer": {
+                    "abilities": {
+                        "Recall": {
+                            "Cooldown": 13
+                        },
+                        "Pulse Bomb": {
+                            "Projectile size": 0.25
+                        }
+                    }
                 }
             },
             "support": {
@@ -937,6 +1573,10 @@ const patches = {
                             "Self healing efficiency": 100,
                             "Health": 50,
                             "Shield health": 50
+                        },
+                        "Solar Rifle": {
+                            "Primary fire recovery": 0.25,
+                            "Secondary fire heal-per-second": 115
                         }
                     }
                 },
@@ -954,6 +1594,36 @@ const patches = {
                     "abilities": {
                         "Rally": {
                             "resets Shield Bash cooldown upon activation": true
+                        }
+                    }
+                },
+                "Lúcio": {
+                    "abilities": {
+                        "Sonic Amplifier": {
+                            "Damage per projectile": 18
+                        },
+                        "Soundwave": {
+                            "Damage": 45
+                        }
+                    }
+                },
+                "Lifeweaver": {
+                    "abilities": {
+                        "Rejuvenating Dash": {
+                            "Heal": 60
+                        },
+                        "Tree of Life": {
+                            "Pulse healing": 90
+                        }
+                    }
+                },
+                "Moira": {
+                    "abilities": {
+                        "Biotic Grasp": {
+                            "Damage per second": 60
+                        },
+                        "Coalescence": {
+                            "Self-heal per second": 55
                         }
                     }
                 }
@@ -993,6 +1663,9 @@ const patches = {
                         "Commanding Shout": {
                             "can be activated while using other abilities": true,
                             "Cooldown": 12
+                        },
+                        "Carnage": {
+                            "Impact damage": 105
                         }
                     }
                 },
@@ -1028,20 +1701,31 @@ const patches = {
                     "abilities": {
                         "Gravitic Flux": {
                             "requires line-of-sight": true
+                        },
+                        "Experimental Barrier": {
+                            "Movement speed": 20
                         }
                     }
                 },
                 "Wrecking Ball": {
                     "abilities": {
                         "Grappling Claw": {
-                            "Impact damage": 60
+                            "Impact damage": 60,
+                            "can be retracted": true,
+                            "No ramming cooldown": 1,
+                            "requires ramming speed for max duration": true
                         },
                         "Piledriver": {
                             "Movement lockout duration for enemies": 0.75
                         },
                         "Minefield": {
+                            "Health": 60,
                             "Damage": 165,
                             "Explosion knockback": 10
+                        },
+                        "Adaptive Shield": {
+                            "Ally overhealth cap": 75,
+                            "Detection radius": 13
                         }
                     }
                 },
@@ -1050,6 +1734,21 @@ const patches = {
                         "Graviton Surge": {
                             "Radius": 7,
                             "Duration": 4
+                        }
+                    }
+                },
+                "Doomfist": {
+                    "abilities": {
+                        "Rocket Punch": {
+                            "empowered punch consumed when the windup is cancelled by using Seismic Slam or Power Block": false
+                        }
+                    }
+                },
+                "Reinhardt": {
+                    "abilities": {
+                        "Earthshatter": {
+                            "Knockdown duration": 3,
+                            "Shockwave range": 25
                         }
                     }
                 }
@@ -1134,13 +1833,19 @@ const patches = {
                             "Cooldown start": "ability use",
                             "Cooldown reduction while burrowed": 0,
                             "Cooldown acceleration while burrowed": 90,
-                            "Initial impact damage": 30
+                            "Initial impact damage": 30,
+                            "Damage over time": 60
                         },
                         "Burrow": {
                             "Grace period": 0.2
                         },
                         "Tectonic Shock": {
-                            "Ultimate Cost": 2125
+                            "Ultimate Cost": 2125,
+                            "Vertical knockback": 5
+                        },
+                        "Clobber": {
+                            "Impact damage": 30,
+                            "Damage over time": 40
                         }
                     }
                 },
@@ -1164,6 +1869,23 @@ const patches = {
                             "Speed": 15
                         }
                     }
+                },
+                "Sombra": {
+                    "abilities": {
+                        "Virus": {
+                            "Damage over time": 90
+                        }
+                    }
+                },
+                "Tracer": {
+                    "abilities": {
+                        "Recall": {
+                            "Cooldown": 13
+                        },
+                        "Pulse Bomb": {
+                            "Projectile size": 0.25
+                        }
+                    }
                 }
             },
             "support": {
@@ -1177,6 +1899,10 @@ const patches = {
                             "Self healing efficiency": 100,
                             "Health": 50,
                             "Shield health": 50
+                        },
+                        "Solar Rifle": {
+                            "Primary fire recovery": 0.25,
+                            "Secondary fire heal-per-second": 115
                         }
                     }
                 },
@@ -1194,6 +1920,36 @@ const patches = {
                     "abilities": {
                         "Rally": {
                             "resets Shield Bash cooldown upon activation": true
+                        }
+                    }
+                },
+                "Lúcio": {
+                    "abilities": {
+                        "Sonic Amplifier": {
+                            "Damage per projectile": 18
+                        },
+                        "Soundwave": {
+                            "Damage": 45
+                        }
+                    }
+                },
+                "Lifeweaver": {
+                    "abilities": {
+                        "Rejuvenating Dash": {
+                            "Heal": 60
+                        },
+                        "Tree of Life": {
+                            "Pulse healing": 90
+                        }
+                    }
+                },
+                "Moira": {
+                    "abilities": {
+                        "Biotic Grasp": {
+                            "Damage per second": 60
+                        },
+                        "Coalescence": {
+                            "Self-heal per second": 55
                         }
                     }
                 }
@@ -1233,6 +1989,9 @@ const patches = {
                         "Commanding Shout": {
                             "can be activated while using other abilities": true,
                             "Cooldown": 12
+                        },
+                        "Carnage": {
+                            "Impact damage": 105
                         }
                     }
                 },
@@ -1268,20 +2027,31 @@ const patches = {
                     "abilities": {
                         "Gravitic Flux": {
                             "requires line-of-sight": true
+                        },
+                        "Experimental Barrier": {
+                            "Movement speed": 20
                         }
                     }
                 },
                 "Wrecking Ball": {
                     "abilities": {
                         "Grappling Claw": {
-                            "Impact damage": 60
+                            "Impact damage": 60,
+                            "can be retracted": true,
+                            "No ramming cooldown": 1,
+                            "requires ramming speed for max duration": true
                         },
                         "Piledriver": {
                             "Movement lockout duration for enemies": 0.75
                         },
                         "Minefield": {
+                            "Health": 60,
                             "Damage": 165,
                             "Explosion knockback": 10
+                        },
+                        "Adaptive Shield": {
+                            "Ally overhealth cap": 75,
+                            "Detection radius": 13
                         }
                     }
                 },
@@ -1290,6 +2060,21 @@ const patches = {
                         "Graviton Surge": {
                             "Radius": 7,
                             "Duration": 4
+                        }
+                    }
+                },
+                "Doomfist": {
+                    "abilities": {
+                        "Rocket Punch": {
+                            "empowered punch consumed when the windup is cancelled by using Seismic Slam or Power Block": false
+                        }
+                    }
+                },
+                "Reinhardt": {
+                    "abilities": {
+                        "Earthshatter": {
+                            "Knockdown duration": 3,
+                            "Shockwave range": 25
                         }
                     }
                 }
@@ -1374,13 +2159,19 @@ const patches = {
                             "Cooldown start": "ability use",
                             "Cooldown reduction while burrowed": 0,
                             "Cooldown acceleration while burrowed": 90,
-                            "Initial impact damage": 30
+                            "Initial impact damage": 30,
+                            "Damage over time": 60
                         },
                         "Burrow": {
                             "Grace period": 0.2
                         },
                         "Tectonic Shock": {
-                            "Ultimate Cost": 2125
+                            "Ultimate Cost": 2125,
+                            "Vertical knockback": 5
+                        },
+                        "Clobber": {
+                            "Impact damage": 30,
+                            "Damage over time": 40
                         }
                     }
                 },
@@ -1404,6 +2195,23 @@ const patches = {
                             "Speed": 15
                         }
                     }
+                },
+                "Sombra": {
+                    "abilities": {
+                        "Virus": {
+                            "Damage over time": 90
+                        }
+                    }
+                },
+                "Tracer": {
+                    "abilities": {
+                        "Recall": {
+                            "Cooldown": 13
+                        },
+                        "Pulse Bomb": {
+                            "Projectile size": 0.25
+                        }
+                    }
                 }
             },
             "support": {
@@ -1417,6 +2225,10 @@ const patches = {
                             "Self healing efficiency": 50,
                             "Health": 75,
                             "Shield health": 50
+                        },
+                        "Solar Rifle": {
+                            "Primary fire recovery": 0.25,
+                            "Secondary fire heal-per-second": 115
                         }
                     }
                 },
@@ -1434,6 +2246,36 @@ const patches = {
                     "abilities": {
                         "Rally": {
                             "resets Shield Bash cooldown upon activation": true
+                        }
+                    }
+                },
+                "Lúcio": {
+                    "abilities": {
+                        "Sonic Amplifier": {
+                            "Damage per projectile": 18
+                        },
+                        "Soundwave": {
+                            "Damage": 45
+                        }
+                    }
+                },
+                "Lifeweaver": {
+                    "abilities": {
+                        "Rejuvenating Dash": {
+                            "Heal": 60
+                        },
+                        "Tree of Life": {
+                            "Pulse healing": 90
+                        }
+                    }
+                },
+                "Moira": {
+                    "abilities": {
+                        "Biotic Grasp": {
+                            "Damage per second": 60
+                        },
+                        "Coalescence": {
+                            "Self-heal per second": 55
                         }
                     }
                 }
@@ -1462,6 +2304,13 @@ const hero_images = {
     "Illari": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/f33f6fe94ad55fcf9027e779f66afac358a2f93651070b95cd565ff90d670c8b.png",
     "Kiriko": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/24d1d7bf86c331b3d81b934442ed36fd0121f6815255c6f26f456127fb342d15.png",
     "Brigitte": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/51b93ea59f369a1defa78e5d08c12b1391f5d2d94614a51fd95c125a7a6151fa.png",
+    "Reinhardt": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/b5e3a4f5629a3acfd47b5d2e695e79ea964b060bf67b7e4f8f15e63accd5f934.png",
+    "Doomfist": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/bc538b345188bdcb2d2be5b2894d471ba54aeea53b03862429205ed49d693bbe.png",
+    "Sombra": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/f348c1704dc50c009ac8acf6912a5a77eaf2a3acdd34e56927190af9eb9145d1.png",
+    "Tracer": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/5ee20a1feed14da5153f19745328e9fc02bd79f8109593a9b7dab9283eb9629b.png",
+    "Lúcio": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/dee7e92975f5e659fa6b28c508d8fbad62bda720698b1d21f2492af7b9f94b48.png",
+    "Lifeweaver": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/57d5014ab6034db9138f838e8450693b4a97ab3c54f85d594b199a8853e75ccb.png",
+    "Moira": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/90fa2b69a7b80ae6d57c9ea6f3387dd18dfc1728bdb26949d28a17b98dd4e5f7.png",
 };
 
 const ability_images = {
@@ -1501,6 +2350,22 @@ const ability_images = {
     "Swift Step": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/e6ed3a36c4ed15b2127d6ca74756b25e0db7cf33ce7e26d9a79fd821526f055f.png",
     "Protection Suzu": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/3775c37a363e1aaf02a6df4cdfb611f18e38bb69ce42dd59abddb4140cea9790.png",
     "Rally": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/08552423da53faa55238bd66a2a72d32d1038e42f2eebc911921bc9d5d575432.png",
+    "Carnage": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/74c40565f02f550ed362d8a5aaed21de94a3ff1915185cb4b93d6ce6207f03ab.png",
+    "Experimental Barrier": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/ae2c31f159331f73739932e85dc21bdfa8eb4f2b2d2de4e89c1488445da34ffb.png",
+    "Adaptive Shield": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/fa65af9c692405f968fafbeedcdfc9092b38a050dc3562bd41280390ccd7a21d.png",
+    "Earthshatter": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/a63041a68d81c202a47a95035878edcfa75d5aa3f72414a7e84e1b1a68594bed.png",
+    "Rocket Punch": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/aa2a067fe151ac2795fe77546711c07be5f0880d9ae5dce554cab0c933d927f0.png",
+    "Clobber": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/1c299cc354b6fd1585e48c59a193ca39961013a460bd46387c28314dd8eda99d.png",
+    "Virus": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/156dfc48d0e7a046692e27ea9f417ee3afbf9d918d92a909fe03d2b705dd3bdd.png",
+    "Recall": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/30939502a8576da1fdcad8c7d21881e32066fb28847fc7df874b1436689e3425.png",
+    "Pulse Bomb": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/383e9b039efb93da77bb91fbeb3654ef50724e0cea0de76b2cc1c4db43de9a6d.png",
+    "Solar Rifle": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/97ca66b75aefd32c23d38a843b8be6b2325792e3cb62523b47541ce97375ab34.png",
+    "Sonic Amplifier": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/7afd1ea98486f12a0338ca55a9a1c49a97867a380f162ea7c10cffa487bfb808.png",
+    "Soundwave": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/a8e254a309bf77a5c8b98f5a5893fcd252a17775e48db367028982989185bed2.png",
+    "Rejuvenating Dash": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/1df0e1d8798e26772880ac0fcd27cf00c280adff88dbd6a66881f78cd9f69791.png",
+    "Tree of Life": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/105495a0c2ea708de307204b47c90915782256cffd83fc8dff8abcc508e0ef5a.png",
+    "Biotic Grasp": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/4073577768c5a1f5b5e8bcdb9ce9615be249d35cfbff4b66bc617c19e3b96591.png",
+    "Coalescence": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/23d3ef53fd21d04e7e7b137b38e87c61b3d65394393dc00759ceb65d406e37b9.png",
 };
 
 let before_patch = Object.keys(patches)[0];
