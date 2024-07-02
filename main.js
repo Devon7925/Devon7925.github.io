@@ -52,10 +52,6 @@ const patches = {
                             "pulls tanks further": true,
                             "Pull knockback": 20.74
                         },
-                        "Rampage": {
-                            "Ultimate Cost": 2700,
-                            "Wound total damage": 90
-                        },
                         "Commanding Shout": {
                             "can be activated while using other abilities": false,
                             "Cooldown": 14,
@@ -64,6 +60,10 @@ const patches = {
                         "Carnage": {
                             "Impact damage": 90,
                             "Immediate healing per target hit": 0
+                        },
+                        "Rampage": {
+                            "Ultimate Cost": 2700,
+                            "Wound total damage": 90
                         }
                     }
                 },
@@ -337,7 +337,37 @@ const patches = {
                 "general": {
                     "Healing reduction inflicted on hit": 15
                 },
+                "Ashe": {
+                    "general": {
+                        "Base health": 250
+                    },
+                    "abilities": {
+                        "B.O.B": {
+                            "Ultimate cost": 2450
+                        }
+                    }
+                },
+                "Bastion": {
+                    "general": {
+                        "Base health": 250
+                    },
+                    "abilities": {
+                        "A-36 Tactical Grenade": {
+                            "Self damage rate": 50,
+                            "briefly grants increased aerial mobility on self knockback while in Configuration: Assault": false
+                        },
+                        "Configuration: Assault": {
+                            "Movement speed penalty": 35
+                        },
+                        "Configuration: Artillery": {
+                            "Ultimate cost": 2500
+                        }
+                    }
+                },
                 "Cassidy": {
+                    "general": {
+                        "Base health": 275
+                    },
                     "abilities": {
                         "Peacekeeper": {
                             "Secondary fire \"Fan the Hammer\" damage": 50
@@ -359,29 +389,137 @@ const patches = {
                             "Max movement speed penalty": 70,
                             "Min movement speed penalty": 70,
                             "Max damage reduction": 40,
-                            "Min damage reduction": 40
+                            "Min damage reduction": 40,
+                            "Ultimate cost": 2000
+                        }
+                    }
+                },
+                "Echo": {
+                    "general": {
+                        "Base health": 250
+                    },
+                    "abilities": {
+                        "Sticky Bombs": {
+                            "Explosion damage": 25,
+                            "Direct damage": 5
+                        },
+                        "Duplicate": {
+                            "Ultimate gain modifier": 4,
+                            "Ultimate Cost": 1850,
+                            "has predetermined tank health pools": false
+                        }
+                    }
+                },
+                "Genji": {
+                    "general": {
+                        "Base health": 250
+                    },
+                    "abilities": {
+                        "Shuriken": {
+                            "Damage": 27
+                        },
+                        "Deflect": {
+                            "Duration": 2
+                        },
+                        "Dragonblade": {
+                            "Ultimate cost": 2125
+                        }
+                    }
+                },
+                "Hanzo": {
+                    "general": {
+                        "Base health": 250
+                    },
+                    "abilities": {
+                        "Storm Bow": {
+                            "Maximum Damage": 120
+                        },
+                        "Storm Arrows": {
+                            "Cooldown": 8,
+                            "Damage per arrow": 75,
+                            "Ammo": 5
+                        },
+                        "Dragonstrike": {
+                            "Speed": 12,
+                            "Ultimate cost": 1850
+                        }
+                    }
+                },
+                "Junkrat": {
+                    "general": {
+                        "Base health": 250
+                    },
+                    "abilities": {
+                        "Frag Launcher": {
+                            "Impact Damage": "40",
+                            "Maximum Splash": "80"
+                        },
+                        "Concussion Mine": {
+                            "Cooldown": 7
+                        },
+                        "RIP-Tire": {
+                            "Ultimate cost": 2100
                         }
                     }
                 },
                 "Mei": {
+                    "general": {
+                        "Base health": 300
+                    },
                     "abilities": {
                         "Endothermic Blaster": {
+                            "Ammo": 140,
                             "Secondary fire projectile size": 0.225,
                             "Secondary fire damage": 75
+                        },
+                        "Cryofreeze": {
+                            "Healing per second": 62.5
+                        },
+                        "Ice Wall": {
+                            "Health per pillar": 250
+                        },
+                        "Blizzard": {
+                            "Ultimate cost": 1925
+                        }
+                    }
+                },
+                "Pharah": {
+                    "general": {
+                        "Base health": 250
+                    },
+                    "abilities": {
+                        "Rocket Launcher": {
+                            "Recovery speed": 0.8,
+                            "Projectile speed": 40
+                        },
+                        "Barrage": {
+                            "Ultimate cost": 2200
                         }
                     }
                 },
                 "Reaper": {
+                    "general": {
+                        "Base health": 300
+                    },
                     "abilities": {
                         "Hellfire Shotguns": {
-                            "Spread": 6.5
+                            "Spread": 6.5,
+                            "Damage per pellet": 5.4
                         },
                         "Shadow Step": {
-                            "Cast time": 1.5
+                            "Cast time": 1.5,
+                            "Cooldown": 10
+                        },
+                        "Death Blossom": {
+                            "Ultimate cost": 1870,
+                            "Damage per second": 185
                         }
                     }
                 },
                 "Sojourn": {
+                    "general": {
+                        "Base health": 250
+                    },
                     "abilities": {
                         "Railgun": {
                             "Secondary fire maximum damage": 130,
@@ -389,23 +527,111 @@ const patches = {
                             "requires overclock for secondary primary piercing": true,
                             "Primary fire shots per second": 14
                         },
+                        "Power Slide": {
+                            "Cooldown": 7
+                        },
                         "Overclock": {
-                            "Energy charge rate": 100
+                            "Energy charge rate": 100,
+                            "Ultimate cost": 2300
+                        }
+                    }
+                },
+                "Soldier: 76": {
+                    "general": {
+                        "Base health": 250
+                    },
+                    "abilities": {
+                        "Heavy Pulse Rifle": {
+                            "Damage": 19
+                        },
+                        "Biotic Field": {
+                            "Cooldown": 18,
+                            "Healing per second": 40
+                        },
+                        "Tactical Visor": {
+                            "Ultimate cost": 2750
+                        }
+                    }
+                },
+                "Sombra": {
+                    "general": {
+                        "Base health": 250
+                    },
+                    "abilities": {
+                        "Virus": {
+                            "Damage over time": 100,
+                            "Cooldown": 6
+                        },
+                        "EMP": {
+                            "Ultimate cost": 1825
                         }
                     }
                 },
                 "Symmetra": {
                     "general": {
-                        "Base health": 100
+                        "Base health": 100,
+                        "Shield health": 150
                     },
                     "abilities": {
                         "Photon Projector": {
-                            "Primary fire charge rate": 1
+                            "Primary fire charge rate": 1,
+                            "Shield regen per beam level": 10
+                        },
+                        "Sentry Turret": {
+                            "Health": 40
+                        },
+                        "Teleporter": {
+                            "Base Health": 100,
+                            "Shield Health": 200
+                        },
+                        "Photon Barrier": {
+                            "Ultimate cost": 2025,
+                            "Barrier health": 4000
+                        }
+                    }
+                },
+                "Torbjörn": {
+                    "general": {
+                        "Base health": 250
+                    },
+                    "abilities": {
+                        "Rivet Gun": {
+                            "Ammo": 18,
+                            "Secondary fire ammo cost": 2
+                        },
+                        "Molten Core": {
+                            "Ultimate Cost": 2350
+                        }
+                    }
+                },
+                "Tracer": {
+                    "general": {
+                        "Base health": 175,
+                        "Model size": 1
+                    },
+                    "abilities": {
+                        "Pulse Pistols": {
+                            "Damage": 6
+                        },
+                        "Recall": {
+                            "Cooldown": 12
+                        },
+                        "Pulse Bomb": {
+                            "Projectile size": 0.35,
+                            "Ultimate cost": 1375
                         }
                     }
                 },
                 "Venture": {
+                    "general": {
+                        "Base health": 250,
+                        "Movement speed": 5.5
+                    },
                     "abilities": {
+                        "Explorer's Resolve": {
+                            "Ability shield generation": 40,
+                            "Shield cap": 75
+                        },
                         "SMART Excavator": {
                             "Maximum explosion damage": 45
                         },
@@ -414,14 +640,21 @@ const patches = {
                             "Cooldown reduction while burrowed": 50,
                             "Cooldown acceleration while burrowed": 0,
                             "Initial impact damage": 60,
-                            "Damage over time": 40
+                            "Damage over time": 40,
+                            "Cooldown": 8,
+                            "Knockback": 14.5
                         },
                         "Burrow": {
-                            "Grace period": 0
+                            "Grace period": 0,
+                            "Minimum damage": 55,
+                            "Maximum damage": 110
                         },
                         "Tectonic Shock": {
                             "Ultimate Cost": 1932,
-                            "Vertical knockback": 7
+                            "Vertical knockback": 7,
+                            "Extra damage range": 0,
+                            "Extra damage multiplier": 1,
+                            "Damage": 130
                         },
                         "Clobber": {
                             "Impact damage": 40,
@@ -429,41 +662,13 @@ const patches = {
                         }
                     }
                 },
-                "Junkrat": {
+                "Widowmaker": {
+                    "general": {
+                        "Base health": 200
+                    },
                     "abilities": {
-                        "Frag Launcher": {
-                            "Impact Damage": "40"
-                        }
-                    }
-                },
-                "Echo": {
-                    "abilities": {
-                        "Duplicate": {
-                            "Ultimate gain modifier": 4
-                        }
-                    }
-                },
-                "Hanzo": {
-                    "abilities": {
-                        "Dragonstrike": {
-                            "Speed": 12
-                        }
-                    }
-                },
-                "Sombra": {
-                    "abilities": {
-                        "Virus": {
-                            "Damage over time": 100
-                        }
-                    }
-                },
-                "Tracer": {
-                    "abilities": {
-                        "Recall": {
-                            "Cooldown": 12
-                        },
-                        "Pulse Bomb": {
-                            "Projectile size": 0.35
+                        "Infra-Sight": {
+                            "Ultimate cost": 1550
                         }
                     }
                 }
@@ -588,10 +793,6 @@ const patches = {
                             "pulls tanks further": true,
                             "Pull knockback": 20.74
                         },
-                        "Rampage": {
-                            "Ultimate Cost": 2700,
-                            "Wound total damage": 90
-                        },
                         "Commanding Shout": {
                             "can be activated while using other abilities": false,
                             "Cooldown": 14,
@@ -600,6 +801,10 @@ const patches = {
                         "Carnage": {
                             "Impact damage": 105,
                             "Immediate healing per target hit": 0
+                        },
+                        "Rampage": {
+                            "Ultimate Cost": 2700,
+                            "Wound total damage": 90
                         }
                     }
                 },
@@ -873,7 +1078,37 @@ const patches = {
                 "general": {
                     "Healing reduction inflicted on hit": 15
                 },
+                "Ashe": {
+                    "general": {
+                        "Base health": 250
+                    },
+                    "abilities": {
+                        "B.O.B": {
+                            "Ultimate cost": 2450
+                        }
+                    }
+                },
+                "Bastion": {
+                    "general": {
+                        "Base health": 250
+                    },
+                    "abilities": {
+                        "A-36 Tactical Grenade": {
+                            "Self damage rate": 50,
+                            "briefly grants increased aerial mobility on self knockback while in Configuration: Assault": false
+                        },
+                        "Configuration: Assault": {
+                            "Movement speed penalty": 35
+                        },
+                        "Configuration: Artillery": {
+                            "Ultimate cost": 2500
+                        }
+                    }
+                },
                 "Cassidy": {
+                    "general": {
+                        "Base health": 275
+                    },
                     "abilities": {
                         "Peacekeeper": {
                             "Secondary fire \"Fan the Hammer\" damage": 50
@@ -895,29 +1130,137 @@ const patches = {
                             "Max movement speed penalty": 70,
                             "Min movement speed penalty": 70,
                             "Max damage reduction": 40,
-                            "Min damage reduction": 40
+                            "Min damage reduction": 40,
+                            "Ultimate cost": 2000
+                        }
+                    }
+                },
+                "Echo": {
+                    "general": {
+                        "Base health": 250
+                    },
+                    "abilities": {
+                        "Sticky Bombs": {
+                            "Explosion damage": 25,
+                            "Direct damage": 5
+                        },
+                        "Duplicate": {
+                            "Ultimate gain modifier": 4,
+                            "Ultimate Cost": 1850,
+                            "has predetermined tank health pools": false
+                        }
+                    }
+                },
+                "Genji": {
+                    "general": {
+                        "Base health": 250
+                    },
+                    "abilities": {
+                        "Shuriken": {
+                            "Damage": 27
+                        },
+                        "Deflect": {
+                            "Duration": 2
+                        },
+                        "Dragonblade": {
+                            "Ultimate cost": 2125
+                        }
+                    }
+                },
+                "Hanzo": {
+                    "general": {
+                        "Base health": 250
+                    },
+                    "abilities": {
+                        "Storm Bow": {
+                            "Maximum Damage": 120
+                        },
+                        "Storm Arrows": {
+                            "Cooldown": 8,
+                            "Damage per arrow": 75,
+                            "Ammo": 5
+                        },
+                        "Dragonstrike": {
+                            "Speed": 12,
+                            "Ultimate cost": 1850
+                        }
+                    }
+                },
+                "Junkrat": {
+                    "general": {
+                        "Base health": 250
+                    },
+                    "abilities": {
+                        "Frag Launcher": {
+                            "Impact Damage": "40",
+                            "Maximum Splash": "80"
+                        },
+                        "Concussion Mine": {
+                            "Cooldown": 7
+                        },
+                        "RIP-Tire": {
+                            "Ultimate cost": 2100
                         }
                     }
                 },
                 "Mei": {
+                    "general": {
+                        "Base health": 300
+                    },
                     "abilities": {
                         "Endothermic Blaster": {
+                            "Ammo": 140,
                             "Secondary fire projectile size": 0.225,
                             "Secondary fire damage": 75
+                        },
+                        "Cryofreeze": {
+                            "Healing per second": 62.5
+                        },
+                        "Ice Wall": {
+                            "Health per pillar": 250
+                        },
+                        "Blizzard": {
+                            "Ultimate cost": 1925
+                        }
+                    }
+                },
+                "Pharah": {
+                    "general": {
+                        "Base health": 250
+                    },
+                    "abilities": {
+                        "Rocket Launcher": {
+                            "Recovery speed": 0.8,
+                            "Projectile speed": 40
+                        },
+                        "Barrage": {
+                            "Ultimate cost": 2200
                         }
                     }
                 },
                 "Reaper": {
+                    "general": {
+                        "Base health": 300
+                    },
                     "abilities": {
                         "Hellfire Shotguns": {
-                            "Spread": 6.5
+                            "Spread": 6.5,
+                            "Damage per pellet": 5.4
                         },
                         "Shadow Step": {
-                            "Cast time": 1.5
+                            "Cast time": 1.5,
+                            "Cooldown": 10
+                        },
+                        "Death Blossom": {
+                            "Ultimate cost": 1870,
+                            "Damage per second": 185 
                         }
                     }
                 },
                 "Sojourn": {
+                    "general": {
+                        "Base health": 250
+                    },
                     "abilities": {
                         "Railgun": {
                             "Secondary fire maximum damage": 130,
@@ -925,23 +1268,111 @@ const patches = {
                             "requires overclock for secondary primary piercing": true,
                             "Primary fire shots per second": 14
                         },
+                        "Power Slide": {
+                            "Cooldown": 7
+                        },
                         "Overclock": {
-                            "Energy charge rate": 100
+                            "Energy charge rate": 100,
+                            "Ultimate cost": 2300
+                        }
+                    }
+                },
+                "Soldier: 76": {
+                    "general": {
+                        "Base health": 250
+                    },
+                    "abilities": {
+                        "Heavy Pulse Rifle": {
+                            "Damage": 19
+                        },
+                        "Biotic Field": {
+                            "Cooldown": 18,
+                            "Healing per second": 40
+                        },
+                        "Tactical Visor": {
+                            "Ultimate cost": 2750
+                        }
+                    }
+                },
+                "Sombra": {
+                    "general": {
+                        "Base health": 250
+                    },
+                    "abilities": {
+                        "Virus": {
+                            "Damage over time": 90,
+                            "Cooldown": 6
+                        },
+                        "EMP": {
+                            "Ultimate cost": 1825
                         }
                     }
                 },
                 "Symmetra": {
                     "general": {
-                        "Base health": 100
+                        "Base health": 100,
+                        "Shield health": 150
                     },
                     "abilities": {
                         "Photon Projector": {
-                            "Primary fire charge rate": 1
+                            "Primary fire charge rate": 1,
+                            "Shield regen per beam level": 10
+                        },
+                        "Sentry Turret": {
+                            "Health": 40
+                        },
+                        "Teleporter": {
+                            "Base Health": 100,
+                            "Shield Health": 200
+                        },
+                        "Photon Barrier": {
+                            "Ultimate cost": 2025,
+                            "Barrier health": 4000
+                        }
+                    }
+                },
+                "Torbjörn": {
+                    "general": {
+                        "Base health": 250
+                    },
+                    "abilities": {
+                        "Rivet Gun": {
+                            "Ammo": 18,
+                            "Secondary fire ammo cost": 2
+                        },
+                        "Molten Core": {
+                            "Ultimate Cost": 2350
+                        }
+                    }
+                },
+                "Tracer": {
+                    "general": {
+                        "Base health": 175,
+                        "Model size": 1
+                    },
+                    "abilities": {
+                        "Pulse Pistols": {
+                            "Damage": 6
+                        },
+                        "Recall": {
+                            "Cooldown": 13
+                        },
+                        "Pulse Bomb": {
+                            "Projectile size": 0.25,
+                            "Ultimate cost": 1375
                         }
                     }
                 },
                 "Venture": {
+                    "general": {
+                        "Base health": 250,
+                        "Movement speed": 5.5
+                    },
                     "abilities": {
+                        "Explorer's Resolve": {
+                            "Ability shield generation": 40,
+                            "Shield cap": 75
+                        },
                         "SMART Excavator": {
                             "Maximum explosion damage": 45
                         },
@@ -950,14 +1381,21 @@ const patches = {
                             "Cooldown reduction while burrowed": 50,
                             "Cooldown acceleration while burrowed": 0,
                             "Initial impact damage": 40,
-                            "Damage over time": 60
+                            "Damage over time": 60,
+                            "Cooldown": 8,
+                            "Knockback": 14.5
                         },
                         "Burrow": {
-                            "Grace period": 0
+                            "Grace period": 0,
+                            "Minimum damage": 55,
+                            "Maximum damage": 110
                         },
                         "Tectonic Shock": {
                             "Ultimate Cost": 1932,
-                            "Vertical knockback": 5
+                            "Vertical knockback": 5,
+                            "Extra damage range": 0,
+                            "Extra damage multiplier": 1,
+                            "Damage": 130
                         },
                         "Clobber": {
                             "Impact damage": 30,
@@ -965,41 +1403,13 @@ const patches = {
                         }
                     }
                 },
-                "Junkrat": {
+                "Widowmaker": {
+                    "general": {
+                        "Base health": 200
+                    },
                     "abilities": {
-                        "Frag Launcher": {
-                            "Impact Damage": "40"
-                        }
-                    }
-                },
-                "Echo": {
-                    "abilities": {
-                        "Duplicate": {
-                            "Ultimate gain modifier": 4
-                        }
-                    }
-                },
-                "Hanzo": {
-                    "abilities": {
-                        "Dragonstrike": {
-                            "Speed": 12
-                        }
-                    }
-                },
-                "Sombra": {
-                    "abilities": {
-                        "Virus": {
-                            "Damage over time": 90
-                        }
-                    }
-                },
-                "Tracer": {
-                    "abilities": {
-                        "Recall": {
-                            "Cooldown": 13
-                        },
-                        "Pulse Bomb": {
-                            "Projectile size": 0.25
+                        "Infra-Sight": {
+                            "Ultimate cost": 1550
                         }
                     }
                 }
@@ -1124,10 +1534,6 @@ const patches = {
                             "pulls tanks further": true,
                             "Pull knockback": 20.74
                         },
-                        "Rampage": {
-                            "Ultimate Cost": 2700,
-                            "Wound total damage": 90
-                        },
                         "Commanding Shout": {
                             "can be activated while using other abilities": false,
                             "Cooldown": 14,
@@ -1136,6 +1542,10 @@ const patches = {
                         "Carnage": {
                             "Impact damage": 105,
                             "Immediate healing per target hit": 0
+                        },
+                        "Rampage": {
+                            "Ultimate Cost": 2700,
+                            "Wound total damage": 90
                         }
                     }
                 },
@@ -1409,7 +1819,37 @@ const patches = {
                 "general": {
                     "Healing reduction inflicted on hit": 20
                 },
+                "Ashe": {
+                    "general": {
+                        "Base health": 250
+                    },
+                    "abilities": {
+                        "B.O.B": {
+                            "Ultimate cost": 2450
+                        }
+                    }
+                },
+                "Bastion": {
+                    "general": {
+                        "Base health": 250
+                    },
+                    "abilities": {
+                        "A-36 Tactical Grenade": {
+                            "Self damage rate": 50,
+                            "briefly grants increased aerial mobility on self knockback while in Configuration: Assault": false
+                        },
+                        "Configuration: Assault": {
+                            "Movement speed penalty": 35
+                        },
+                        "Configuration: Artillery": {
+                            "Ultimate cost": 2500
+                        }
+                    }
+                },
                 "Cassidy": {
+                    "general": {
+                        "Base health": 275
+                    },
                     "abilities": {
                         "Peacekeeper": {
                             "Secondary fire \"Fan the Hammer\" damage": 50
@@ -1431,29 +1871,137 @@ const patches = {
                             "Max movement speed penalty": 70,
                             "Min movement speed penalty": 70,
                             "Max damage reduction": 40,
-                            "Min damage reduction": 40
+                            "Min damage reduction": 40,
+                            "Ultimate cost": 2000
+                        }
+                    }
+                },
+                "Echo": {
+                    "general": {
+                        "Base health": 250
+                    },
+                    "abilities": {
+                        "Sticky Bombs": {
+                            "Explosion damage": 25,
+                            "Direct damage": 5
+                        },
+                        "Duplicate": {
+                            "Ultimate gain modifier": 4,
+                            "Ultimate Cost": 1850,
+                            "has predetermined tank health pools": false
+                        }
+                    }
+                },
+                "Genji": {
+                    "general": {
+                        "Base health": 250
+                    },
+                    "abilities": {
+                        "Shuriken": {
+                            "Damage": 27
+                        },
+                        "Deflect": {
+                            "Duration": 2
+                        },
+                        "Dragonblade": {
+                            "Ultimate cost": 2125
+                        }
+                    }
+                },
+                "Hanzo": {
+                    "general": {
+                        "Base health": 250
+                    },
+                    "abilities": {
+                        "Storm Bow": {
+                            "Maximum Damage": 120
+                        },
+                        "Storm Arrows": {
+                            "Cooldown": 8,
+                            "Damage per arrow": 75,
+                            "Ammo": 5
+                        },
+                        "Dragonstrike": {
+                            "Speed": 12,
+                            "Ultimate cost": 1850
+                        }
+                    }
+                },
+                "Junkrat": {
+                    "general": {
+                        "Base health": 250
+                    },
+                    "abilities": {
+                        "Frag Launcher": {
+                            "Impact Damage": "40",
+                            "Maximum Splash": "80"
+                        },
+                        "Concussion Mine": {
+                            "Cooldown": 7
+                        },
+                        "RIP-Tire": {
+                            "Ultimate cost": 2100
                         }
                     }
                 },
                 "Mei": {
+                    "general": {
+                        "Base health": 300
+                    },
                     "abilities": {
                         "Endothermic Blaster": {
+                            "Ammo": 140,
                             "Secondary fire projectile size": 0.225,
                             "Secondary fire damage": 75
+                        },
+                        "Cryofreeze": {
+                            "Healing per second": 62.5
+                        },
+                        "Ice Wall": {
+                            "Health per pillar": 250
+                        },
+                        "Blizzard": {
+                            "Ultimate cost": 1925
+                        }
+                    }
+                },
+                "Pharah": {
+                    "general": {
+                        "Base health": 250
+                    },
+                    "abilities": {
+                        "Rocket Launcher": {
+                            "Recovery speed": 0.8,
+                            "Projectile speed": 40
+                        },
+                        "Barrage": {
+                            "Ultimate cost": 2200
                         }
                     }
                 },
                 "Reaper": {
+                    "general": {
+                        "Base health": 300
+                    },
                     "abilities": {
                         "Hellfire Shotguns": {
-                            "Spread": 6.5
+                            "Spread": 6.5,
+                            "Damage per pellet": 5.4
                         },
                         "Shadow Step": {
-                            "Cast time": 1.5
+                            "Cast time": 1.5,
+                            "Cooldown": 10
+                        },
+                        "Death Blossom": {
+                            "Ultimate cost": 1870,
+                            "Damage per second": 185 
                         }
                     }
                 },
                 "Sojourn": {
+                    "general": {
+                        "Base health": 250
+                    },
                     "abilities": {
                         "Railgun": {
                             "Secondary fire maximum damage": 130,
@@ -1461,23 +2009,111 @@ const patches = {
                             "requires overclock for secondary primary piercing": true,
                             "Primary fire shots per second": 14
                         },
+                        "Power Slide": {
+                            "Cooldown": 7
+                        },
                         "Overclock": {
-                            "Energy charge rate": 100
+                            "Energy charge rate": 100,
+                            "Ultimate cost": 2300
+                        }
+                    }
+                },
+                "Soldier: 76": {
+                    "general": {
+                        "Base health": 250
+                    },
+                    "abilities": {
+                        "Heavy Pulse Rifle": {
+                            "Damage": 19
+                        },
+                        "Biotic Field": {
+                            "Cooldown": 18,
+                            "Healing per second": 40
+                        },
+                        "Tactical Visor": {
+                            "Ultimate cost": 2750
+                        }
+                    }
+                },
+                "Sombra": {
+                    "general": {
+                        "Base health": 250
+                    },
+                    "abilities": {
+                        "Virus": {
+                            "Damage over time": 90,
+                            "Cooldown": 6
+                        },
+                        "EMP": {
+                            "Ultimate cost": 1825
                         }
                     }
                 },
                 "Symmetra": {
                     "general": {
-                        "Base health": 100
+                        "Base health": 100,
+                        "Shield health": 150
                     },
                     "abilities": {
                         "Photon Projector": {
-                            "Primary fire charge rate": 1
+                            "Primary fire charge rate": 1,
+                            "Shield regen per beam level": 10
+                        },
+                        "Sentry Turret": {
+                            "Health": 40
+                        },
+                        "Teleporter": {
+                            "Base Health": 100,
+                            "Shield Health": 200
+                        },
+                        "Photon Barrier": {
+                            "Ultimate cost": 2025,
+                            "Barrier health": 4000
+                        }
+                    }
+                },
+                "Torbjörn": {
+                    "general": {
+                        "Base health": 250
+                    },
+                    "abilities": {
+                        "Rivet Gun": {
+                            "Ammo": 18,
+                            "Secondary fire ammo cost": 2
+                        },
+                        "Molten Core": {
+                            "Ultimate Cost": 2350
+                        }
+                    }
+                },
+                "Tracer": {
+                    "general": {
+                        "Base health": 175,
+                        "Model size": 1
+                    },
+                    "abilities": {
+                        "Pulse Pistols": {
+                            "Damage": 6
+                        },
+                        "Recall": {
+                            "Cooldown": 13
+                        },
+                        "Pulse Bomb": {
+                            "Projectile size": 0.25,
+                            "Ultimate cost": 1375
                         }
                     }
                 },
                 "Venture": {
+                    "general": {
+                        "Base health": 250,
+                        "Movement speed": 5.5
+                    },
                     "abilities": {
+                        "Explorer's Resolve": {
+                            "Ability shield generation": 40,
+                            "Shield cap": 75
+                        },
                         "SMART Excavator": {
                             "Maximum explosion damage": 40
                         },
@@ -1486,14 +2122,21 @@ const patches = {
                             "Cooldown reduction while burrowed": 50,
                             "Cooldown acceleration while burrowed": 0,
                             "Initial impact damage": 30,
-                            "Damage over time": 60
+                            "Damage over time": 60,
+                            "Cooldown": 8,
+                            "Knockback": 14.5
                         },
                         "Burrow": {
-                            "Grace period": 0
+                            "Grace period": 0,
+                            "Minimum damage": 55,
+                            "Maximum damage": 110
                         },
                         "Tectonic Shock": {
                             "Ultimate Cost": 2125,
-                            "Vertical knockback": 5
+                            "Vertical knockback": 5,
+                            "Extra damage range": 0,
+                            "Extra damage multiplier": 1,
+                            "Damage": 130
                         },
                         "Clobber": {
                             "Impact damage": 30,
@@ -1501,41 +2144,13 @@ const patches = {
                         }
                     }
                 },
-                "Junkrat": {
+                "Widowmaker": {
+                    "general": {
+                        "Base health": 200
+                    },
                     "abilities": {
-                        "Frag Launcher": {
-                            "Impact Damage": "40"
-                        }
-                    }
-                },
-                "Echo": {
-                    "abilities": {
-                        "Duplicate": {
-                            "Ultimate gain modifier": 4
-                        }
-                    }
-                },
-                "Hanzo": {
-                    "abilities": {
-                        "Dragonstrike": {
-                            "Speed": 12
-                        }
-                    }
-                },
-                "Sombra": {
-                    "abilities": {
-                        "Virus": {
-                            "Damage over time": 90
-                        }
-                    }
-                },
-                "Tracer": {
-                    "abilities": {
-                        "Recall": {
-                            "Cooldown": 13
-                        },
-                        "Pulse Bomb": {
-                            "Projectile size": 0.25
+                        "Infra-Sight": {
+                            "Ultimate cost": 1550
                         }
                     }
                 }
@@ -1660,10 +2275,6 @@ const patches = {
                             "pulls tanks further": true,
                             "Pull knockback": 20.74
                         },
-                        "Rampage": {
-                            "Ultimate Cost": 2700,
-                            "Wound total damage": 90
-                        },
                         "Commanding Shout": {
                             "can be activated while using other abilities": true,
                             "Cooldown": 12,
@@ -1672,6 +2283,10 @@ const patches = {
                         "Carnage": {
                             "Impact damage": 105,
                             "Immediate healing per target hit": 0
+                        },
+                        "Rampage": {
+                            "Ultimate Cost": 2700,
+                            "Wound total damage": 90
                         }
                     }
                 },
@@ -1945,7 +2560,37 @@ const patches = {
                 "general": {
                     "Healing reduction inflicted on hit": 20
                 },
+                "Ashe": {
+                    "general": {
+                        "Base health": 250
+                    },
+                    "abilities": {
+                        "B.O.B": {
+                            "Ultimate cost": 2450
+                        }
+                    }
+                },
+                "Bastion": {
+                    "general": {
+                        "Base health": 250
+                    },
+                    "abilities": {
+                        "A-36 Tactical Grenade": {
+                            "Self damage rate": 50,
+                            "briefly grants increased aerial mobility on self knockback while in Configuration: Assault": false
+                        },
+                        "Configuration: Assault": {
+                            "Movement speed penalty": 35
+                        },
+                        "Configuration: Artillery": {
+                            "Ultimate cost": 2500
+                        }
+                    }
+                },
                 "Cassidy": {
+                    "general": {
+                        "Base health": 275
+                    },
                     "abilities": {
                         "Peacekeeper": {
                             "Secondary fire \"Fan the Hammer\" damage": 50
@@ -1967,29 +2612,137 @@ const patches = {
                             "Max movement speed penalty": 70,
                             "Min movement speed penalty": 70,
                             "Max damage reduction": 40,
-                            "Min damage reduction": 40
+                            "Min damage reduction": 40,
+                            "Ultimate cost": 2000
+                        }
+                    }
+                },
+                "Echo": {
+                    "general": {
+                        "Base health": 250
+                    },
+                    "abilities": {
+                        "Sticky Bombs": {
+                            "Explosion damage": 25,
+                            "Direct damage": 5
+                        },
+                        "Duplicate": {
+                            "Ultimate gain modifier": 4.5,
+                            "Ultimate Cost": 1850,
+                            "has predetermined tank health pools": false
+                        }
+                    }
+                },
+                "Genji": {
+                    "general": {
+                        "Base health": 250
+                    },
+                    "abilities": {
+                        "Shuriken": {
+                            "Damage": 27
+                        },
+                        "Deflect": {
+                            "Duration": 2
+                        },
+                        "Dragonblade": {
+                            "Ultimate cost": 2125
+                        }
+                    }
+                },
+                "Hanzo": {
+                    "general": {
+                        "Base health": 250
+                    },
+                    "abilities": {
+                        "Storm Bow": {
+                            "Maximum Damage": 120
+                        },
+                        "Storm Arrows": {
+                            "Cooldown": 8,
+                            "Damage per arrow": 75,
+                            "Ammo": 5
+                        },
+                        "Dragonstrike": {
+                            "Speed": 15,
+                            "Ultimate cost": 1850
+                        }
+                    }
+                },
+                "Junkrat": {
+                    "general": {
+                        "Base health": 250
+                    },
+                    "abilities": {
+                        "Frag Launcher": {
+                            "Impact Damage": "45",
+                            "Maximum Splash": "80"
+                        },
+                        "Concussion Mine": {
+                            "Cooldown": 7
+                        },
+                        "RIP-Tire": {
+                            "Ultimate cost": 2100
                         }
                     }
                 },
                 "Mei": {
+                    "general": {
+                        "Base health": 300
+                    },
                     "abilities": {
                         "Endothermic Blaster": {
+                            "Ammo": 140,
                             "Secondary fire projectile size": 0.225,
                             "Secondary fire damage": 75
+                        },
+                        "Cryofreeze": {
+                            "Healing per second": 62.5
+                        },
+                        "Ice Wall": {
+                            "Health per pillar": 250
+                        },
+                        "Blizzard": {
+                            "Ultimate cost": 1925
+                        }
+                    }
+                },
+                "Pharah": {
+                    "general": {
+                        "Base health": 250
+                    },
+                    "abilities": {
+                        "Rocket Launcher": {
+                            "Recovery speed": 0.8,
+                            "Projectile speed": 40
+                        },
+                        "Barrage": {
+                            "Ultimate cost": 2200
                         }
                     }
                 },
                 "Reaper": {
+                    "general": {
+                        "Base health": 300
+                    },
                     "abilities": {
                         "Hellfire Shotguns": {
-                            "Spread": 6.5
+                            "Spread": 6.5,
+                            "Damage per pellet": 5.4
                         },
                         "Shadow Step": {
-                            "Cast time": 1.5
+                            "Cast time": 1.5,
+                            "Cooldown": 10
+                        },
+                        "Death Blossom": {
+                            "Ultimate cost": 1870,
+                            "Damage per second": 185 
                         }
                     }
                 },
                 "Sojourn": {
+                    "general": {
+                        "Base health": 250
+                    },
                     "abilities": {
                         "Railgun": {
                             "Secondary fire maximum damage": 130,
@@ -1997,23 +2750,111 @@ const patches = {
                             "requires overclock for secondary primary piercing": true,
                             "Primary fire shots per second": 14
                         },
+                        "Power Slide": {
+                            "Cooldown": 7
+                        },
                         "Overclock": {
-                            "Energy charge rate": 100
+                            "Energy charge rate": 100,
+                            "Ultimate cost": 2300
+                        }
+                    }
+                },
+                "Soldier: 76": {
+                    "general": {
+                        "Base health": 250
+                    },
+                    "abilities": {
+                        "Heavy Pulse Rifle": {
+                            "Damage": 19
+                        },
+                        "Biotic Field": {
+                            "Cooldown": 18,
+                            "Healing per second": 40
+                        },
+                        "Tactical Visor": {
+                            "Ultimate cost": 2750
+                        }
+                    }
+                },
+                "Sombra": {
+                    "general": {
+                        "Base health": 250
+                    },
+                    "abilities": {
+                        "Virus": {
+                            "Damage over time": 90,
+                            "Cooldown": 6
+                        },
+                        "EMP": {
+                            "Ultimate cost": 1825
                         }
                     }
                 },
                 "Symmetra": {
                     "general": {
-                        "Base health": 100
+                        "Base health": 100,
+                        "Shield health": 150
                     },
                     "abilities": {
                         "Photon Projector": {
-                            "Primary fire charge rate": 1
+                            "Primary fire charge rate": 1,
+                            "Shield regen per beam level": 10
+                        },
+                        "Sentry Turret": {
+                            "Health": 40
+                        },
+                        "Teleporter": {
+                            "Base Health": 100,
+                            "Shield Health": 200
+                        },
+                        "Photon Barrier": {
+                            "Ultimate cost": 2025,
+                            "Barrier health": 4000
+                        }
+                    }
+                },
+                "Torbjörn": {
+                    "general": {
+                        "Base health": 250
+                    },
+                    "abilities": {
+                        "Rivet Gun": {
+                            "Ammo": 18,
+                            "Secondary fire ammo cost": 2
+                        },
+                        "Molten Core": {
+                            "Ultimate Cost": 2350
+                        }
+                    }
+                },
+                "Tracer": {
+                    "general": {
+                        "Base health": 175,
+                        "Model size": 1
+                    },
+                    "abilities": {
+                        "Pulse Pistols": {
+                            "Damage": 6
+                        },
+                        "Recall": {
+                            "Cooldown": 13
+                        },
+                        "Pulse Bomb": {
+                            "Projectile size": 0.25,
+                            "Ultimate cost": 1375
                         }
                     }
                 },
                 "Venture": {
+                    "general": {
+                        "Base health": 250,
+                        "Movement speed": 5.5
+                    },
                     "abilities": {
+                        "Explorer's Resolve": {
+                            "Ability shield generation": 40,
+                            "Shield cap": 75
+                        },
                         "SMART Excavator": {
                             "Maximum explosion damage": 40
                         },
@@ -2022,14 +2863,21 @@ const patches = {
                             "Cooldown reduction while burrowed": 50,
                             "Cooldown acceleration while burrowed": 0,
                             "Initial impact damage": 30,
-                            "Damage over time": 60
+                            "Damage over time": 60,
+                            "Cooldown": 8,
+                            "Knockback": 14.5
                         },
                         "Burrow": {
-                            "Grace period": 0
+                            "Grace period": 0,
+                            "Minimum damage": 55,
+                            "Maximum damage": 110
                         },
                         "Tectonic Shock": {
                             "Ultimate Cost": 2125,
-                            "Vertical knockback": 5
+                            "Vertical knockback": 5,
+                            "Extra damage range": 0,
+                            "Extra damage multiplier": 1,
+                            "Damage": 130
                         },
                         "Clobber": {
                             "Impact damage": 30,
@@ -2037,41 +2885,13 @@ const patches = {
                         }
                     }
                 },
-                "Junkrat": {
+                "Widowmaker": {
+                    "general": {
+                        "Base health": 200
+                    },
                     "abilities": {
-                        "Frag Launcher": {
-                            "Impact Damage": "45"
-                        }
-                    }
-                },
-                "Echo": {
-                    "abilities": {
-                        "Duplicate": {
-                            "Ultimate gain modifier": 4.5
-                        }
-                    }
-                },
-                "Hanzo": {
-                    "abilities": {
-                        "Dragonstrike": {
-                            "Speed": 15
-                        }
-                    }
-                },
-                "Sombra": {
-                    "abilities": {
-                        "Virus": {
-                            "Damage over time": 90
-                        }
-                    }
-                },
-                "Tracer": {
-                    "abilities": {
-                        "Recall": {
-                            "Cooldown": 13
-                        },
-                        "Pulse Bomb": {
-                            "Projectile size": 0.25
+                        "Infra-Sight": {
+                            "Ultimate cost": 1550
                         }
                     }
                 }
@@ -2196,10 +3016,6 @@ const patches = {
                             "pulls tanks further": true,
                             "Pull knockback": 20.74
                         },
-                        "Rampage": {
-                            "Ultimate Cost": 2700,
-                            "Wound total damage": 90
-                        },
                         "Commanding Shout": {
                             "can be activated while using other abilities": true,
                             "Cooldown": 12,
@@ -2208,6 +3024,10 @@ const patches = {
                         "Carnage": {
                             "Impact damage": 105,
                             "Immediate healing per target hit": 0
+                        },
+                        "Rampage": {
+                            "Ultimate Cost": 2700,
+                            "Wound total damage": 90
                         }
                     }
                 },
@@ -2481,7 +3301,37 @@ const patches = {
                 "general": {
                     "Healing reduction inflicted on hit": 20
                 },
+                "Ashe": {
+                    "general": {
+                        "Base health": 250
+                    },
+                    "abilities": {
+                        "B.O.B": {
+                            "Ultimate cost": 2450
+                        }
+                    }
+                },
+                "Bastion": {
+                    "general": {
+                        "Base health": 250
+                    },
+                    "abilities": {
+                        "A-36 Tactical Grenade": {
+                            "Self damage rate": 50,
+                            "briefly grants increased aerial mobility on self knockback while in Configuration: Assault": false
+                        },
+                        "Configuration: Assault": {
+                            "Movement speed penalty": 35
+                        },
+                        "Configuration: Artillery": {
+                            "Ultimate cost": 2500
+                        }
+                    }
+                },
                 "Cassidy": {
+                    "general": {
+                        "Base health": 275
+                    },
                     "abilities": {
                         "Peacekeeper": {
                             "Secondary fire \"Fan the Hammer\" damage": 50
@@ -2503,29 +3353,137 @@ const patches = {
                             "Max movement speed penalty": 70,
                             "Min movement speed penalty": 70,
                             "Max damage reduction": 40,
-                            "Min damage reduction": 40
+                            "Min damage reduction": 40,
+                            "Ultimate cost": 2000
+                        }
+                    }
+                },
+                "Echo": {
+                    "general": {
+                        "Base health": 250
+                    },
+                    "abilities": {
+                        "Sticky Bombs": {
+                            "Explosion damage": 25,
+                            "Direct damage": 5
+                        },
+                        "Duplicate": {
+                            "Ultimate gain modifier": 4.5,
+                            "Ultimate Cost": 1850,
+                            "has predetermined tank health pools": false
+                        }
+                    }
+                },
+                "Genji": {
+                    "general": {
+                        "Base health": 250
+                    },
+                    "abilities": {
+                        "Shuriken": {
+                            "Damage": 27
+                        },
+                        "Deflect": {
+                            "Duration": 2
+                        },
+                        "Dragonblade": {
+                            "Ultimate cost": 2125
+                        }
+                    }
+                },
+                "Hanzo": {
+                    "general": {
+                        "Base health": 250
+                    },
+                    "abilities": {
+                        "Storm Bow": {
+                            "Maximum Damage": 120
+                        },
+                        "Storm Arrows": {
+                            "Cooldown": 8,
+                            "Damage per arrow": 75,
+                            "Ammo": 5
+                        },
+                        "Dragonstrike": {
+                            "Speed": 15,
+                            "Ultimate cost": 1850
+                        }
+                    }
+                },
+                "Junkrat": {
+                    "general": {
+                        "Base health": 250
+                    },
+                    "abilities": {
+                        "Frag Launcher": {
+                            "Impact Damage": "45",
+                            "Maximum Splash": "80"
+                        },
+                        "Concussion Mine": {
+                            "Cooldown": 7
+                        },
+                        "RIP-Tire": {
+                            "Ultimate cost": 2100
                         }
                     }
                 },
                 "Mei": {
+                    "general": {
+                        "Base health": 300
+                    },
                     "abilities": {
                         "Endothermic Blaster": {
+                            "Ammo": 140,
                             "Secondary fire projectile size": 0.225,
                             "Secondary fire damage": 75
+                        },
+                        "Cryofreeze": {
+                            "Healing per second": 62.5
+                        },
+                        "Ice Wall": {
+                            "Health per pillar": 250
+                        },
+                        "Blizzard": {
+                            "Ultimate cost": 1925
+                        }
+                    }
+                },
+                "Pharah": {
+                    "general": {
+                        "Base health": 250
+                    },
+                    "abilities": {
+                        "Rocket Launcher": {
+                            "Recovery speed": 0.8,
+                            "Projectile speed": 40
+                        },
+                        "Barrage": {
+                            "Ultimate cost": 2200
                         }
                     }
                 },
                 "Reaper": {
+                    "general": {
+                        "Base health": 300
+                    },
                     "abilities": {
                         "Hellfire Shotguns": {
-                            "Spread": 6.5
+                            "Spread": 6.5,
+                            "Damage per pellet": 5.4
                         },
                         "Shadow Step": {
-                            "Cast time": 1.5
+                            "Cast time": 1.5,
+                            "Cooldown": 10
+                        },
+                        "Death Blossom": {
+                            "Ultimate cost": 1870,
+                            "Damage per second": 185 
                         }
                     }
                 },
                 "Sojourn": {
+                    "general": {
+                        "Base health": 250
+                    },
                     "abilities": {
                         "Railgun": {
                             "Secondary fire maximum damage": 130,
@@ -2533,23 +3491,111 @@ const patches = {
                             "requires overclock for secondary primary piercing": true,
                             "Primary fire shots per second": 14
                         },
+                        "Power Slide": {
+                            "Cooldown": 7
+                        },
                         "Overclock": {
-                            "Energy charge rate": 100
+                            "Energy charge rate": 100,
+                            "Ultimate cost": 2300
+                        }
+                    }
+                },
+                "Soldier: 76": {
+                    "general": {
+                        "Base health": 250
+                    },
+                    "abilities": {
+                        "Heavy Pulse Rifle": {
+                            "Damage": 19
+                        },
+                        "Biotic Field": {
+                            "Cooldown": 18,
+                            "Healing per second": 40
+                        },
+                        "Tactical Visor": {
+                            "Ultimate cost": 2750
+                        }
+                    }
+                },
+                "Sombra": {
+                    "general": {
+                        "Base health": 250
+                    },
+                    "abilities": {
+                        "Virus": {
+                            "Damage over time": 90,
+                            "Cooldown": 6
+                        },
+                        "EMP": {
+                            "Ultimate cost": 1825
                         }
                     }
                 },
                 "Symmetra": {
                     "general": {
-                        "Base health": 100
+                        "Base health": 100,
+                        "Shield health": 150
                     },
                     "abilities": {
                         "Photon Projector": {
-                            "Primary fire charge rate": 1
+                            "Primary fire charge rate": 1,
+                            "Shield regen per beam level": 10
+                        },
+                        "Sentry Turret": {
+                            "Health": 40
+                        },
+                        "Teleporter": {
+                            "Base Health": 100,
+                            "Shield Health": 200
+                        },
+                        "Photon Barrier": {
+                            "Ultimate cost": 2025,
+                            "Barrier health": 4000
+                        }
+                    }
+                },
+                "Torbjörn": {
+                    "general": {
+                        "Base health": 250
+                    },
+                    "abilities": {
+                        "Rivet Gun": {
+                            "Ammo": 18,
+                            "Secondary fire ammo cost": 2
+                        },
+                        "Molten Core": {
+                            "Ultimate Cost": 2350
+                        }
+                    }
+                },
+                "Tracer": {
+                    "general": {
+                        "Base health": 175,
+                        "Model size": 1
+                    },
+                    "abilities": {
+                        "Pulse Pistols": {
+                            "Damage": 6
+                        },
+                        "Recall": {
+                            "Cooldown": 13
+                        },
+                        "Pulse Bomb": {
+                            "Projectile size": 0.25,
+                            "Ultimate cost": 1375
                         }
                     }
                 },
                 "Venture": {
+                    "general": {
+                        "Base health": 250,
+                        "Movement speed": 5.5
+                    },
                     "abilities": {
+                        "Explorer's Resolve": {
+                            "Ability shield generation": 40,
+                            "Shield cap": 75
+                        },
                         "SMART Excavator": {
                             "Maximum explosion damage": 40
                         },
@@ -2558,14 +3604,21 @@ const patches = {
                             "Cooldown reduction while burrowed": 0,
                             "Cooldown acceleration while burrowed": 90,
                             "Initial impact damage": 30,
-                            "Damage over time": 60
+                            "Damage over time": 60,
+                            "Cooldown": 8,
+                            "Knockback": 14.5
                         },
                         "Burrow": {
-                            "Grace period": 0.2
+                            "Grace period": 0.2,
+                            "Minimum damage": 55,
+                            "Maximum damage": 110
                         },
                         "Tectonic Shock": {
                             "Ultimate Cost": 2125,
-                            "Vertical knockback": 5
+                            "Vertical knockback": 5,
+                            "Extra damage range": 0,
+                            "Extra damage multiplier": 1,
+                            "Damage": 130
                         },
                         "Clobber": {
                             "Impact damage": 30,
@@ -2573,41 +3626,13 @@ const patches = {
                         }
                     }
                 },
-                "Junkrat": {
+                "Widowmaker": {
+                    "general": {
+                        "Base health": 200
+                    },
                     "abilities": {
-                        "Frag Launcher": {
-                            "Impact Damage": "45"
-                        }
-                    }
-                },
-                "Echo": {
-                    "abilities": {
-                        "Duplicate": {
-                            "Ultimate gain modifier": 4.5
-                        }
-                    }
-                },
-                "Hanzo": {
-                    "abilities": {
-                        "Dragonstrike": {
-                            "Speed": 15
-                        }
-                    }
-                },
-                "Sombra": {
-                    "abilities": {
-                        "Virus": {
-                            "Damage over time": 90
-                        }
-                    }
-                },
-                "Tracer": {
-                    "abilities": {
-                        "Recall": {
-                            "Cooldown": 13
-                        },
-                        "Pulse Bomb": {
-                            "Projectile size": 0.25
+                        "Infra-Sight": {
+                            "Ultimate cost": 1550
                         }
                     }
                 }
@@ -2732,10 +3757,6 @@ const patches = {
                             "pulls tanks further": true,
                             "Pull knockback": 20.74
                         },
-                        "Rampage": {
-                            "Ultimate Cost": 2700,
-                            "Wound total damage": 90
-                        },
                         "Commanding Shout": {
                             "can be activated while using other abilities": true,
                             "Cooldown": 12,
@@ -2744,6 +3765,10 @@ const patches = {
                         "Carnage": {
                             "Impact damage": 105,
                             "Immediate healing per target hit": 0
+                        },
+                        "Rampage": {
+                            "Ultimate Cost": 2700,
+                            "Wound total damage": 90
                         }
                     }
                 },
@@ -3017,7 +4042,37 @@ const patches = {
                 "general": {
                     "Healing reduction inflicted on hit": 20
                 },
+                "Ashe": {
+                    "general": {
+                        "Base health": 250
+                    },
+                    "abilities": {
+                        "B.O.B": {
+                            "Ultimate cost": 2450
+                        }
+                    }
+                },
+                "Bastion": {
+                    "general": {
+                        "Base health": 250
+                    },
+                    "abilities": {
+                        "A-36 Tactical Grenade": {
+                            "Self damage rate": 50,
+                            "briefly grants increased aerial mobility on self knockback while in Configuration: Assault": false
+                        },
+                        "Configuration: Assault": {
+                            "Movement speed penalty": 35
+                        },
+                        "Configuration: Artillery": {
+                            "Ultimate cost": 2500
+                        }
+                    }
+                },
                 "Cassidy": {
+                    "general": {
+                        "Base health": 275
+                    },
                     "abilities": {
                         "Peacekeeper": {
                             "Secondary fire \"Fan the Hammer\" damage": 50
@@ -3039,29 +4094,137 @@ const patches = {
                             "Max movement speed penalty": 70,
                             "Min movement speed penalty": 70,
                             "Max damage reduction": 40,
-                            "Min damage reduction": 40
+                            "Min damage reduction": 40,
+                            "Ultimate cost": 2000
+                        }
+                    }
+                },
+                "Echo": {
+                    "general": {
+                        "Base health": 250
+                    },
+                    "abilities": {
+                        "Sticky Bombs": {
+                            "Explosion damage": 25,
+                            "Direct damage": 5
+                        },
+                        "Duplicate": {
+                            "Ultimate gain modifier": 4.5,
+                            "Ultimate Cost": 1850,
+                            "has predetermined tank health pools": false
+                        }
+                    }
+                },
+                "Genji": {
+                    "general": {
+                        "Base health": 250
+                    },
+                    "abilities": {
+                        "Shuriken": {
+                            "Damage": 27
+                        },
+                        "Deflect": {
+                            "Duration": 2
+                        },
+                        "Dragonblade": {
+                            "Ultimate cost": 2125
+                        }
+                    }
+                },
+                "Hanzo": {
+                    "general": {
+                        "Base health": 250
+                    },
+                    "abilities": {
+                        "Storm Bow": {
+                            "Maximum Damage": 120
+                        },
+                        "Storm Arrows": {
+                            "Cooldown": 8,
+                            "Damage per arrow": 75,
+                            "Ammo": 5
+                        },
+                        "Dragonstrike": {
+                            "Speed": 15,
+                            "Ultimate cost": 1850
+                        }
+                    }
+                },
+                "Junkrat": {
+                    "general": {
+                        "Base health": 250
+                    },
+                    "abilities": {
+                        "Frag Launcher": {
+                            "Impact Damage": "45",
+                            "Maximum Splash": "80"
+                        },
+                        "Concussion Mine": {
+                            "Cooldown": 7
+                        },
+                        "RIP-Tire": {
+                            "Ultimate cost": 2100
                         }
                     }
                 },
                 "Mei": {
+                    "general": {
+                        "Base health": 300
+                    },
                     "abilities": {
                         "Endothermic Blaster": {
+                            "Ammo": 140,
                             "Secondary fire projectile size": 0.225,
                             "Secondary fire damage": 75
+                        },
+                        "Cryofreeze": {
+                            "Healing per second": 62.5
+                        },
+                        "Ice Wall": {
+                            "Health per pillar": 250
+                        },
+                        "Blizzard": {
+                            "Ultimate cost": 1925
+                        }
+                    }
+                },
+                "Pharah": {
+                    "general": {
+                        "Base health": 250
+                    },
+                    "abilities": {
+                        "Rocket Launcher": {
+                            "Recovery speed": 0.8,
+                            "Projectile speed": 40
+                        },
+                        "Barrage": {
+                            "Ultimate cost": 2200
                         }
                     }
                 },
                 "Reaper": {
+                    "general": {
+                        "Base health": 300
+                    },
                     "abilities": {
                         "Hellfire Shotguns": {
-                            "Spread": 6.5
+                            "Spread": 6.5,
+                            "Damage per pellet": 5.4
                         },
                         "Shadow Step": {
-                            "Cast time": 1.5
+                            "Cast time": 1.5,
+                            "Cooldown": 10
+                        },
+                        "Death Blossom": {
+                            "Ultimate cost": 1870,
+                            "Damage per second": 185 
                         }
                     }
                 },
                 "Sojourn": {
+                    "general": {
+                        "Base health": 250
+                    },
                     "abilities": {
                         "Railgun": {
                             "Secondary fire maximum damage": 130,
@@ -3069,23 +4232,111 @@ const patches = {
                             "requires overclock for secondary primary piercing": true,
                             "Primary fire shots per second": 14
                         },
+                        "Power Slide": {
+                            "Cooldown": 7
+                        },
                         "Overclock": {
-                            "Energy charge rate": 100
+                            "Energy charge rate": 100,
+                            "Ultimate cost": 2300
+                        }
+                    }
+                },
+                "Soldier: 76": {
+                    "general": {
+                        "Base health": 250
+                    },
+                    "abilities": {
+                        "Heavy Pulse Rifle": {
+                            "Damage": 19
+                        },
+                        "Biotic Field": {
+                            "Cooldown": 18,
+                            "Healing per second": 40
+                        },
+                        "Tactical Visor": {
+                            "Ultimate cost": 2750
+                        }
+                    }
+                },
+                "Sombra": {
+                    "general": {
+                        "Base health": 250
+                    },
+                    "abilities": {
+                        "Virus": {
+                            "Damage over time": 90,
+                            "Cooldown": 6
+                        },
+                        "EMP": {
+                            "Ultimate cost": 1825
                         }
                     }
                 },
                 "Symmetra": {
                     "general": {
-                        "Base health": 100
+                        "Base health": 100,
+                        "Shield health": 150
                     },
                     "abilities": {
                         "Photon Projector": {
-                            "Primary fire charge rate": 1
+                            "Primary fire charge rate": 1,
+                            "Shield regen per beam level": 10
+                        },
+                        "Sentry Turret": {
+                            "Health": 40
+                        },
+                        "Teleporter": {
+                            "Base Health": 100,
+                            "Shield Health": 200
+                        },
+                        "Photon Barrier": {
+                            "Ultimate cost": 2025,
+                            "Barrier health": 4000
+                        }
+                    }
+                },
+                "Torbjörn": {
+                    "general": {
+                        "Base health": 250
+                    },
+                    "abilities": {
+                        "Rivet Gun": {
+                            "Ammo": 18,
+                            "Secondary fire ammo cost": 2
+                        },
+                        "Molten Core": {
+                            "Ultimate Cost": 2350
+                        }
+                    }
+                },
+                "Tracer": {
+                    "general": {
+                        "Base health": 175,
+                        "Model size": 1
+                    },
+                    "abilities": {
+                        "Pulse Pistols": {
+                            "Damage": 6
+                        },
+                        "Recall": {
+                            "Cooldown": 13
+                        },
+                        "Pulse Bomb": {
+                            "Projectile size": 0.25,
+                            "Ultimate cost": 1375
                         }
                     }
                 },
                 "Venture": {
+                    "general": {
+                        "Base health": 250,
+                        "Movement speed": 5.5
+                    },
                     "abilities": {
+                        "Explorer's Resolve": {
+                            "Ability shield generation": 40,
+                            "Shield cap": 75
+                        },
                         "SMART Excavator": {
                             "Maximum explosion damage": 40
                         },
@@ -3094,14 +4345,21 @@ const patches = {
                             "Cooldown reduction while burrowed": 0,
                             "Cooldown acceleration while burrowed": 90,
                             "Initial impact damage": 30,
-                            "Damage over time": 60
+                            "Damage over time": 60,
+                            "Cooldown": 8,
+                            "Knockback": 14.5
                         },
                         "Burrow": {
-                            "Grace period": 0.2
+                            "Grace period": 0.2,
+                            "Minimum damage": 55,
+                            "Maximum damage": 110
                         },
                         "Tectonic Shock": {
                             "Ultimate Cost": 2125,
-                            "Vertical knockback": 5
+                            "Vertical knockback": 5,
+                            "Extra damage range": 0,
+                            "Extra damage multiplier": 1,
+                            "Damage": 130
                         },
                         "Clobber": {
                             "Impact damage": 30,
@@ -3109,41 +4367,13 @@ const patches = {
                         }
                     }
                 },
-                "Junkrat": {
+                "Widowmaker": {
+                    "general": {
+                        "Base health": 200
+                    },
                     "abilities": {
-                        "Frag Launcher": {
-                            "Impact Damage": "45"
-                        }
-                    }
-                },
-                "Echo": {
-                    "abilities": {
-                        "Duplicate": {
-                            "Ultimate gain modifier": 4.5
-                        }
-                    }
-                },
-                "Hanzo": {
-                    "abilities": {
-                        "Dragonstrike": {
-                            "Speed": 15
-                        }
-                    }
-                },
-                "Sombra": {
-                    "abilities": {
-                        "Virus": {
-                            "Damage over time": 90
-                        }
-                    }
-                },
-                "Tracer": {
-                    "abilities": {
-                        "Recall": {
-                            "Cooldown": 13
-                        },
-                        "Pulse Bomb": {
-                            "Projectile size": 0.25
+                        "Infra-Sight": {
+                            "Ultimate cost": 1550
                         }
                     }
                 }
@@ -3268,10 +4498,6 @@ const patches = {
                             "pulls tanks further": true,
                             "Pull knockback": 20.74
                         },
-                        "Rampage": {
-                            "Ultimate Cost": 2700,
-                            "Wound total damage": 90
-                        },
                         "Commanding Shout": {
                             "can be activated while using other abilities": true,
                             "Cooldown": 12,
@@ -3280,6 +4506,10 @@ const patches = {
                         "Carnage": {
                             "Impact damage": 105,
                             "Immediate healing per target hit": 0
+                        },
+                        "Rampage": {
+                            "Ultimate Cost": 2700,
+                            "Wound total damage": 90
                         }
                     }
                 },
@@ -3553,7 +4783,37 @@ const patches = {
                 "general": {
                     "Healing reduction inflicted on hit": 20
                 },
+                "Ashe": {
+                    "general": {
+                        "Base health": 250
+                    },
+                    "abilities": {
+                        "B.O.B": {
+                            "Ultimate cost": 2450
+                        }
+                    }
+                },
+                "Bastion": {
+                    "general": {
+                        "Base health": 250
+                    },
+                    "abilities": {
+                        "A-36 Tactical Grenade": {
+                            "Self damage rate": 50,
+                            "briefly grants increased aerial mobility on self knockback while in Configuration: Assault": false
+                        },
+                        "Configuration: Assault": {
+                            "Movement speed penalty": 35
+                        },
+                        "Configuration: Artillery": {
+                            "Ultimate cost": 2500
+                        }
+                    }
+                },
                 "Cassidy": {
+                    "general": {
+                        "Base health": 275
+                    },
                     "abilities": {
                         "Peacekeeper": {
                             "Secondary fire \"Fan the Hammer\" damage": 45
@@ -3575,29 +4835,137 @@ const patches = {
                             "Max movement speed penalty": 70,
                             "Min movement speed penalty": 35,
                             "Max damage reduction": 40,
-                            "Min damage reduction": 0
+                            "Min damage reduction": 0,
+                            "Ultimate cost": 2000
+                        }
+                    }
+                },
+                "Echo": {
+                    "general": {
+                        "Base health": 250
+                    },
+                    "abilities": {
+                        "Sticky Bombs": {
+                            "Explosion damage": 25,
+                            "Direct damage": 5
+                        },
+                        "Duplicate": {
+                            "Ultimate gain modifier": 4.5,
+                            "Ultimate Cost": 1850,
+                            "has predetermined tank health pools": false
+                        }
+                    }
+                },
+                "Genji": {
+                    "general": {
+                        "Base health": 250
+                    },
+                    "abilities": {
+                        "Shuriken": {
+                            "Damage": 27
+                        },
+                        "Deflect": {
+                            "Duration": 2
+                        },
+                        "Dragonblade": {
+                            "Ultimate cost": 2125
+                        }
+                    }
+                },
+                "Hanzo": {
+                    "general": {
+                        "Base health": 250
+                    },
+                    "abilities": {
+                        "Storm Bow": {
+                            "Maximum Damage": 120
+                        },
+                        "Storm Arrows": {
+                            "Cooldown": 8,
+                            "Damage per arrow": 75,
+                            "Ammo": 5
+                        },
+                        "Dragonstrike": {
+                            "Speed": 15,
+                            "Ultimate cost": 1850
+                        }
+                    }
+                },
+                "Junkrat": {
+                    "general": {
+                        "Base health": 250
+                    },
+                    "abilities": {
+                        "Frag Launcher": {
+                            "Impact Damage": "45",
+                            "Maximum Splash": "80"
+                        },
+                        "Concussion Mine": {
+                            "Cooldown": 7
+                        },
+                        "RIP-Tire": {
+                            "Ultimate cost": 2100
                         }
                     }
                 },
                 "Mei": {
+                    "general": {
+                        "Base health": 300
+                    },
                     "abilities": {
                         "Endothermic Blaster": {
+                            "Ammo": 140,
                             "Secondary fire projectile size": 0.2,
                             "Secondary fire damage": 85
+                        },
+                        "Cryofreeze": {
+                            "Healing per second": 62.5
+                        },
+                        "Ice Wall": {
+                            "Health per pillar": 250
+                        },
+                        "Blizzard": {
+                            "Ultimate cost": 1925
+                        }
+                    }
+                },
+                "Pharah": {
+                    "general": {
+                        "Base health": 250
+                    },
+                    "abilities": {
+                        "Rocket Launcher": {
+                            "Recovery speed": 0.8,
+                            "Projectile speed": 40
+                        },
+                        "Barrage": {
+                            "Ultimate cost": 2200
                         }
                     }
                 },
                 "Reaper": {
+                    "general": {
+                        "Base health": 300
+                    },
                     "abilities": {
                         "Hellfire Shotguns": {
-                            "Spread": 6
+                            "Spread": 6,
+                            "Damage per pellet": 5.4
                         },
                         "Shadow Step": {
-                            "Cast time": 1.2
+                            "Cast time": 1.2,
+                            "Cooldown": 10
+                        },
+                        "Death Blossom": {
+                            "Ultimate cost": 1870,
+                            "Damage per second": 185 
                         }
                     }
                 },
                 "Sojourn": {
+                    "general": {
+                        "Base health": 250
+                    },
                     "abilities": {
                         "Railgun": {
                             "Secondary fire maximum damage": 100,
@@ -3605,23 +4973,111 @@ const patches = {
                             "requires overclock for secondary primary piercing": false,
                             "Primary fire shots per second": 16
                         },
+                        "Power Slide": {
+                            "Cooldown": 7
+                        },
                         "Overclock": {
-                            "Energy charge rate": 120
+                            "Energy charge rate": 120,
+                            "Ultimate cost": 2300
+                        }
+                    }
+                },
+                "Soldier: 76": {
+                    "general": {
+                        "Base health": 250
+                    },
+                    "abilities": {
+                        "Heavy Pulse Rifle": {
+                            "Damage": 19
+                        },
+                        "Biotic Field": {
+                            "Cooldown": 18,
+                            "Healing per second": 40
+                        },
+                        "Tactical Visor": {
+                            "Ultimate cost": 2750
+                        }
+                    }
+                },
+                "Sombra": {
+                    "general": {
+                        "Base health": 250
+                    },
+                    "abilities": {
+                        "Virus": {
+                            "Damage over time": 90,
+                            "Cooldown": 6
+                        },
+                        "EMP": {
+                            "Ultimate cost": 1825
                         }
                     }
                 },
                 "Symmetra": {
                     "general": {
-                        "Base health": 125
+                        "Base health": 125,
+                        "Shield health": 150
                     },
                     "abilities": {
                         "Photon Projector": {
-                            "Primary fire charge rate": 1.25
+                            "Primary fire charge rate": 1.25,
+                            "Shield regen per beam level": 10
+                        },
+                        "Sentry Turret": {
+                            "Health": 40
+                        },
+                        "Teleporter": {
+                            "Base Health": 100,
+                            "Shield Health": 200
+                        },
+                        "Photon Barrier": {
+                            "Ultimate cost": 2025,
+                            "Barrier health": 4000
+                        }
+                    }
+                },
+                "Torbjörn": {
+                    "general": {
+                        "Base health": 250
+                    },
+                    "abilities": {
+                        "Rivet Gun": {
+                            "Ammo": 18,
+                            "Secondary fire ammo cost": 2
+                        },
+                        "Molten Core": {
+                            "Ultimate Cost": 2350
+                        }
+                    }
+                },
+                "Tracer": {
+                    "general": {
+                        "Base health": 175,
+                        "Model size": 1
+                    },
+                    "abilities": {
+                        "Pulse Pistols": {
+                            "Damage": 6
+                        },
+                        "Recall": {
+                            "Cooldown": 13
+                        },
+                        "Pulse Bomb": {
+                            "Projectile size": 0.25,
+                            "Ultimate cost": 1375
                         }
                     }
                 },
                 "Venture": {
+                    "general": {
+                        "Base health": 250,
+                        "Movement speed": 5.5
+                    },
                     "abilities": {
+                        "Explorer's Resolve": {
+                            "Ability shield generation": 40,
+                            "Shield cap": 75
+                        },
                         "SMART Excavator": {
                             "Maximum explosion damage": 40
                         },
@@ -3630,14 +5086,21 @@ const patches = {
                             "Cooldown reduction while burrowed": 0,
                             "Cooldown acceleration while burrowed": 90,
                             "Initial impact damage": 30,
-                            "Damage over time": 60
+                            "Damage over time": 60,
+                            "Cooldown": 8,
+                            "Knockback": 14.5
                         },
                         "Burrow": {
-                            "Grace period": 0.2
+                            "Grace period": 0.2,
+                            "Minimum damage": 55,
+                            "Maximum damage": 110
                         },
                         "Tectonic Shock": {
                             "Ultimate Cost": 2125,
-                            "Vertical knockback": 5
+                            "Vertical knockback": 5,
+                            "Extra damage range": 0,
+                            "Extra damage multiplier": 1,
+                            "Damage": 130
                         },
                         "Clobber": {
                             "Impact damage": 30,
@@ -3645,41 +5108,13 @@ const patches = {
                         }
                     }
                 },
-                "Junkrat": {
+                "Widowmaker": {
+                    "general": {
+                        "Base health": 200
+                    },
                     "abilities": {
-                        "Frag Launcher": {
-                            "Impact Damage": "45"
-                        }
-                    }
-                },
-                "Echo": {
-                    "abilities": {
-                        "Duplicate": {
-                            "Ultimate gain modifier": 4.5
-                        }
-                    }
-                },
-                "Hanzo": {
-                    "abilities": {
-                        "Dragonstrike": {
-                            "Speed": 15
-                        }
-                    }
-                },
-                "Sombra": {
-                    "abilities": {
-                        "Virus": {
-                            "Damage over time": 90
-                        }
-                    }
-                },
-                "Tracer": {
-                    "abilities": {
-                        "Recall": {
-                            "Cooldown": 13
-                        },
-                        "Pulse Bomb": {
-                            "Projectile size": 0.25
+                        "Infra-Sight": {
+                            "Ultimate cost": 1550
                         }
                     }
                 }
@@ -3756,9 +5191,9 @@ const patches = {
         "general": {
             "Knockdown time": 1.7,
             "Armor health": "a flat damage reduction of 5 per projectile, up to a maximum of 50% damage reduction",
-            "Out-of-combat health regeneration": "10 + 5% of max hp",
-            "Role lock": "1-2-2",
-            "Ultimate percent retained on swap": 15
+            "Out-of-combat health regeneration": "none",
+            "Role lock": "2-2-2",
+            "Ultimate percent retained on swap": 0
         },
         "heroes": {
             "tank": {
@@ -3816,7 +5251,7 @@ const patches = {
                         "Rampage": {
                             "Ultimate Cost": 2700,
                             "Wound total damage": 60
-                        },
+                        }
                     }
                 },
                 "Orisa": {
@@ -3974,10 +5409,10 @@ const patches = {
                         },
                         "Rocket Punch": {
                             "empowered punch consumed when the windup is cancelled by using Seismic Slam or Power Block": false,
-                            "Wall stun duration": 0.0,
-                            "Maximum empowered wall stun duration": 0.0,
+                            "Wall stun duration": 0,
+                            "Maximum empowered wall stun duration": 0,
                             "Minimum knockback": 12,
-                            "Maximum knockback": 28,
+                            "Maximum knockback": 28
                         },
                         "Meteor Strike": {
                             "Ultimate cost": 2145,
@@ -4087,9 +5522,39 @@ const patches = {
             },
             "damage": {
                 "general": {
-                    "Healing reduction inflicted on hit": 20
+                    "Healing reduction inflicted on hit": 0
+                },
+                "Ashe": {
+                    "general": {
+                        "Base health": 200
+                    },
+                    "abilities": {
+                        "B.O.B": {
+                            "Ultimate cost": 2240
+                        }
+                    }
+                },
+                "Bastion": {
+                    "general": {
+                        "Base health": 200
+                    },
+                    "abilities": {
+                        "A-36 Tactical Grenade": {
+                            "Self damage rate": 25,
+                            "briefly grants increased aerial mobility on self knockback while in Configuration: Assault": true
+                        },
+                        "Configuration: Assault": {
+                            "Movement speed penalty": 45
+                        },
+                        "Configuration: Artillery": {
+                            "Ultimate cost": 2310
+                        }
+                    }
                 },
                 "Cassidy": {
+                    "general": {
+                        "Base health": 225
+                    },
                     "abilities": {
                         "Peacekeeper": {
                             "Secondary fire \"Fan the Hammer\" damage": 45
@@ -4111,29 +5576,137 @@ const patches = {
                             "Max movement speed penalty": 70,
                             "Min movement speed penalty": 35,
                             "Max damage reduction": 40,
-                            "Min damage reduction": 0
+                            "Min damage reduction": 0,
+                            "Ultimate cost": 1680
+                        }
+                    }
+                },
+                "Echo": {
+                    "general": {
+                        "Base health": 200
+                    },
+                    "abilities": {
+                        "Sticky Bombs": {
+                            "Explosion damage": 23.61,
+                            "Direct damage": 4.72
+                        },
+                        "Duplicate": {
+                            "Ultimate gain modifier": 5,
+                            "Ultimate Cost": 2028,
+                            "has predetermined tank health pools": true
+                        }
+                    }
+                },
+                "Genji": {
+                    "general": {
+                        "Base health": 200
+                    },
+                    "abilities": {
+                        "Shuriken": {
+                            "Damage": 29
+                        },
+                        "Deflect": {
+                            "Duration": 1.5
+                        },
+                        "Dragonblade": {
+                            "Ultimate cost": 1932
+                        }
+                    }
+                },
+                "Hanzo": {
+                    "general": {
+                        "Base health": 200
+                    },
+                    "abilities": {
+                        "Storm Bow": {
+                            "Maximum Damage": 125
+                        },
+                        "Storm Arrows": {
+                            "Cooldown": 10,
+                            "Damage per arrow": 70,
+                            "Ammo": 4
+                        },
+                        "Dragonstrike": {
+                            "Speed": 15,
+                            "Ultimate cost": 1680
+                        }
+                    }
+                },
+                "Junkrat": {
+                    "general": {
+                        "Base health": 200
+                    },
+                    "abilities": {
+                        "Frag Launcher": {
+                            "Impact Damage": "41.4",
+                            "Maximum Splash": "73.6"
+                        },
+                        "Concussion Mine": {
+                            "Cooldown": 8
+                        },
+                        "RIP-Tire": {
+                            "Ultimate cost": 1925
                         }
                     }
                 },
                 "Mei": {
+                    "general": {
+                        "Base health": 250
+                    },
                     "abilities": {
                         "Endothermic Blaster": {
+                            "Ammo": 120,
                             "Secondary fire projectile size": 0.2,
-                            "Secondary fire damage": 85
+                            "Secondary fire damage": 75
+                        },
+                        "Cryofreeze": {
+                            "Healing per second": 50
+                        },
+                        "Ice Wall": {
+                            "Health per pillar": 275
+                        },
+                        "Blizzard": {
+                            "Ultimate cost": 1610
+                        }
+                    }
+                },
+                "Pharah": {
+                    "general": {
+                        "Base health": 200
+                    },
+                    "abilities": {
+                        "Rocket Launcher": {
+                            "Recovery speed": 0.85,
+                            "Projectile speed": 35
+                        },
+                        "Barrage": {
+                            "Ultimate cost": 2100
                         }
                     }
                 },
                 "Reaper": {
+                    "general": {
+                        "Base health": 250
+                    },
                     "abilities": {
                         "Hellfire Shotguns": {
-                            "Spread": 6
+                            "Spread": 6,
+                            "Damage per pellet": 5.8
                         },
                         "Shadow Step": {
-                            "Cast time": 1.2
+                            "Cast time": 1.2,
+                            "Cooldown": 8
+                        },
+                        "Death Blossom": {
+                            "Ultimate cost": 2100,
+                            "Damage per second": 170
                         }
                     }
                 },
                 "Sojourn": {
+                    "general": {
+                        "Base health": 200
+                    },
                     "abilities": {
                         "Railgun": {
                             "Secondary fire maximum damage": 100,
@@ -4141,23 +5714,111 @@ const patches = {
                             "requires overclock for secondary primary piercing": false,
                             "Primary fire shots per second": 16
                         },
+                        "Power Slide": {
+                            "Cooldown": 9
+                        },
                         "Overclock": {
-                            "Energy charge rate": 120
+                            "Energy charge rate": 120,
+                            "Ultimate cost": 2100
+                        }
+                    }
+                },
+                "Soldier: 76": {
+                    "general": {
+                        "Base health": 200
+                    },
+                    "abilities": {
+                        "Heavy Pulse Rifle": {
+                            "Damage": 19.5
+                        },
+                        "Biotic Field": {
+                            "Cooldown": 15,
+                            "Healing per second": 35
+                        },
+                        "Tactical Visor": {
+                            "Ultimate cost": 2310
+                        }
+                    }
+                },
+                "Sombra": {
+                    "general": {
+                        "Base health": 200
+                    },
+                    "abilities": {
+                        "Virus": {
+                            "Damage over time": 90,
+                            "Cooldown": 7
+                        },
+                        "EMP": {
+                            "Ultimate cost": 1484
                         }
                     }
                 },
                 "Symmetra": {
                     "general": {
-                        "Base health": 125
+                        "Base health": 100,
+                        "Shield health": 100
                     },
                     "abilities": {
                         "Photon Projector": {
-                            "Primary fire charge rate": 1.25
+                            "Primary fire charge rate": 1.25,
+                            "Shield regen per beam level": 0
+                        },
+                        "Sentry Turret": {
+                            "Health": 30
+                        },
+                        "Teleporter": {
+                            "Base Health": 75,
+                            "Shield Health": 150
+                        },
+                        "Photon Barrier": {
+                            "Ultimate cost": 1680,
+                            "Barrier health": 3000
+                        }
+                    }
+                },
+                "Torbjörn": {
+                    "general": {
+                        "Base health": 250
+                    },
+                    "abilities": {
+                        "Rivet Gun": {
+                            "Ammo": 15,
+                            "Secondary fire ammo cost": 3
+                        },
+                        "Molten Core": {
+                            "Ultimate Cost": 2142
+                        }
+                    }
+                },
+                "Tracer": {
+                    "general": {
+                        "Base health": 175,
+                        "Model size": 0.96
+                    },
+                    "abilities": {
+                        "Pulse Pistols": {
+                            "Damage": 5.5
+                        },
+                        "Recall": {
+                            "Cooldown": 12
+                        },
+                        "Pulse Bomb": {
+                            "Projectile size": 0.25,
+                            "Ultimate cost": 1260
                         }
                     }
                 },
                 "Venture": {
+                    "general": {
+                        "Base health": 250,
+                        "Movement speed": 6
+                    },
                     "abilities": {
+                        "Explorer's Resolve": {
+                            "Ability shield generation": 25,
+                            "Shield cap": 50
+                        },
                         "SMART Excavator": {
                             "Maximum explosion damage": 40
                         },
@@ -4165,57 +5826,36 @@ const patches = {
                             "Cooldown start": "ability use",
                             "Cooldown reduction while burrowed": 0,
                             "Cooldown acceleration while burrowed": 90,
-                            "Initial impact damage": 30,
-                            "Damage over time": 60
+                            "Initial impact damage": 21.67,
+                            "Damage over time": 43.33,
+                            "Cooldown": 6.5,
+                            "Knockback": 10.15
                         },
                         "Burrow": {
-                            "Grace period": 0.2
+                            "Grace period": 0.2,
+                            "Minimum damage": 40,
+                            "Maximum damage": 80
                         },
                         "Tectonic Shock": {
-                            "Ultimate Cost": 2125,
-                            "Vertical knockback": 5
+                            "Ultimate Cost": 1925,
+                            "Vertical knockback": 5,
+                            "Extra damage range": 2.5,
+                            "Extra damage multiplier": 1.5,
+                            "Damage": 110
                         },
                         "Clobber": {
-                            "Impact damage": 30,
-                            "Damage over time": 40
+                            "Impact damage": 27.86,
+                            "Damage over time": 37.14
                         }
                     }
                 },
-                "Junkrat": {
+                "Widowmaker": {
+                    "general": {
+                        "Base health": 175
+                    },
                     "abilities": {
-                        "Frag Launcher": {
-                            "Impact Damage": "45"
-                        }
-                    }
-                },
-                "Echo": {
-                    "abilities": {
-                        "Duplicate": {
-                            "Ultimate gain modifier": 4.5
-                        }
-                    }
-                },
-                "Hanzo": {
-                    "abilities": {
-                        "Dragonstrike": {
-                            "Speed": 15
-                        }
-                    }
-                },
-                "Sombra": {
-                    "abilities": {
-                        "Virus": {
-                            "Damage over time": 90
-                        }
-                    }
-                },
-                "Tracer": {
-                    "abilities": {
-                        "Recall": {
-                            "Cooldown": 13
-                        },
-                        "Pulse Bomb": {
-                            "Projectile size": 0.25
+                        "Infra-Sight": {
+                            "Ultimate cost": 1540
                         }
                     }
                 }
@@ -4320,6 +5960,13 @@ const hero_images = {
     "Mauga": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/6dbd80a0b40bd0464db35948f98d91ecc6dfcede8c94ff9b1ecefda781a7aa1f.png",
     "Ramattra": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/cf69d4bfa61ac14f61d3d541b0d2687a20fa24f55afe7a392d746f5ccb138dea.png",
     "Winston": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/6a9a37012551410b46b2c28146404354fe21e4a1e8ea65db4e1e497eeaa05c71.png",
+    "Ashe": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/e41d918d0e7ffa772b5571df3d0dc1a05e6d9032307f78be935972cfd59f208a.png",
+    "Bastion": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/3a7dc6d45ce7a1e1c2d31bd4d88b4889c412b2003ad82d1fd8e41271952c1f68.png",
+    "Genji": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/190a3dd9a5a4c8daeff9ec4da861f43cb28116964e89dc7416da104d8fae9134.png",
+    "Pharah": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/93d639075993fdef3402aa9131f93be7789a33a11dc0099f2f88d22dda09c175.png",
+    "Soldier: 76": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/1cb6f3ad4b8afdc1a901c26180a4c134018bb805b91eefe9b7cf2946879f10c8.png",
+    "Torbjörn": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/2ef3a4bdd117829a83867a7775ece351c4226f29b24cdbf8d7fac89443e8d8a2.png",
+    "Widowmaker": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/b4871b9addd770582c8b6a1ab366b9ec08d986c2995248ee5fce7e15cb0d809d.png",
 };
 
 const ability_images = {
@@ -4408,7 +6055,38 @@ const ability_images = {
     "The Best Defense": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/e60ad8d06a44f829f6110b528751d2e5a1840e0a72bed4a9c848970ba6ebae80.png",
     "Incendiary and Volatile Changuns": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/df6bae435e7e319b51fe4977e92971fcfbb9b30fab2f39d1e614660274fab226.png",
     "Nemesis Form": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/5a9818afe979474cd23a8a3863522be14ae549df841a6a7efc9ed5398f3d692f.png",
-
+    "Steadfast": "https://static.wikia.nocookie.net/overwatch_gamepedia/images/e/e7/Passive-Reinhardt.png/revision/latest/scale-to-width-down/22?cb=20190821013118",
+    "B.O.B": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/e788b12d476e896dac3831bbc0842fb3b4d07a89b3c337959d9a6cd6ea5a7df5.png",
+    "A-36 Tactical Grenade": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/37f3d4912b5ff848e9712a7941c5ac0123483561b4ddb1f9273b9c932d43a1bf.png",
+    "Configuration: Assault": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/5cf3fc40ec6eeee9716f66a934d9bf7f0803a924e72c12c5d1a6c74e57c933bd.png",
+    "Configuration: Artillery": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/06c377aef476bfb21ee1dca3d4d1151f8a4131b388a5489f3dfce6fb232a2711.png",
+    "Sticky Bombs": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/dcaa626e367b80b5bcd2425e26e0075b5343990785bc96e1705325904f73fe96.png",
+    "Storm Bow": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/1aa4358e8a1d423dd55669780908b856141a783d053224b629b064c66288469e.png",
+    "Storm Arrows": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/92c56621ba267d94f16baacda3f10ba7777b475935981b02e5026449d8e3d79c.png",
+    "Concussion Mine": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/1d6135a3089363cf2c59d5157740cf5dc4ad572bc215553672a79812c397dbd2.png",
+    "RIP-Tire": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/d16b5c6c337b1c0ecee3e5bf0760c870927e921fed8f0caed12dcb996b5347ae.png",
+    "Cryofreeze": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/183591c8c22fa134b6826555caf28481a4a3a22ec96d53a935612e0e45425378.png",
+    "Ice Wall": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/bd63b2d05e4a2aa8615b7cad828fd05427f07e69c7611a662c5cb0d726b82627.png",
+    "Blizzard": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/892fd12cc3f8bd3b54bbc175b6d8caecdedaa819c819c5fc216c3c2b4f486a3f.png",
+    "Rocket Launcher": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/c5fee4019276f284dc81e3eaa4f6244a3a7477fbcebc2b5e70a1b9bdfc0fab9b.png",
+    "Barrage": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/0708775beda1d200b586ae1d019522ea5ad8baa9bdcbbe076854102830f9fdae.png",
+    "Death Blossom": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/e35595575880a304e14d427a0f9f5f04dc0886ba0f4cadd731ac935174f031e2.png",
+    "Power Slide": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/5e94ae14aee5e5054a6347e25f1c7ddd284b0cb73925dbc716e358970ec94f0d.png",
+    "Heavy Pulse Rifle": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/69eaf669cd646a617439592615f023cfec82c27f4a3e19f48188941b3feaf55f.png",
+    "Biotic Field": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/aaadd3dee89ac8797ecb7a1e647f574a034b1930726296fd17946d343254bdf0.png",
+    "Tactical Visor": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/5e8d4b8fb5cd1271314b8462012e9894c811a7c4857739e73bde53f2431e673d.png",
+    "EMP": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/6104a559ac558db8f7356a10b419d1330e98758ba9f8099666d694c088c64265.png",
+    "Sentry Turret": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/6ca1ad903ec0121026994bd2318dd5f2488ba40e5dbf5bdb2d5fad8474359253.png",
+    "Teleporter": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/13b45663f441144ded977e8ccf9ed180c213176206a9f6f9e189e29f09a03b64.png",
+    "Photon Barrier": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/366a8cb1fd0718d4e2307674c713277b2a6c095c1997ddb7f4b9d9779063adb1.png",
+    "Rivet Gun": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/6fd3a8b1e1c43cd3c6f1a03d6ff9e76d9394d537235bc7b57380e78937e991ff.png",
+    "Molten Core": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/640e2363d97cfe133716bb2811d5dedb18faddb50ebbf77c415163ea50e87b41.png",
+    "Pulse Pistols": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/82520ccd791a5befa5ac74a6b5263471de44b0674abb07fbf1568c149c88a91a.png",
+    "Infra-Sight": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/b7783e8f83afc45dac37b80d0801a5b8200727e3dde299510d2f1886e0c7237b.png",
+    "Explorer's Resolve": "https://static.wikia.nocookie.net/overwatch_gamepedia/images/3/38/Explorer%27s_Resolve.svg/revision/latest/scale-to-width-down/22?cb=20240427224413",
+    "Shuriken": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/8d0916035141abd9ab2bf72dbcfd0460b7a0019529e023d259ad4340890b34b3.png",
+    "Deflect": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/9e46bda733749ddd6512b61c021b4487b6201338a9ff39c716e4ee06e5d63a58.png",
+    "Dragonblade": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/e9c3c82c08ce1a6006dbdf6905591040ed83ddceba81efb2e526c217cd57c931.png",
 };
 
 let before_patch = Object.keys(patches)[0];
