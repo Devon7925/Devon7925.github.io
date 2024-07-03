@@ -1,3 +1,5 @@
+import units from "./units.json" with { type: "json" };
+
 let patch_selectors = document.getElementsByClassName("patch-selector");
 const patches = {
     "MAR 28, 2024": {
@@ -28,7 +30,7 @@ const patches = {
                             "Impact damage": 15
                         },
                         "Defense Matrix": {
-                            "cooldown": 1,
+                            "Cooldown": 1,
                             "Maximum Duration": 3
                         },
                         "Self Destruct": {
@@ -50,7 +52,7 @@ const patches = {
                         },
                         "Jagged Blade": {
                             "pulls tanks further": true,
-                            "Pull knockback": 20.74
+                            "Pull distance": 20.74
                         },
                         "Commanding Shout": {
                             "can be activated while using other abilities": false,
@@ -107,7 +109,7 @@ const patches = {
                             "Cooldown": 1.5,
                             "Maximum healing": 450,
                             "Maximum Time": 2.5,
-                            "Resource regeneration percent per second": 10
+                            "Resource regeneration per second": 10
                         },
                         "Chain Hook": {
                             "Cooldown": 6
@@ -132,7 +134,7 @@ const patches = {
                         },
                         "Kinetic Grasp": {
                             "Cooldown": 12,
-                            "Overhealth generation percent": 60
+                            "Overhealth generation from damage mitigated": 60
                         },
                         "Accretion": {
                             "Direct damage": 40,
@@ -405,7 +407,7 @@ const patches = {
                             "Direct damage": 5
                         },
                         "Duplicate": {
-                            "Ultimate gain modifier": 4,
+                            "Ultimate gain multiplier": 4,
                             "Ultimate Cost": 1850,
                             "has predetermined tank health pools": false
                         }
@@ -844,14 +846,14 @@ const patches = {
                     },
                     "abilities": {
                         "Regeneration": {
-                            "Healing": 0,
+                            "Healing per second": 0,
                             "Delay": 2.5
                         },
                         "Sympathetic Recovery": {
                             "Self healing as percent of healing done": 40
                         },
                         "Caduceus Staff": {
-                            "Healing": 55
+                            "Healing per second": 55
                         },
                         "Caduceus Blaster": {
                             "Ammo": 25
@@ -925,7 +927,7 @@ const patches = {
                             "Impact damage": 15
                         },
                         "Defense Matrix": {
-                            "cooldown": 1,
+                            "Cooldown": 1,
                             "Maximum Duration": 3
                         },
                         "Self Destruct": {
@@ -947,7 +949,7 @@ const patches = {
                         },
                         "Jagged Blade": {
                             "pulls tanks further": true,
-                            "Pull knockback": 20.74
+                            "Pull distance": 20.74
                         },
                         "Commanding Shout": {
                             "can be activated while using other abilities": false,
@@ -1004,7 +1006,7 @@ const patches = {
                             "Cooldown": 1.5,
                             "Maximum healing": 450,
                             "Maximum Time": 2.5,
-                            "Resource regeneration percent per second": 10
+                            "Resource regeneration per second": 10
                         },
                         "Chain Hook": {
                             "Cooldown": 6
@@ -1029,7 +1031,7 @@ const patches = {
                         },
                         "Kinetic Grasp": {
                             "Cooldown": 12,
-                            "Overhealth generation percent": 60
+                            "Overhealth generation from damage mitigated": 60
                         },
                         "Accretion": {
                             "Direct damage": 40,
@@ -1302,7 +1304,7 @@ const patches = {
                             "Direct damage": 5
                         },
                         "Duplicate": {
-                            "Ultimate gain modifier": 4,
+                            "Ultimate gain multiplier": 4,
                             "Ultimate Cost": 1850,
                             "has predetermined tank health pools": false
                         }
@@ -1741,14 +1743,14 @@ const patches = {
                     },
                     "abilities": {
                         "Regeneration": {
-                            "Healing": 0,
+                            "Healing per second": 0,
                             "Delay": 2.5
                         },
                         "Sympathetic Recovery": {
                             "Self healing as percent of healing done": 40
                         },
                         "Caduceus Staff": {
-                            "Healing": 55
+                            "Healing per second": 55
                         },
                         "Caduceus Blaster": {
                             "Ammo": 25
@@ -1822,7 +1824,7 @@ const patches = {
                             "Impact damage": 15
                         },
                         "Defense Matrix": {
-                            "cooldown": 1,
+                            "Cooldown": 1,
                             "Maximum Duration": 3
                         },
                         "Self Destruct": {
@@ -1844,7 +1846,7 @@ const patches = {
                         },
                         "Jagged Blade": {
                             "pulls tanks further": true,
-                            "Pull knockback": 20.74
+                            "Pull distance": 20.74
                         },
                         "Commanding Shout": {
                             "can be activated while using other abilities": false,
@@ -1901,7 +1903,7 @@ const patches = {
                             "Cooldown": 1.5,
                             "Maximum healing": 450,
                             "Maximum Time": 2.5,
-                            "Resource regeneration percent per second": 10
+                            "Resource regeneration per second": 10
                         },
                         "Chain Hook": {
                             "Cooldown": 6
@@ -1926,7 +1928,7 @@ const patches = {
                         },
                         "Kinetic Grasp": {
                             "Cooldown": 12,
-                            "Overhealth generation percent": 60
+                            "Overhealth generation from damage mitigated": 60
                         },
                         "Accretion": {
                             "Direct damage": 40,
@@ -2199,7 +2201,7 @@ const patches = {
                             "Direct damage": 5
                         },
                         "Duplicate": {
-                            "Ultimate gain modifier": 4,
+                            "Ultimate gain multiplier": 4,
                             "Ultimate Cost": 1850,
                             "has predetermined tank health pools": false
                         }
@@ -2638,14 +2640,14 @@ const patches = {
                     },
                     "abilities": {
                         "Regeneration": {
-                            "Healing": 0,
+                            "Healing per second": 0,
                             "Delay": 2.5
                         },
                         "Sympathetic Recovery": {
                             "Self healing as percent of healing done": 40
                         },
                         "Caduceus Staff": {
-                            "Healing": 55
+                            "Healing per second": 55
                         },
                         "Caduceus Blaster": {
                             "Ammo": 25
@@ -2719,7 +2721,7 @@ const patches = {
                             "Impact damage": 15
                         },
                         "Defense Matrix": {
-                            "cooldown": 1,
+                            "Cooldown": 1,
                             "Maximum Duration": 3
                         },
                         "Self Destruct": {
@@ -2741,7 +2743,7 @@ const patches = {
                         },
                         "Jagged Blade": {
                             "pulls tanks further": true,
-                            "Pull knockback": 20.74
+                            "Pull distance": 20.74
                         },
                         "Commanding Shout": {
                             "can be activated while using other abilities": true,
@@ -2798,7 +2800,7 @@ const patches = {
                             "Cooldown": 1.5,
                             "Maximum healing": 450,
                             "Maximum Time": 2.5,
-                            "Resource regeneration percent per second": 10
+                            "Resource regeneration per second": 10
                         },
                         "Chain Hook": {
                             "Cooldown": 6
@@ -2823,7 +2825,7 @@ const patches = {
                         },
                         "Kinetic Grasp": {
                             "Cooldown": 12,
-                            "Overhealth generation percent": 60
+                            "Overhealth generation from damage mitigated": 60
                         },
                         "Accretion": {
                             "Direct damage": 40,
@@ -3096,7 +3098,7 @@ const patches = {
                             "Direct damage": 5
                         },
                         "Duplicate": {
-                            "Ultimate gain modifier": 4.5,
+                            "Ultimate gain multiplier": 4.5,
                             "Ultimate Cost": 1850,
                             "has predetermined tank health pools": false
                         }
@@ -3535,14 +3537,14 @@ const patches = {
                     },
                     "abilities": {
                         "Regeneration": {
-                            "Healing": 0,
+                            "Healing per second": 0,
                             "Delay": 2.5
                         },
                         "Sympathetic Recovery": {
                             "Self healing as percent of healing done": 40
                         },
                         "Caduceus Staff": {
-                            "Healing": 55
+                            "Healing per second": 55
                         },
                         "Caduceus Blaster": {
                             "Ammo": 25
@@ -3616,7 +3618,7 @@ const patches = {
                             "Impact damage": 15
                         },
                         "Defense Matrix": {
-                            "cooldown": 1,
+                            "Cooldown": 1,
                             "Maximum Duration": 3
                         },
                         "Self Destruct": {
@@ -3638,7 +3640,7 @@ const patches = {
                         },
                         "Jagged Blade": {
                             "pulls tanks further": true,
-                            "Pull knockback": 20.74
+                            "Pull distance": 20.74
                         },
                         "Commanding Shout": {
                             "can be activated while using other abilities": true,
@@ -3695,7 +3697,7 @@ const patches = {
                             "Cooldown": 1.5,
                             "Maximum healing": 450,
                             "Maximum Time": 2.5,
-                            "Resource regeneration percent per second": 10
+                            "Resource regeneration per second": 10
                         },
                         "Chain Hook": {
                             "Cooldown": 6
@@ -3720,7 +3722,7 @@ const patches = {
                         },
                         "Kinetic Grasp": {
                             "Cooldown": 12,
-                            "Overhealth generation percent": 60
+                            "Overhealth generation from damage mitigated": 60
                         },
                         "Accretion": {
                             "Direct damage": 40,
@@ -3993,7 +3995,7 @@ const patches = {
                             "Direct damage": 5
                         },
                         "Duplicate": {
-                            "Ultimate gain modifier": 4.5,
+                            "Ultimate gain multiplier": 4.5,
                             "Ultimate Cost": 1850,
                             "has predetermined tank health pools": false
                         }
@@ -4432,14 +4434,14 @@ const patches = {
                     },
                     "abilities": {
                         "Regeneration": {
-                            "Healing": 0,
+                            "Healing per second": 0,
                             "Delay": 2.5
                         },
                         "Sympathetic Recovery": {
                             "Self healing as percent of healing done": 40
                         },
                         "Caduceus Staff": {
-                            "Healing": 55
+                            "Healing per second": 55
                         },
                         "Caduceus Blaster": {
                             "Ammo": 25
@@ -4513,7 +4515,7 @@ const patches = {
                             "Impact damage": 15
                         },
                         "Defense Matrix": {
-                            "cooldown": 1,
+                            "Cooldown": 1,
                             "Maximum Duration": 3
                         },
                         "Self Destruct": {
@@ -4535,7 +4537,7 @@ const patches = {
                         },
                         "Jagged Blade": {
                             "pulls tanks further": true,
-                            "Pull knockback": 20.74
+                            "Pull distance": 20.74
                         },
                         "Commanding Shout": {
                             "can be activated while using other abilities": true,
@@ -4592,7 +4594,7 @@ const patches = {
                             "Cooldown": 1.25,
                             "Maximum healing": 400,
                             "Maximum Time": 2.5,
-                            "Resource regeneration percent per second": 8
+                            "Resource regeneration per second": 8
                         },
                         "Chain Hook": {
                             "Cooldown": 6
@@ -4617,7 +4619,7 @@ const patches = {
                         },
                         "Kinetic Grasp": {
                             "Cooldown": 12,
-                            "Overhealth generation percent": 60
+                            "Overhealth generation from damage mitigated": 60
                         },
                         "Accretion": {
                             "Direct damage": 40,
@@ -4890,7 +4892,7 @@ const patches = {
                             "Direct damage": 5
                         },
                         "Duplicate": {
-                            "Ultimate gain modifier": 4.5,
+                            "Ultimate gain multiplier": 4.5,
                             "Ultimate Cost": 1850,
                             "has predetermined tank health pools": false
                         }
@@ -5329,14 +5331,14 @@ const patches = {
                     },
                     "abilities": {
                         "Regeneration": {
-                            "Healing": 0,
+                            "Healing per second": 0,
                             "Delay": 2.5
                         },
                         "Sympathetic Recovery": {
                             "Self healing as percent of healing done": 40
                         },
                         "Caduceus Staff": {
-                            "Healing": 55
+                            "Healing per second": 55
                         },
                         "Caduceus Blaster": {
                             "Ammo": 25
@@ -5410,7 +5412,7 @@ const patches = {
                             "Impact damage": 25
                         },
                         "Defense Matrix": {
-                            "cooldown": 1,
+                            "Cooldown": 1,
                             "Maximum Duration": 3
                         },
                         "Self Destruct": {
@@ -5432,7 +5434,7 @@ const patches = {
                         },
                         "Jagged Blade": {
                             "pulls tanks further": true,
-                            "Pull knockback": 20.74
+                            "Pull distance": 20.74
                         },
                         "Commanding Shout": {
                             "can be activated while using other abilities": true,
@@ -5489,7 +5491,7 @@ const patches = {
                             "Cooldown": 1.25,
                             "Maximum healing": 400,
                             "Maximum Time": 2.5,
-                            "Resource regeneration percent per second": 8
+                            "Resource regeneration per second": 8
                         },
                         "Chain Hook": {
                             "Cooldown": 6
@@ -5514,7 +5516,7 @@ const patches = {
                         },
                         "Kinetic Grasp": {
                             "Cooldown": 12,
-                            "Overhealth generation percent": 60
+                            "Overhealth generation from damage mitigated": 60
                         },
                         "Accretion": {
                             "Direct damage": 40,
@@ -5787,7 +5789,7 @@ const patches = {
                             "Direct damage": 5
                         },
                         "Duplicate": {
-                            "Ultimate gain modifier": 4.5,
+                            "Ultimate gain multiplier": 4.5,
                             "Ultimate Cost": 1850,
                             "has predetermined tank health pools": false
                         }
@@ -6226,14 +6228,14 @@ const patches = {
                     },
                     "abilities": {
                         "Regeneration": {
-                            "Healing": 0,
+                            "Healing per second": 0,
                             "Delay": 2.5
                         },
                         "Sympathetic Recovery": {
                             "Self healing as percent of healing done": 40
                         },
                         "Caduceus Staff": {
-                            "Healing": 55
+                            "Healing per second": 55
                         },
                         "Caduceus Blaster": {
                             "Ammo": 25
@@ -6307,7 +6309,7 @@ const patches = {
                             "Impact damage": 10
                         },
                         "Defense Matrix": {
-                            "cooldown": 1.5,
+                            "Cooldown": 1.5,
                             "Maximum Duration": 2
                         },
                         "Self Destruct": {
@@ -6329,7 +6331,7 @@ const patches = {
                         },
                         "Jagged Blade": {
                             "pulls tanks further": false,
-                            "Pull knockback": 17.629
+                            "Pull distance": 17.629
                         },
                         "Commanding Shout": {
                             "can be activated while using other abilities": true,
@@ -6386,7 +6388,7 @@ const patches = {
                             "Cooldown": 3.5,
                             "Maximum healing": 300,
                             "Maximum Time": 1.425,
-                            "Resource regeneration percent per second": 12.5
+                            "Resource regeneration per second": 12.5
                         },
                         "Chain Hook": {
                             "Cooldown": 7
@@ -6411,7 +6413,7 @@ const patches = {
                         },
                         "Kinetic Grasp": {
                             "Cooldown": 13,
-                            "Overhealth generation percent": 40
+                            "Overhealth generation from damage mitigated": 40
                         },
                         "Accretion": {
                             "Direct damage": 50,
@@ -6684,7 +6686,7 @@ const patches = {
                             "Direct damage": 4.72
                         },
                         "Duplicate": {
-                            "Ultimate gain modifier": 5,
+                            "Ultimate gain multiplier": 5,
                             "Ultimate Cost": 2028,
                             "has predetermined tank health pools": true
                         }
@@ -7123,14 +7125,14 @@ const patches = {
                     },
                     "abilities": {
                         "Regeneration": {
-                            "Healing": 20,
+                            "Healing per second": 20,
                             "Delay": 2.5
                         },
                         "Sympathetic Recovery": {
                             "Self healing as percent of healing done": 40
                         },
                         "Caduceus Staff": {
-                            "Healing": 60
+                            "Healing per second": 60
                         },
                         "Caduceus Blaster": {
                             "Ammo": 20
@@ -7307,7 +7309,6 @@ const ability_images = {
     "The Best Defense": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/e60ad8d06a44f829f6110b528751d2e5a1840e0a72bed4a9c848970ba6ebae80.png",
     "Incendiary and Volatile Changuns": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/df6bae435e7e319b51fe4977e92971fcfbb9b30fab2f39d1e614660274fab226.png",
     "Nemesis Form": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/5a9818afe979474cd23a8a3863522be14ae549df841a6a7efc9ed5398f3d692f.png",
-    "Steadfast": "https://static.wikia.nocookie.net/overwatch_gamepedia/images/e/e7/Passive-Reinhardt.png/revision/latest/scale-to-width-down/22?cb=20190821013118",
     "B.O.B": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/e788b12d476e896dac3831bbc0842fb3b4d07a89b3c337959d9a6cd6ea5a7df5.png",
     "A-36 Tactical Grenade": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/37f3d4912b5ff848e9712a7941c5ac0123483561b4ddb1f9273b9c932d43a1bf.png",
     "Configuration: Assault": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/5cf3fc40ec6eeee9716f66a934d9bf7f0803a924e72c12c5d1a6c74e57c933bd.png",
@@ -7335,7 +7336,6 @@ const ability_images = {
     "Molten Core": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/640e2363d97cfe133716bb2811d5dedb18faddb50ebbf77c415163ea50e87b41.png",
     "Pulse Pistols": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/82520ccd791a5befa5ac74a6b5263471de44b0674abb07fbf1568c149c88a91a.png",
     "Infra-Sight": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/b7783e8f83afc45dac37b80d0801a5b8200727e3dde299510d2f1886e0c7237b.png",
-    "Explorer's Resolve": "https://static.wikia.nocookie.net/overwatch_gamepedia/images/3/38/Explorer%27s_Resolve.svg/revision/latest/scale-to-width-down/22?cb=20240427224413",
     "Shuriken": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/8d0916035141abd9ab2bf72dbcfd0460b7a0019529e023d259ad4340890b34b3.png",
     "Deflect": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/9e46bda733749ddd6512b61c021b4487b6201338a9ff39c716e4ee06e5d63a58.png",
     "Dragonblade": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/e9c3c82c08ce1a6006dbdf6905591040ed83ddceba81efb2e526c217cd57c931.png",
@@ -7366,6 +7366,7 @@ const ability_images = {
     "Regeneration": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/c14b2c5652526a006233965b176fb2b5af9e7c5d44045fad3844267303f07091.png",
     "Sympathetic Recovery": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/c14b2c5652526a006233965b176fb2b5af9e7c5d44045fad3844267303f07091.png",
     "Projected Barrier": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/6e42984ee8329a50e9c2460ae2df7670d7be9846a093c336e4576d1eea1fb2f1.png",
+    "Meteor Strike": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/fa96b2650987b3784a725a0fb1704f7191a686a4f42c9ccf61c404e2f08b158c.png",
 };
 
 const queryString = window.location.search;
@@ -7377,6 +7378,11 @@ let after_patch = urlParams.get("after") || Object.keys(patches)[0];
 function isEmpty(obj) {
     for (var i in obj) { return false; }
     return true;
+}
+
+function round(num, decimalPlaces = 0) {
+    num = Math.round(num + "e" + decimalPlaces);
+    return Number(num + "e" + -decimalPlaces);
 }
 
 function overlay(template, data) {
@@ -7436,8 +7442,39 @@ function convert_to_changes(before, after) {
     throw "Invalid";
 }
 
-function getChangeText(name, change) {
+function getChangeText(name, change, units) {
     if (typeof change[0] == "number") {
+        if (units == "percent") {
+            let change_type = "increased";
+            if (change[0] > change[1]) {
+                change_type = "reduced";
+            }
+            return `${name} ${change_type} from ${change[0]}% to ${change[1]}%.`;
+        } else if (units == "health per second") {
+            let change_type = "increased";
+            if (change[0] > change[1]) {
+                change_type = "reduced";
+            }
+            return `${name} ${change_type} from ${change[0]} to ${change[1]} health per second.`;
+        } else if (units == "seconds") {
+            let change_type = "increased";
+            if (change[0] > change[1]) {
+                change_type = "reduced";
+            }
+            return `${name} ${change_type} from ${change[0]} to ${change[1]} seconds.`;
+        } else if (units == "meters") {
+            let change_type = "increased";
+            if (change[0] > change[1]) {
+                change_type = "reduced";
+            }
+            return `${name} ${change_type} from ${change[0]} to ${change[1]} meters.`;
+        } else if (units == "relative percent") {
+            if (change[0] > change[1]) {
+                return `${name} reduced by ${round(100 * (1.0 - change[1] / change[0]), 2)}%.`;
+            } else {
+                return `${name} increased by ${round(100 * (change[1] / change[0] - 1.0), 2)}%.`;
+            }
+        }
         let change_type = "increased";
         if (change[0] > change[1]) {
             change_type = "reduced";
@@ -7461,7 +7498,7 @@ function updatePatchNotes() {
     if (changes.general) {
         let changeRender = "";
         for (let generalRule in changes.general) {
-            changeRender += `<li>${getChangeText(generalRule, changes.general[generalRule])}</li>`
+            changeRender += `<li>${getChangeText(generalRule, changes.general[generalRule], units.general[generalRule])}</li>`
         }
         hero_section.innerHTML += `
             <div class="PatchNotes-section PatchNotes-section-generic_update">
@@ -7478,11 +7515,11 @@ function updatePatchNotes() {
             </div>
         `;
     }
-    for (role in changes.heroes) {
+    for (let role in changes.heroes) {
         let generalChangeRender = "";
         if (changes.heroes[role].general) {
             for (let generalRule in changes.heroes[role].general) {
-                generalChangeRender += `<li>${getChangeText(generalRule, changes.heroes[role].general[generalRule])}</li>`
+                generalChangeRender += `<li>${getChangeText(generalRule, changes.heroes[role].general[generalRule], units.heroes[role].general[generalRule])}</li>`
             }
             generalChangeRender = `
                 <div class="PatchNotes-sectionDescription">
@@ -7494,20 +7531,20 @@ function updatePatchNotes() {
         }
         let heroChanges = "";
         for (let hero of Object.keys(changes.heroes[role]).sort()) {
-            if(hero == "general") continue;
+            if (hero == "general") continue;
             let generalChangesRender = "";
             if (changes.heroes[role][hero].general) {
                 generalChangesRender += "<ul>";
-                for (property in changes.heroes[role][hero].general) {
-                    generalChangesRender += `<li>${getChangeText(property, changes.heroes[role][hero].general[property])}</li>`
+                for (let property in changes.heroes[role][hero].general) {
+                    generalChangesRender += `<li>${getChangeText(property, changes.heroes[role][hero].general[property], units.heroes[role][hero].general[property])}</li>`
                 }
                 generalChangesRender += "</ul>";
             }
             let abilities = "";
             for (let ability in changes.heroes[role][hero].abilities) {
                 let ability_changes = "";
-                for (stat in changes.heroes[role][hero].abilities[ability]) {
-                    ability_changes += `<li>${getChangeText(stat, changes.heroes[role][hero].abilities[ability][stat])}</li>`;
+                for (let stat in changes.heroes[role][hero].abilities[ability]) {
+                    ability_changes += `<li>${getChangeText(stat, changes.heroes[role][hero].abilities[ability][stat], units.heroes[role][hero].abilities[ability][stat])}</li>`;
                 }
                 abilities += `
                     <div class="PatchNotesAbilityUpdate">
