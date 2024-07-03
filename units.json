@@ -651,7 +651,7 @@
                     "Tectonic Shock": {
                         "Ultimate Cost": "none",
                         "Vertical knockback": "relative percent",
-                        "Extra damage range": "none",
+                        "Extra damage range": "meters",
                         "Extra damage multiplier": "none",
                         "Damage": "none"
                     },

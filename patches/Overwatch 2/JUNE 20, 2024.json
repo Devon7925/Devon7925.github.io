@@ -222,10 +222,10 @@
                     },
                     "Rocket Punch": {
                         "empowered punch consumed when the windup is cancelled by using Seismic Slam or Power Block": false,
-                        "Wall stun duration": 0.15,
-                        "Maximum empowered wall stun duration": 0.65,
                         "Minimum knockback": 15,
-                        "Maximum knockback": 35
+                        "Maximum knockback": 35,
+                        "Wall stun": 0.15,
+                        "Maximum empowered wall stun": 0.65
                     },
                     "Meteor Strike": {
                         "Ultimate cost": 2145,
@@ -637,7 +637,6 @@
                     },
                     "Drill Dash": {
                         "Cooldown start": "ability use",
-                        "Cooldown reduction while burrowed": 0,
                         "Cooldown acceleration while burrowed": 90,
                         "Initial impact damage": 30,
                         "Damage over time": 60,
@@ -652,7 +651,6 @@
                     "Tectonic Shock": {
                         "Ultimate Cost": 2125,
                         "Vertical knockback": 5,
-                        "Extra damage range": 0,
                         "Extra damage multiplier": 1,
                         "Damage": 130
                     },
@@ -712,8 +710,7 @@
                         "Cooldown": 15,
                         "Instant healing": 40,
                         "Instant healing on allies <50% HP": 40,
-                        "Heal over time": 40,
-                        "Additional self heal over time": 0
+                        "Heal over time": 40
                     },
                     "Immortality Field": {
                         "Health": 125
@@ -780,9 +777,7 @@
                         "Ammo": 15
                     },
                     "Swift Step": {
-                        "Cooldown": 8,
-                        "Respawn cooldown": 0,
-                        "Self healing": 0
+                        "Cooldown": 8
                     },
                     "Protection Suzu": {
                         "cleanses hard knockdown stuns": true
@@ -843,7 +838,6 @@
                 },
                 "abilities": {
                     "Regeneration": {
-                        "Healing per second": 0,
                         "Delay": 2.5
                     },
                     "Sympathetic Recovery": {

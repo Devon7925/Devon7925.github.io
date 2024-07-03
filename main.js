@@ -4,6 +4,7 @@ let patch_selectors = document.getElementsByClassName("patch-selector");
 export let patches = {};
 const patchList = {
     "Overwatch 2": [
+        "MAR 19, 2024",
         "MAR 28, 2024",
         "APR 16, 2024",
         "APR 30, 2024",
@@ -249,38 +250,6 @@ function round(num, decimalPlaces = 0) {
     return Number(num + "e" + -decimalPlaces);
 }
 
-function overlay(template, data) {
-    if (typeof template == "number" && typeof data == "number") {
-        return data;
-    }
-    if (typeof template == "string" && typeof data == "string") {
-        return data;
-    }
-    if (typeof template == "boolean" && typeof data == "boolean") {
-        return data;
-    }
-    if (typeof template == "object" && typeof data == "object") {
-        let result = {};
-        for (let key in template) {
-            if (Object.hasOwn(data, key)) {
-                result[key] = overlay(template[key], data[key]);
-            } else {
-                result[key] = template[key];
-            }
-        }
-        return result;
-    }
-    throw "Invalid";
-}
-
-function patch_overlay(overlay_version) {
-    let result = {};
-    for (let patch in patches) {
-        result[patch] = overlay(patches[overlay_version], patches[patch]);
-    }
-    return result;
-}
-
 export function convert_to_changes(before, after) {
     if (typeof before == "object" && typeof after == "object") {
         let result = {};
@@ -293,7 +262,7 @@ export function convert_to_changes(before, after) {
             }
         }
         for (let key in after) {
-            if(!(key in before)) {
+            if (!(key in before)) {
                 result[key] = [undefined, after[key]];
             }
         }
@@ -303,13 +272,21 @@ export function convert_to_changes(before, after) {
 }
 
 export function getChangeText(name, change, units) {
-    if (change[0] === undefined) {
-        if (units == "percent") {
-            return `There is now ${change[1]}% ${name.toLowerCase()}.`;
+    if (change[0] === undefined || !Array.isArray(change)) {
+        let new_value = change[1];
+        if (!Array.isArray(change)) {
+            new_value = change;
         }
-        return `There is now ${change[1]} ${name.toLowerCase()}.`;
+        if (units == "percent") {
+            return `There is now ${new_value}% ${name.toLowerCase()}.`;
+        } else if (units == "meters") {
+            return `There is now ${new_value} meter ${name.toLowerCase()}.`;
+        } else if (units == "seconds") {
+            return `There is now ${new_value} second ${name.toLowerCase()}.`;
+        }
+        return `There is now ${new_value} ${name.toLowerCase()}.`;
     } else if (typeof change[0] == "number") {
-        if(change[1] === undefined){
+        if (change[1] === undefined) {
             return `${name} removed.`;
         } else if (units == "percent") {
             let change_type = "increased";
@@ -400,18 +377,22 @@ function updatePatchNotes() {
         for (let hero of Object.keys(changes.heroes[role]).sort()) {
             if (hero == "general") continue;
             let generalChangesRender = "";
-            if (changes.heroes[role][hero].general) {
+            let heroData = changes.heroes[role][hero];
+            if (Array.isArray(heroData)) {
+                heroData = heroData[1];
+            }
+            if (heroData.general) {
                 generalChangesRender += "<ul>";
-                for (let property in changes.heroes[role][hero].general) {
-                    generalChangesRender += `<li>${getChangeText(property, changes.heroes[role][hero].general[property], units.heroes[role][hero].general[property])}</li>`
+                for (let property in heroData.general) {
+                    generalChangesRender += `<li>${getChangeText(property, heroData.general[property], units.heroes[role][hero].general[property])}</li>`
                 }
                 generalChangesRender += "</ul>";
             }
             let abilities = "";
-            for (let ability in changes.heroes[role][hero].abilities) {
+            for (let ability in heroData.abilities) {
                 let ability_changes = "";
-                for (let stat in changes.heroes[role][hero].abilities[ability]) {
-                    ability_changes += `<li>${getChangeText(stat, changes.heroes[role][hero].abilities[ability][stat], units.heroes[role][hero].abilities[ability][stat])}</li>`;
+                for (let stat in heroData.abilities[ability]) {
+                    ability_changes += `<li>${getChangeText(stat, heroData.abilities[ability][stat], units.heroes[role][hero].abilities[ability][stat])}</li>`;
                 }
                 abilities += `
                     <div class="PatchNotesAbilityUpdate">
@@ -456,7 +437,11 @@ function updatePatchNotes() {
 
 
 
-let patch_options = Object.keys(patches).map((p) => `<option value=\"${p}\">${p}</option>`).join();
+let patch_options = Object.entries(patchList)
+    .flatMap(([k, v]) => v
+        .map((p) => `${k} - ${p}`)
+        .map((p) => `<option value=\"${p}\">${p}</option>`)
+    ).join();
 for (let i = 0; i < patch_selectors.length; i++) {
     patch_selectors[i].innerHTML = patch_options;
 }
