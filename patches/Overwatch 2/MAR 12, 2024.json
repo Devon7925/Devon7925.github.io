@@ -265,7 +265,7 @@
             },
             "Mauga": {
                 "general": {
-                    "Base health": 525,
+                    "Base health": 550,
                     "Armor health": 200,
                     "Model Size": 1
                 },
@@ -278,10 +278,11 @@
                         "Cooldown": 6
                     },
                     "Cardiac Overdrive": {
-                        "Cooldown": 12,
+                        "Cooldown": 10,
                         "Allied damage reduction": 30,
                         "Lifesteal multiplier": 60,
-                        "Duration": 5
+                        "Duration": 4,
+                        "Overhealth filled upon activation": 100
                     },
                     "Cage Fight": {
                         "Ultimate cost": 2650,
@@ -563,7 +564,7 @@
                         "Cooldown": 6
                     },
                     "EMP": {
-                        "Ultimate cost": 1825
+                        "Ultimate cost": 1679
                     }
                 }
             },
@@ -576,10 +577,10 @@
                     "Photon Projector": {
                         "Primary fire charge rate": 1,
                         "Shield regen per beam level": 10,
-                        "Primary fire damage per second per level": 60
+                        "Primary fire damage per second per level": 65
                     },
                     "Sentry Turret": {
-                        "Health": 40
+                        "Health": 50
                     },
                     "Teleporter": {
                         "Base Health": 100,
@@ -620,43 +621,6 @@
                     "Pulse Bomb": {
                         "Projectile size": 0.35,
                         "Ultimate cost": 1375
-                    }
-                }
-            },
-            "Venture": {
-                "general": {
-                    "Base health": 250,
-                    "Movement speed": 5.5
-                },
-                "abilities": {
-                    "Explorer's Resolve": {
-                        "Ability shield generation": 40,
-                        "Shield cap": 75
-                    },
-                    "SMART Excavator": {
-                        "Maximum explosion damage": 45
-                    },
-                    "Drill Dash": {
-                        "Cooldown start": "ability end",
-                        "Cooldown reduction while burrowed": 50,
-                        "Initial impact damage": 60,
-                        "Damage over time": 40,
-                        "Cooldown": 8,
-                        "Knockback": 14.5
-                    },
-                    "Burrow": {
-                        "Minimum damage": 55,
-                        "Maximum damage": 110
-                    },
-                    "Tectonic Shock": {
-                        "Ultimate Cost": 1932,
-                        "Vertical knockback": 7,
-                        "Extra damage multiplier": 1,
-                        "Damage": 130
-                    },
-                    "Clobber": {
-                        "Impact damage": 40,
-                        "Damage over time": 30
                     }
                 }
             },

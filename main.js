@@ -4,6 +4,7 @@ let patch_selectors = document.getElementsByClassName("patch-selector");
 export let patches = {};
 const patchList = {
     "Overwatch 2": [
+        "MAR 12, 2024",
         "MAR 19, 2024",
         "MAR 28, 2024",
         "APR 16, 2024",

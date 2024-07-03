@@ -273,7 +273,8 @@
                     },
                     "Cardiac Overdrive": {
                         "Cooldown": 16,
-                        "Lifesteal multiplier": 50
+                        "Lifesteal multiplier": 50,
+                        "Duration": 5
                     },
                     "Cage Fight": {
                         "Ultimate cost": 2400,
@@ -324,8 +325,7 @@
             }
         },
         "damage": {
-            "general": {
-            },
+            "general": {},
             "Ashe": {
                 "general": {
                     "Base health": 200
@@ -564,7 +564,8 @@
                 "abilities": {
                     "Photon Projector": {
                         "Primary fire charge rate": 1.25,
-                        "Shield regen per beam level": 0
+                        "Shield regen per beam level": 0,
+                        "Primary fire damage per second per level": 60
                     },
                     "Sentry Turret": {
                         "Health": 30
@@ -868,8 +869,7 @@
                     "Shield health": 100
                 },
                 "abilities": {
-                    "Snap Kick": {
-                    },
+                    "Snap Kick": {},
                     "Orb of Destruction": {
                         "Ammo": 20
                     },

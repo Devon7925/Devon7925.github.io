@@ -280,7 +280,9 @@
                     "Cardiac Overdrive": {
                         "Cooldown": "seconds",
                         "Allied damage reduction": "none",
-                        "Lifesteal multiplier": "none"
+                        "Lifesteal multiplier": "none",
+                        "Overhealth filled upon activation": "none",
+                        "Duration": "seconds"
                     },
                     "Cage Fight": {
                         "Ultimate cost": "none",
@@ -574,7 +576,8 @@
                 "abilities": {
                     "Photon Projector": {
                         "Primary fire charge rate": "none",
-                        "Shield regen per beam level": "health per second"
+                        "Shield regen per beam level": "health per second",
+                        "Primary fire damage per second per level": "none"
                     },
                     "Sentry Turret": {
                         "Health": "none"
