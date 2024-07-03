@@ -47,7 +47,7 @@
                         "Total damage": "none"
                     },
                     "Jagged Blade": {
-                        "pulls tanks further": "none",
+                        "Increased knockback on tanks": "percent",
                         "Pull distance": "relative percent"
                     },
                     "Commanding Shout": {

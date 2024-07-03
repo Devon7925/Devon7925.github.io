@@ -47,7 +47,6 @@
                         "Total damage": 75
                     },
                     "Jagged Blade": {
-                        "pulls tanks further": false,
                         "Pull distance": 17.629
                     },
                     "Commanding Shout": {
@@ -61,7 +60,8 @@
                     },
                     "Rampage": {
                         "Ultimate Cost": 2450,
-                        "Wound total damage": 60
+                        "Wound total damage": 60,
+                        "Startup time": 0.5
                     }
                 }
             },
@@ -73,10 +73,8 @@
                 "abilities": {
                     "Fortify": {
                         "Duration": 3.5,
-                        "Movement speed reduction": 0,
                         "Cooldown start": "ability end",
-                        "Cooldown": 13,
-                        "Overhealth generation": 0
+                        "Cooldown": 13
                     },
                     "Energy Javelin": {
                         "Direct damage": 70
@@ -145,8 +143,7 @@
             "Wrecking Ball": {
                 "general": {
                     "Base health": 400,
-                    "Armor health": 100,
-                    "Shield health": 0
+                    "Armor health": 100
                 },
                 "abilities": {
                     "Grappling Claw": {

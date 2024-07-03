@@ -47,7 +47,6 @@
                         "Total damage": 80
                     },
                     "Jagged Blade": {
-                        "pulls tanks further": true,
                         "Pull distance": 20.74
                     },
                     "Commanding Shout": {
@@ -61,7 +60,8 @@
                     },
                     "Rampage": {
                         "Ultimate Cost": 2700,
-                        "Wound total damage": 90
+                        "Wound total damage": 90,
+                        "Startup time": 0.75
                     }
                 }
             },

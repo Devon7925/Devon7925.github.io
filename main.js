@@ -1,7 +1,7 @@
 import units from "./units.json" with { type: "json" };
 
 let patch_selectors = document.getElementsByClassName("patch-selector");
-const patches = {};
+export let patches = {};
 const patchList = {
     "Overwatch 2": [
         "MAR 28, 2024",
@@ -220,7 +220,7 @@ const ability_images = {
 const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
 
-let before_patch = "Overwatch 2 - " + patchList["Overwatch 2"][0];
+export let before_patch = "Overwatch 2 - " + patchList["Overwatch 2"][0];
 if (urlParams.get("before")) {
     let path = urlParams.get("before").split(":");
     if (path[1] == "latest") {
@@ -229,7 +229,7 @@ if (urlParams.get("before")) {
         before_patch = path[0] + " - " + path[1];
     }
 }
-let after_patch = "Overwatch 2 - " + patchList["Overwatch 2"][0];
+export let after_patch = "Overwatch 2 - " + patchList["Overwatch 2"][0];
 if (urlParams.get("after")) {
     let path = urlParams.get("after").split(":");
     if (path[1] == "latest") {
@@ -281,16 +281,7 @@ function patch_overlay(overlay_version) {
     return result;
 }
 
-function convert_to_changes(before, after) {
-    if (typeof before == "number" && typeof after == "number") {
-        return [before, after];
-    }
-    if (typeof before == "string" && typeof after == "string") {
-        return [before, after];
-    }
-    if (typeof before == "boolean" && typeof after == "boolean") {
-        return [before, after];
-    }
+export function convert_to_changes(before, after) {
     if (typeof before == "object" && typeof after == "object") {
         let result = {};
         for (let key in before) {
@@ -301,14 +292,26 @@ function convert_to_changes(before, after) {
                 }
             }
         }
+        for (let key in after) {
+            if(!(key in before)) {
+                result[key] = [undefined, after[key]];
+            }
+        }
         return result;
     }
-    throw "Invalid";
+    return [before, after];
 }
 
-function getChangeText(name, change, units) {
-    if (typeof change[0] == "number") {
+export function getChangeText(name, change, units) {
+    if (change[0] === undefined) {
         if (units == "percent") {
+            return `There is now ${change[1]}% ${name.toLowerCase()}.`;
+        }
+        return `There is now ${change[1]} ${name.toLowerCase()}.`;
+    } else if (typeof change[0] == "number") {
+        if(change[1] === undefined){
+            return `${name} removed.`;
+        } else if (units == "percent") {
             let change_type = "increased";
             if (change[0] > change[1]) {
                 change_type = "reduced";
