@@ -1,16 +1,16 @@
 {
     "general": {
-        "Knockdown time": "none",
+        "Knockdown time": "seconds",
         "Armor health": "none",
         "Out-of-combat health regeneration": "none",
         "Role lock": "none",
-        "Ultimate percent retained on swap": "none"
+        "Ultimate percent retained on swap": "percent"
     },
     "heroes": {
         "tank": {
             "general": {
-                "Critical headshot damage reduction": "none",
-                "Knockback resistance": "none"
+                "Critical headshot damage reduction": "percent",
+                "Knockback resistance": "percent"
             },
             "D.Va": {
                 "general": {
