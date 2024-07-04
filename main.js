@@ -1,4 +1,8 @@
-import units from "./units.json" with { type: "json" };
+// import units from "./units.json" with { type: "json" };
+// cant use because firefox dumb https://bugzilla.mozilla.org/show_bug.cgi?id=1736059
+let units = await fetch("./units.json")
+    .then((res) => res.text())
+    .then((text) => JSON.parse(text));
 
 let patch_selectors = document.getElementsByClassName("patch-selector");
 export let patches = {};
