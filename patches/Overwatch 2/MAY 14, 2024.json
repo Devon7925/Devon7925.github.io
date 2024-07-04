@@ -361,6 +361,9 @@
                     },
                     "Configuration: Artillery": {
                         "Ultimate cost": 2500
+                    },
+                    "Ironclad": {
+                        "Damage reduction": 20
                     }
                 }
             },

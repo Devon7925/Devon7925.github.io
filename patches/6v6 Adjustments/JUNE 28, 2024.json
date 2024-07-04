@@ -290,7 +290,7 @@
                 "abilities": {
                     "Nemesis Form": {
                         "Cooldown": 9,
-                        "Extra armor": 175,
+                        "Extra armor": 200,
                         "Pummel damage": 70
                     },
                     "Void Barrier": {
@@ -350,6 +350,9 @@
                     },
                     "Configuration: Artillery": {
                         "Ultimate cost": 2310
+                    },
+                    "Ironclad": {
+                        "Damage reduction": 10
                     }
                 }
             },
