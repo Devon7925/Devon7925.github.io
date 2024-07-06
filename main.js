@@ -8,6 +8,8 @@ let patch_selectors = document.getElementsByClassName("patch-selector");
 export let patches = {};
 const patchList = {
     "Overwatch 2": [
+        "FEB 13, 2024",
+        "FEB 21, 2024",
         "MAR 12, 2024",
         "MAR 19, 2024",
         "MAR 28, 2024",
@@ -221,6 +223,16 @@ const ability_images = {
     "Sympathetic Recovery": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/c14b2c5652526a006233965b176fb2b5af9e7c5d44045fad3844267303f07091.png",
     "Projected Barrier": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/6e42984ee8329a50e9c2460ae2df7670d7be9846a093c336e4576d1eea1fb2f1.png",
     "Meteor Strike": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/fa96b2650987b3784a725a0fb1704f7191a686a4f42c9ccf61c404e2f08b158c.png",
+    "Augmented Fusion Driver": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/8bf67f548fb8dd8fde4dd07ae567e635f8d6229c330a3656134697b9ecbd9140.png",
+    "Void Accelerator": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/f9b14ddf35c743968761ca0abd260385d836df9ce7d196a688ee3b5f25a720ca.png",
+    "Pummel": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/1dd2e8ea208e8a79def7852a422924c0c5f791ee7f09a0541240271bd3ecb0e7.png",
+    "Pig Pen": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/0150c28fe47ff4a7c16138266bf2b4903bd45e4b7770ab40572bb792b647838c.png",
+    "Tri-shot": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/8fc9f68f9cdcd7c90ce902d1882bca2e783609f7f0e62c8ee00996eec4026063.png",
+    "Concussive Blast": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/9747b440730824756ae2d17e4d1f38468f36c985c35f56cf1f175a613279479a.png",
+    "Translocator": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/e81f286184e24512c724af16a960a1faca6ade164238b025d19da64226f05f4d.png",
+    "Deploy Turret": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/a25d559460eed995f177b84eda6000aca6a52c8600dcf2249cc50ca31aa9c786.png",
+    "Light Gun": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/24074dececa8bf7b57628509e70731916db62b5ab5b30660ac1727b20bbc5b4d.png",
+    "Widow's Kiss": "https://d15f34w2p8l1cc.cloudfront.net/overwatch/13a1e7903c23a5e140aa01fa930f585c1ea69e1e24378c0462f42053085f7ad9.png"
 };
 
 const queryString = window.location.search;
@@ -397,6 +409,12 @@ function updatePatchNotes() {
             for (let ability in heroData.abilities) {
                 let ability_changes = "";
                 for (let stat in heroData.abilities[ability]) {
+                    if(!units.heroes[role][hero].abilities[ability]) {
+                        console.error(`Missing ability for ${hero} - ${ability}`)
+                    }
+                    if(!units.heroes[role][hero].abilities[ability][stat]) {
+                        console.error(`Missing units for ${hero} - ${ability} - ${stat}`)
+                    }
                     ability_changes += `<li>${getChangeText(stat, heroData.abilities[ability][stat], units.heroes[role][hero].abilities[ability][stat])}</li>`;
                 }
                 abilities += `
