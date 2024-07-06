@@ -131,7 +131,9 @@
                         "disables other abilities and automatically fires": true
                     },
                     "Pig Pen": {
-                        "Vertical Knockback": 3
+                        "Vertical Knockback": 3,
+                        "Initial damage": 60,
+                        "Damage over time": 30
                     }
                 }
             },

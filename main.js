@@ -21,6 +21,7 @@ const patchList = {
         "JUNE 20, 2024",
     ],
     "6v6 Adjustments": [
+        "JUNE 21, 2024",
         "JUNE 28, 2024",
     ]
 };
@@ -238,24 +239,30 @@ const ability_images = {
 const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
 
-export let before_patch = "Overwatch 2 - " + patchList["Overwatch 2"][0];
+let before_patch_path = "Overwatch 2:recent"
+let after_patch_path = "Overwatch 2:latest"
 if (urlParams.get("before")) {
-    let path = urlParams.get("before").split(":");
-    if (path[1] == "latest") {
-        before_patch = path[0] + " - " + patchList[path[0]][patchList[path[0]].length - 1];
-    } else {
-        before_patch = path[0] + " - " + path[1];
-    }
+    before_patch_path = urlParams.get("before")
 }
-export let after_patch = "Overwatch 2 - " + patchList["Overwatch 2"][0];
 if (urlParams.get("after")) {
-    let path = urlParams.get("after").split(":");
-    if (path[1] == "latest") {
-        after_patch = path[0] + " - " + patchList[path[0]][patchList[path[0]].length - 1];
+    after_patch_path = urlParams.get("after")
+}
+
+function patch_from_path(joined_path) {
+    let path = joined_path.split(":");
+    if (path[1] == "oldest") {
+        return path[0] + " - " + patchList[path[0]][0];
+    } else if (path[1] == "latest") {
+        return path[0] + " - " + patchList[path[0]][patchList[path[0]].length - 1];
+    } else if (path[1] == "recent") {
+        return path[0] + " - " + patchList[path[0]][patchList[path[0]].length - 2];
     } else {
-        after_patch = path[0] + " - " + path[1];
+        return path[0] + " - " + path[1];
     }
 }
+
+export let before_patch = patch_from_path(before_patch_path);
+export let after_patch = patch_from_path(after_patch_path);
 
 function isEmpty(obj) {
     for (var i in obj) { return false; }

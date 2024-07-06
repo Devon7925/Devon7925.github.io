@@ -134,7 +134,9 @@
                         "disables other abilities and automatically fires": "none"
                     },
                     "Pig Pen": {
-                        "Vertical Knockback": "none"
+                        "Vertical Knockback": "none",
+                        "Initial damage": "none",
+                        "Damage over time": "none"
                     }
                 }
             },
@@ -544,7 +546,7 @@
                 },
                 "abilities": {
                     "Rocket Launcher": {
-                        "Recovery speed": "none",
+                        "Recovery speed": "seconds",
                         "Projectile speed": "none"
                     },
                     "Barrage": {
