@@ -172,7 +172,8 @@
                         "Maximum duration": 6,
                         "cancelled by stuns": true,
                         "Pellet count": 16,
-                        "Recovery time": 0.125
+                        "Recovery time": 0.125,
+                        "Critical multiplier": 2
                     }
                 }
             },
@@ -208,7 +209,8 @@
                         "Explosion damage": 30,
                         "Recovery time": 1.5,
                         "Bullets per burst": 2,
-                        "Burst recovery time": 0.192
+                        "Burst recovery time": 0.192,
+                        "Explosion self damage": 25
                     }
                 }
             },
@@ -319,14 +321,14 @@
                         "Maximum temporary health": 150
                     },
                     "Hand Cannon": {
-                        "Minimum damage": 16.5,
-                        "Maximum damage": 55,
                         "Projectile size": 0.0,
                         "Pellet count": 11,
                         "Critical multiplier": 2,
                         "Reload time per ammo": 0.4,
                         "Ammo": 4,
-                        "Recovery time": 0.336
+                        "Recovery time": 0.336,
+                        "Damage per pellet": 5.0,
+                        "Minimum damage per pellet": 1.5
                     },
                     "Seismic Slam": {
                         "Damage": 50,
@@ -355,7 +357,8 @@
                         "Min wall slam damage": 20,
                         "Minimum empowered wall stun": 0.5,
                         "Empowered Rocket Punch knockback radius": 4,
-                        "Minimum time before cancel option becomes available": 0.25
+                        "Minimum time before cancel option becomes available": 0.25,
+                        "Empowered damage multiplier": 1.5
                     },
                     "Meteor Strike": {
                         "Ultimate cost": 1680,
@@ -448,18 +451,6 @@
                         "Pellet count": 10
                     }
                 }
-            },
-            "Ramattra": {
-                "abilities": {
-                    "Revenous Vortex": {
-                        "Duration": 3
-                    },
-                    "Ravenous Vortex": {
-                        "Duration": 3,
-                        "Slow": 40,
-                        "Radius": 4
-                    }
-                }
             }
         },
         "damage": {
@@ -476,7 +467,8 @@
                         "Weapon damage": 14,
                         "has tank passive": false,
                         "Health": 1000,
-                        "prefers to shoot at enemy targets that Ashe damage with her rifle": false
+                        "prefers to shoot at enemy targets that Ashe damage with her rifle": false,
+                        "Recovery time": 0.125
                     },
                     "The Viper": {
                         "Projectile size": 0.0,
@@ -524,14 +516,16 @@
                         "Impact damage": 15,
                         "Maximum explosion damage falloff": 70,
                         "Detonation time": 0.5,
-                        "Cooldown": 10
+                        "Cooldown": 10,
+                        "Splash Damage": 100
                     },
                     "Configuration: Assault": {
                         "Movement speed penalty": 35,
                         "Cooldown": 12,
                         "Spread": 2.2,
                         "Damage": 12,
-                        "Duration": 6
+                        "Duration": 6,
+                        "Recovery time": 0.03333333333333333
                     },
                     "Configuration: Artillery": {
                         "Ultimate cost": 2272,
@@ -599,7 +593,8 @@
                     "Fan the Hammer": {
                         "Damage": 50,
                         "Recovery time": 0.112,
-                        "Alt fire of": "Peacekeeper"
+                        "Alt fire of": "Peacekeeper",
+                        "Additional reload delay": 0.358
                     }
                 }
             },
@@ -611,7 +606,8 @@
                     "Sticky Bombs": {
                         "Explosion damage": 25,
                         "Direct damage": 5,
-                        "Projectile size": 0.18
+                        "Projectile size": 0.18,
+                        "Bullets per shot": 6
                     },
                     "Duplicate": {
                         "Ultimate gain multiplier": 5.5,
@@ -709,7 +705,8 @@
                         "Speed": 12,
                         "Ultimate cost": 1681,
                         "Critical multiplier": 2,
-                        "Damage per second": 150
+                        "Damage per second": 150,
+                        "Projectile size": 0.1
                     },
                     "Sonic Arrow": {
                         "does impact sound plat for enemies": false,
@@ -1074,8 +1071,8 @@
                         "Travel speed": 15
                     },
                     "Teleporter": {
-                        "Base Health": 50,
-                        "Shield Health": 250,
+                        "Base health": 50,
+                        "Shield health": 250,
                         "Cooldown": 10,
                         "Build time": 2,
                         "Cooldown start": "teleporter destroyed"
@@ -1119,7 +1116,8 @@
                     "Deploy Turret": {
                         "Turret damage": 14,
                         "Cooldown": 10,
-                        "Turret base health": 250
+                        "Turret base health": 250,
+                        "Turret recovery time": 0.256
                     },
                     "Overload": {
                         "Overhealth": 100,
@@ -1457,7 +1455,8 @@
                         "Self-heal per second": 50,
                         "can use fade during duration": false,
                         "Ultimate cost": 2770,
-                        "Bonus movement speed": 50
+                        "Bonus movement speed": 50,
+                        "Damage per second": 70
                     },
                     "Fade": {
                         "can be activated while affected by mobility-locking effects": true,

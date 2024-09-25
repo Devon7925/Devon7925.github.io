@@ -227,7 +227,8 @@
                         "Projectile size": 0.05,
                         "Maximum duration": 8,
                         "Pellet count": 16,
-                        "Recovery time": 0.125
+                        "Recovery time": 0.125,
+                        "Critical multiplier": 2
                     },
                     "Pig Pen": {
                         "Vertical Knockback": 3,
@@ -273,7 +274,8 @@
                         "Explosion damage": 30,
                         "Recovery time": 1.5,
                         "Bullets per burst": 2,
-                        "Burst recovery time": 0.192
+                        "Burst recovery time": 0.192,
+                        "Explosion self damage": 25
                     }
                 }
             },
@@ -383,14 +385,14 @@
                         "Maximum temporary health": 200
                     },
                     "Hand Cannon": {
-                        "Minimum damage": 13.5,
-                        "Maximum damage": 45,
                         "Projectile size": 0.05,
                         "Pellet count": 11,
                         "Critical multiplier": 2,
                         "Reload time per ammo": 0.4,
                         "Ammo": 4,
-                        "Recovery time": 0.336
+                        "Recovery time": 0.336,
+                        "Damage per pellet": 4.090909090909091,
+                        "Minimum damage per pellet": 1.2272727272727273
                     },
                     "Seismic Slam": {
                         "Damage": 40,
@@ -416,7 +418,8 @@
                         "Min wall slam damage": 10,
                         "Minimum empowered wall stun": 0.25,
                         "Empowered Rocket Punch knockback radius": 3,
-                        "Minimum time before cancel option becomes available": 0.12
+                        "Minimum time before cancel option becomes available": 0.12,
+                        "Empowered damage multiplier": 1.5
                     },
                     "Meteor Strike": {
                         "Ultimate cost": 1932,
@@ -484,14 +487,16 @@
                         "Incendiary Chaingun burn duration": 3,
                         "Critical multiplier": 2,
                         "Recovery time": 0.055555,
-                        "Damage": 3.25
+                        "Damage": 3.25,
+                        "Reload time": 2.2
                     },
                     "Overrun": {
                         "Cooldown": 8,
                         "Damage": 50,
                         "Knockback damage": 20,
                         "Damage reduction": 50,
-                        "can be interrupted by Hack": false
+                        "can be interrupted by Hack": false,
+                        "Critical multiplier": 2
                     },
                     "Cardiac Overdrive": {
                         "Cooldown": 12,
@@ -612,7 +617,8 @@
                         "Weapon damage": 17,
                         "has tank passive": true,
                         "Health": 900,
-                        "prefers to shoot at enemy targets that Ashe damage with her rifle": true
+                        "prefers to shoot at enemy targets that Ashe damage with her rifle": true,
+                        "Recovery time": 0.125
                     },
                     "The Viper": {
                         "Projectile size": 0.08,
@@ -660,14 +666,16 @@
                         "Impact damage": 15,
                         "Maximum explosion damage falloff": 50,
                         "Detonation time": 0.35,
-                        "Cooldown": 8
+                        "Cooldown": 8,
+                        "Splash Damage": 100
                     },
                     "Configuration: Assault": {
                         "Movement speed penalty": 45,
                         "Cooldown": 12,
                         "Spread": 2.2,
                         "Damage": 12,
-                        "Duration": 6
+                        "Duration": 6,
+                        "Recovery time": 0.03333333333333333
                     },
                     "Configuration: Artillery": {
                         "Ultimate cost": 2310,
@@ -738,7 +746,8 @@
                     "Fan the Hammer": {
                         "Damage": 45,
                         "Recovery time": 0.112,
-                        "Alt fire of": "Peacekeeper"
+                        "Alt fire of": "Peacekeeper",
+                        "Additional reload delay": 0.358
                     }
                 }
             },
@@ -750,7 +759,8 @@
                     "Sticky Bombs": {
                         "Explosion damage": 23.61,
                         "Direct damage": 4.72,
-                        "Projectile size": 0.305
+                        "Projectile size": 0.305,
+                        "Bullets per shot": 6
                     },
                     "Duplicate": {
                         "Ultimate gain multiplier": 5,
@@ -867,7 +877,8 @@
                         "Speed": 15,
                         "Ultimate cost": 1680,
                         "Critical multiplier": 2,
-                        "Damage per second": 150
+                        "Damage per second": 150,
+                        "Projectile size": 0.175
                     },
                     "Sonic Arrow": {
                         "does impact sound plat for enemies": true,
@@ -1244,8 +1255,8 @@
                         "Travel speed": 20
                     },
                     "Teleporter": {
-                        "Base Health": 75,
-                        "Shield Health": 150,
+                        "Base health": 75,
+                        "Shield health": 150,
                         "Cooldown": 12,
                         "Build time": 1,
                         "Maximum lifetime": 10,
@@ -1290,7 +1301,8 @@
                     "Deploy Turret": {
                         "Turret damage": 13,
                         "Cooldown": 12,
-                        "Turret base health": 225
+                        "Turret base health": 225,
+                        "Turret recovery time": 0.256
                     },
                     "Overload": {
                         "Overhealth": 100,
@@ -1382,7 +1394,8 @@
                     "Burrow": {
                         "Grace period": 0.2,
                         "Minimum damage": 35,
-                        "Maximum damage": 70
+                        "Maximum damage": 70,
+                        "Maximum duration": 4
                     },
                     "Tectonic Shock": {
                         "Ultimate cost": 1925,
@@ -1820,7 +1833,8 @@
                         "Self-heal per second": 55,
                         "can use fade during duration": false,
                         "Ultimate cost": 2800,
-                        "Bonus movement speed": 40
+                        "Bonus movement speed": 40,
+                        "Damage per second": 70
                     },
                     "Fade": {
                         "can be activated while affected by mobility-locking effects": false,
@@ -1836,11 +1850,13 @@
             },
             "Zenyatta": {
                 "general": {
+                    "has overridden melee": true,
                     "Base health": 100,
                     "Shield health": 100
                 },
                 "abilities": {
                     "Snap Kick": {
+                        "Damage": 60,
                         "Knockback": 8
                     },
                     "Orb of Destruction": {
