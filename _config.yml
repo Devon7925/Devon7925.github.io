@@ -25,11 +25,20 @@ description: >- # this means to ignore newlines until "baseurl:"
 baseurl: "" # the subpath of your site, e.g. /blog
 url: https://devon7925.github.io
 github_username:  Devon7925
+remote_theme: jekyll/minima
+
+# Conversion
+markdown:    kramdown
+highlighter: pygments
 
 # Build settings
-theme: minima
+# theme: minima
 plugins:
   - jekyll-feed
+  - jekyll-remote-theme
+
+minima:
+  skin: auto
 
 # Exclude from processing.
 # The following items will not be processed, by default.
