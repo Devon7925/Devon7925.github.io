@@ -46,6 +46,16 @@ A playground for the Slang language. This is my fork of the official slang playg
 
 A version of the Slang Playground with higher performance and more features built for native.
 
+### [Slang Voxel Engine](https://devon7925.github.io/slang-voxels/)
+
+[![slang-playground](https://img.shields.io/badge/GitHub-slang--native--playground-blue?style=flat&logo=github)](https://github.com/Devon7925/slang-voxels)
+![WASM](https://img.shields.io/badge/-WASM-gray?style=flat)
+![Slang](https://img.shields.io/badge/-Slang-gray?style=flat)
+![Rust](https://img.shields.io/badge/-Rust-gray?style=flat)
+![Raytracing](https://img.shields.io/badge/-Raytracing-gray?style=flat)
+
+Uses slang native playground for a voxel engine using raytracing written almost entirely in Slang for the GPU.
+
 ### Discord Queue Bot
 
 [![queue_bot](https://img.shields.io/badge/GitHub-queue__bot-blue?style=flat&logo=github)](https://github.com/Devon7925/queue_bot)
