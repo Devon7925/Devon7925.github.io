@@ -17,6 +17,15 @@ This is a site for links to my personal projects.
 
 A tool to compare Overwatch patch balance over time. Also makes it easy to look at hero stats and breakpoints.
 
+### [Overwatch 2 Stats](./overwatch_stats/)
+
+[![overwatch_stats](https://img.shields.io/badge/GitHub-overwatch__stats-blue?style=flat&logo=github)](https://github.com/Devon7925/overwatch_patch_compare)
+![Typescript](https://img.shields.io/badge/-Typescript-gray?style=flat)
+![Vue.js](https://img.shields.io/badge/-Vue.js-gray?style=flat)
+![JSON](https://img.shields.io/badge/-JSON-gray?style=flat)
+
+A tool to do data analysis on overwatch's official stats.
+
 ### [Infinite Canvas](./TrueInfiniteCanvas/)
 
 [![TrueInfiniteCanvas](https://img.shields.io/badge/GitHub-TrueInfiniteCanvas-blue?style=flat&logo=github)](https://github.com/Devon7925/TrueInfiniteCanvas)
